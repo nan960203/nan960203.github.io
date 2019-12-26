@@ -1,0 +1,609 @@
+@charset 'utf-8';
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    
+}
+#wrap{
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#hd{
+    clear: both;
+    position: relative;
+    width: 100%;
+}
+.header{
+    height: 130px;
+    width: 80%;
+    margin: 0 auto;
+}
+.header .logo{
+    display: block;
+    width: 120px;
+    height: 50px;
+    padding-top: 40px;
+}
+.logo img{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+.gnb{
+    float: right;
+    position: absolute;
+    top: 50px;
+    left: 400px;
+    width: 600px;
+}
+.gnb li{
+    float: left;
+    width: 20%;
+}
+.gnb li a{
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
+}
+.gnb li:first-child a{
+    color: #fa9172;
+}
+.gnb li a:hover{
+    color: #fa9172;
+}
+.top-bar{
+    position: absolute;
+    top: 50px;
+    width: 320px;
+    right: 150px;
+}
+.top-bar li{
+    float: left;
+    margin-right: 20px;
+}
+.top-bar li a{
+    display: block;
+    font-size: 17px;
+}
+.top-bar li:first-child a{
+    font-size: 12px;
+}
+.top-bar li a i:hover{
+    color: gainsboro;
+}
+
+
+
+
+
+
+/*가짜토굴*/
+.bgleft{
+    position: absolute;
+    left: 80px;
+    top: 250px;
+}
+.bgleft img{
+    width: 30px;
+    height: 30px;
+}
+.bgright{
+    position: absolute;
+    right: 80px;
+    top: 220px;
+}
+.bgright li{
+    clear: both;
+}
+.bgright img{
+    width: 50px;
+    height: 50px;
+}
+
+
+/*아티스트*/
+
+.ARTISTS-list{
+    width: 100%;
+    height: 1300px;
+    position: relative;
+    clear: both;
+}
+.artists{
+    position: relative;
+   padding-top: 20px;
+    width: 70%;
+    margin: 0 auto;
+}
+.artists li{
+    position: relative;
+    cursor: pointer;
+    float: left;
+    width: 23%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+.artists li a{
+    display: block;
+}
+.artists li:first-child:hover::after{
+    content: "JAY PARK / 박재범";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+
+.artists li:nth-child(2):hover::after{
+    content: "SIMON DOMINIC / 사이먼 도미닉";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:nth-child(3):hover::after{
+    content: "GRAY / 그레이";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:nth-child(4):hover::after{
+    content: "LOCO / 로꼬";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:nth-child(5):hover::after{
+    content: "CHA CHA MALONE / 차 차 말론";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:nth-child(6):hover::after{
+    content: "ELO / 엘로";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:nth-child(7):hover::after{
+    content: "UGLY DUCK / 어글리덕";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:nth-child(8):hover::after{
+    content: "WOO WON JAE / 우원재";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:nth-child(9):hover::after{
+    content: "HOODY / 후디";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:nth-child(10):hover::after{
+    content: "DJ PUMKIN / DJ 펌킨";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:nth-child(11):hover::after{
+    content: "DJ WEGUN / DJ 웨건";
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom:0px;
+    height: 50px;
+    text-indent: 20px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(238, 238, 238,0.5);
+}
+.artists li:first-child{
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/instarpack.jpg);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:first-child:hover{
+            background-image: url(../img/sub1.jpg);
+        }
+
+.artists li:nth-child(2){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/instarsam.jpg);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(2):hover{
+            background-image: url(../img/sub2.jpg);
+        }
+
+
+
+
+.artists li:nth-child(3){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/images/instar_03.png);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(3):hover{
+            background-image: url(../img/sub3.jpeg);
+        }
+
+
+.artists li:nth-child(3){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/images/instar_03.png);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(3):hover{
+            background-image: url(../img/sub3.jpeg);
+        }
+
+
+.artists li:nth-child(4){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/images/instar_26.png);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(4):hover{
+            background-image: url(../img/sub4.jpg);
+        }
+
+
+.artists li:nth-child(5){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/images/instar_18.png);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(5):hover{
+            background-image: url(../img/sub5.jpg);
+        }
+
+
+.artists li:nth-child(6){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/instar20.jpg);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(6):hover{
+            background-image: url(../img/sub6.jpg);
+        }
+
+
+.artists li:nth-child(7){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/instar23.jpg);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(7):hover{
+            background-image: url(../img/sub7.jpg);
+        }
+
+
+.artists li:nth-child(8){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/instar25.jpg);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(8):hover{
+            background-image: url(../img/sub8.jpg);
+        }
+
+
+.artists li:nth-child(9){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/instar26.jpg);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(9):hover{
+            background-image: url(../img/sub9.jpeg);
+        }
+
+
+.artists li:nth-child(10){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/instar27.jpg);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(10):hover{
+            background-image: url(../img/sub10.jpg);
+        }
+
+
+.artists li:nth-child(11){
+            width: 300px;
+            height: 350px;
+            background-image: url(../img/instar28.jpg);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            margin-top: 30px;
+        }
+        .artists li:nth-child(11):hover{
+            background-image: url(../img/sub11.jpg);
+        }
+
+
+
+
+
+.top-btn{
+    text-align: center;
+    border: 1px solid #333;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    line-height: 30px;
+    right: 50px;
+    bottom: 100px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.ft{
+    width: 100%;
+    clear: both;
+    position: relative;
+    height: 50px;
+    
+    
+}
+.copyright{
+    text-align: center;
+}
+
+
+
+
+  @media screen and (max-width:767px){
+            .wrap{
+                column-count: 1;
+            }
+      .gnb{
+          display: none;
+      }
+   
+      .top-bar{
+          display: none;
+      }
+      .slider img{
+          width: 100%;
+      }
+      
+      
+/*가짜토굴*/
+.bgleft{
+    position: absolute;
+    left:calc(50% - -170px);
+    top: -80px;
+}
+.bgleft img{
+    width: 25px;
+    height: 25px;
+}
+.bgright{
+    position: absolute;
+    right: 4px;
+    top: 40px;
+}
+.bgright li{
+    clear: both;
+}
+.bgright img{
+    width: 50px;
+    height: 50px;
+}
+
+      /*아티스트*/
+      .ARTISTS-list{
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    clear: both;
+}
+.artists{
+    width: 80%;
+    margin: 0 auto;
+}
+.artists li{
+    float: left;
+    width: 100%;
+}
+      .artists li:nth-child(1){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(2){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(3){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(4){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(5){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(6){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(7){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(8){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(9){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(10){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(11){
+          width: 100%;
+          height: 300px;
+      }
+      
+        }
