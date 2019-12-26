@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scale=no">
+    <title>한솔교육</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="css/sub2.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:768px) and (max-width:959px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:960px)">
+
+    <link rel="shortcut icon" href="./favicon/16x16favicon.png">
+
+    <link rel="shortcut icon" href="./favicon/16x16favicon.png">
+    <link rel="shortcut icon" href="./favicon/32x32favicon.png">
+    <link rel="shortcut icon" href="./favicon/48x48favicon.png">
+    <link rel="shortcut icon" href="./favicon/64x64favicon.png">
+    <link rel="shortcut icon" href="./favicon/72favicon.png">
+    <link rel="shortcut icon" href="./favicon/96favicon.png">
+    <link rel="shortcut icon" href="./favicon/128favicon.png">
+    <link rel="shortcut icon" href="./favicon/144favicon.png">
+    <link rel="shortcut icon" href="./favicon/152favicon.png">
+    <link rel="shortcut icon" href="./favicon/256favicon.png">
+
+
+    <!-- 모바일 웹앱 문서정보에 대한 설정 -->
+    <meta name="title" content="한솔교육">
+    <meta name="auther" content="김난">
+    <meta name="url" content="http://nan960203.dothome.co.kr/project4">
+    <meta name="description" content="한솔교육, 교육, 한솔, 초등, 유아, 어린이, 공부, 학습, 학습지, 무료교육, 상담, 학생">
+    <meta name="keywords" content=" 한솔교육, 교육, 한솔, 초등, 유아, 어린이, 공부, 학습, 학습지, 무료교육, 상담, 학생">
+    <!-- 애플 어플 문서 정보 설정 -->
+    <meta name="apple-mobile-web-app-title" content="한솔교육, 교육, 한솔, 초등, 유아, 어린이, 공부, 학습, 학습지, 무료교육, 상담, 학생">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 소셜에 문서정보 노출 설정 -->
+    <meta itemprop="name" content="한솔교육">
+    <meta itemprop="description" content="한솔교육, 교육, 한솔, 초등, 유아, 어린이, 공부, 학습, 학습지, 무료교육, 상담, 학생">
+    <meta itemprop="image" content="./favicon/256favicon.png">
+    <!-- 페이스북에 노출 설정 -->
+    <meta property="fb:app_id" content="APP_ID">
+    <!-- 카카오톡, 블로그 등의 크롤링으로 화면 미리보기 노출 -->
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="한솔교육">
+    <meta property="og:url" content="./index.html">
+    <meta property="og:description" content="한솔교육, 교육, 한솔, 초등, 유아, 어린이, 공부, 학습, 학습지, 무료교육, 상담, 학생">
+    <meta property="og:img" content="http://nan960203.dothome.co.kr/project4/data/hs.bn01.jpg"><!-- 썸네일이미지 . http://부터 시작하는 절대주소로 남겨야 함 -->
+    <script src="script/jquery-1.11.1.js"></script>
+    <script src="script/main.js"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--제이쿼리 파일 CDM형식으로 연결-->
+    <script src="collap.js"></script>
+</head>
+<script>
+    $(document).ready(
+        function() {
+            var wd = parseInt($(window).width()); /*문서가 시작되면 로딩되면 .은 동작을 줄거에씀 =parseInt;문자열을 숫자로 바꿈 /오른쪽 값을 왼쪽으로 대입시킨다 [var] 변수 wd라는 곳에 저장해라 */
+
+            $("#btnGroup label").click(function() {
+                /*실행문은 중가로 안에다가 써야됨 btngroup안에 라벨을 클릭하면 함수 안쪽을 실행하라 */
+
+
+
+                $("#btnGroup label").removeClass("on"); //on 클래스를 준것을 삭제하고 (모든 label)
+                $(this).addClass("on") //this(내가 클릭한) label는 on클래스를 추가해라
+
+                var curImg = parseInt($(this).attr('for'));
+                //attr(속성):가져오다->btnGroup label 의 'for'속성을 가져와서 curImg변수에 저장하십시오(ex:for="3"-->curImg(3))
+                $("#images").animate({
+                    "margin-left": (curImg - 1) * (wd * -1)
+                }, 500);
+
+                //#images(500%).anmiate({"margin-left":속성값},시간(duration=1000=1s))
+                //#images(500%).anmiate({"속성":속성값},시간)
+                //anmiate -> 부드럽고 자연스럽게
+                //속성값:(curimg-1)*(WD*-1)
+                /* (2-1)*((wd(100%)*-1)=-100%)
+                
+                
+                
+                */
+
+
+            });
+
+
+        });
+
+</script>
+<script>
+    $(document).ready(function() {
+        var wd = parseInt($(window).width());
+        var aniWid = wd * -1;
+        var cnt = parseInt($("#images li").length);
+        $("#vdo1").width($(window).width());
+        $("#vdo1").height($(window).width() / 4 * 3);
+
+        var intv = setInterval(function() {
+            leftAni();
+        }, 3000);
+        $("#btnGroup .rightBtn").click(function() {
+            clearInterval(intv);
+            leftAni();
+            intv = setInterval(function() {
+                leftAni();
+            }, 3000);
+        });
+
+        $("#btnGroup .leftBtn").click(function() {
+            clearInterval(intv);
+            rightAni();
+            intv = setInterval(function() {
+                leftAni();
+            }, 3000);
+        });
+
+
+        function rightAni() {
+            $("#images li").eq(2).prependTo("#images");
+            $("#images").css("margin-left", aniWid);
+            $("#images").animate({
+                "margin-left": "0px"
+            }, 800);
+        };
+
+        function leftAni() {
+            $("#images").animate({
+                "margin-left": aniWid
+            }, 800, function() {
+                $("#images li").eq(0).appendTo("#images");
+                $("#images").css("margin-left", "0px");
+            });
+        };
+    })
+    $(document).ready(function() {
+        $("#gnb a.dp1").click(function() { //대메뉴를 클릭하면#gnb
+            $(".sub").removeClass("on"); //서브메뉴 sub가on이라는 클래스를 삭제 모든서브메뉴 높이가 0px안보이게 
+            $(this).next(".sub").addClass("on"); //대메뉴 바로뒤에오는 .sub서브메뉴에 on이라는 클래스를 addclass추가하라 높이가 125px 보이기하라
+            $("#gnb a.dp1").removeClass("on"); //대메뉴의 on이라는 클래스를 일괄적으로 모든메뉴가 on을 삭제하라 
+            $(this).addClass("on"); //내자신(지금 내가 클릭한 대메뉴) on을 추가하라
+        });
+        var wd = parseInt($(".vs").width());
+        $(".btn_box li").click(function() { //버튼박스 li를 클릭하면
+            var idx = $(this).index(); //내자신(li)의 인덱스(0,1,2,3,4)를 idx라는 변수명으로 저장
+            $(".img_box").not(":animated").animate({
+                "margin-left": wd * idx * -1 + "px"
+            }, 600); // 이미지박스는 animated제외시키고 
+            $(".btn_box li").removeClass("on");
+            $(this).addClass("on");
+        });
+    });
+
+</script>
+<script>
+        $(document).ready( /*문서라 로딩이되면*/
+            function( /*어떤걸 동작할껀데?*/ ) {
+            
+
+                $(".sns").click(function() {
+                    $(".sns_box").addClass("on");
+                });
+                $(".sns_box .close").click(function() {
+                    $(".sns_box").removeClass("on")
+                });
+
+               
+
+
+
+
+            }); /*;마침표 없으면 앙돼~~*/
+    </script>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="top_bar">
+                <ul>
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">사이트맵</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/main-img/images/hslogo22_03.png" alt="">
+            </a>
+        </div>
+        <input type="checkbox" class="ck_item" id="ck1">
+        <input type="checkbox" class="ck_item" id="ck2">
+        <nav class="top_btn">
+            <!--토글버튼역할-->
+            <ul>
+                <li class="search">
+                    <label for="ck1">검색</label>
+                </li>
+                <li class="menu">
+                    <label for="ck2">메뉴</label>
+                </li>
+            </ul>
+        </nav>
+        <nav id="find_nav">
+            <!--검색박스-->
+            <form action="" class="frm1">
+                <input type="text" name="search" placeholder="검색어입력" id="keyword" class="in_data">
+                <input type="submit" value="검색" class="frm_btn">
+                <!--전송버튼-->
+            </form>
+            <p class="hash_title">SEARCH</p>
+            <!--해시태그-->
+            <ul class="hash">
+                <li class="item1"><a href="sub1.html">무료교육상담</a></li>
+                <li class="item2"><a href="sub2.html">무료수업신청</a></li> <br>
+                <li class="item3"><a href="sub3.html">고객센터</a></li>
+                <li class="item4"><a href="sub4.html">마이페이지</a></li>
+            </ul>
+            <label for="ck1" class="close"></label>
+        </nav>
+        <nav id="gnb">
+            <div class="menu-bar">
+                <h1><a href="index.html"><img src="./img/main-img/images/hslogo22_03.png" alt=""></a></h1>
+            </div>
+            <nav class="login">
+                <ul>
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                </ul>
+            </nav>
+
+            <ul class="nav">
+                <li class="item1"><a href="#" class="dp1">한솔교육 스토리</a>
+                    <ul class="sub">
+                        <li class="it1"><a href="#">한솔은 어떻게?</a></li>
+                        <li class="it2"><a href="#">한솔미디어</a></li>
+                        <li class="it1"><a href="#">Real 신기한 후기</a></li>
+                        <li class="it2"><a href="#">브랜드스토리</a></li>
+                        <li class="it1"><a href="#">언어회로의힘</a></li>
+                    </ul>
+                </li>
+                <li class="item2"><a href="#" class="dp1">교육서비스</a>
+                    <ul class="sub">
+                        <li class="it3"><a href="#">학습음원</a></li>
+                        <li class="it4"><a href="#">피쉬톡</a></li>
+                        <li class="it5"><a href="#">핑거스터디</a></li>
+                        <li class="it6"><a href="#">맞춤교육정보</a></li>
+                        <li class="it6"><a href="#">행복한교육이야기</a></li>
+                    </ul>
+                </li>
+                <li class="item3"><a href="sub.html" class="dp1">전체제품</a>
+                    <ul class="sub">
+                        <li class="it1"><a href="./sub.html">연령별</a></li>
+                        <li class="it2"><a href="./sub.html">브랜드별</a></li>
+                        <li class="it3"><a href="./sub.html">관심영역별</a></li>
+                        <li class="it4"><a href="">제품맵</a></li>
+                        <li class="it5"><a href="">브랜드소개</a></li>
+                    </ul>
+                </li>
+                <li class="item4"><a href="#" class="dp1">멤버십</a>
+                    <ul class="sub">
+                        <li class="it1"><a href="">연락처</a></li>
+                        <li class="it2"><a href="">고객문의</a></li>
+                        <li class="it3"><a href="">사이트맵</a></li>
+                        <li class="it4"><a href="">이용약관</a></li>
+                        <li class="it5"><a href="">개인정보처리방침</a></li>
+                    </ul>
+                </li>
+                <li class="item5"><a href="#" class="dp1">이벤트/캠페인</a>
+                    <ul class="sub">
+                        <li class="it1"><a href="">연락처</a></li>
+                        <li class="it2"><a href="">고객문의</a></li>
+                        <li class="it3"><a href="">사이트맵</a></li>
+                        <li class="it4"><a href="">이용약관</a></li>
+                        <li class="it5"><a href="">개인정보처리방침</a></li>
+                    </ul>
+                </li>
+                <li class="item6"><a href="#" class="dp1">마이페이지</a>
+                    <ul class="sub">
+                        <li class="it1"><a href="">관심제품</a></li>
+                        <li class="it2"><a href="">장바구니</a></li>
+                        <li class="it3"><a href="">거래내역조회</a></li>
+                        <li class="it4"><a href="">수업비조회</a></li>
+                        <li class="it5"><a href="">1:1문의내역</a></li>
+                        <li class="it5"><a href="">나의쿠폰 포인트조회</a></li>
+                    </ul>
+                </li>
+                <li class="item6"><a href="#" class="dp1">고객센터</a>
+                    <ul class="sub">
+                        <li class="it1"><a href="">자주묻는질문</a></li>
+                        <li class="it2"><a href="">1:1문의</a></li>
+                        <li class="it3"><a href="">지점/선생님 찾기</a></li>
+                        <li class="it4"><a href="">무료교육상담</a></li>
+                        <li class="it5"><a href="">무료교육상담확인</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <label for="ck2" class="close"></label>
+        </nav>
+
+
+        <nav id="gnb2">
+            <!--네비-->
+            <ul>
+                <li><a href="">한솔교육 스토리</a>
+                    <ul class="sub">
+                        <li><a href="">한솔교육스토리</a></li>
+                        <li><a href="">브랜드스토리</a></li>
+                        <li><a href="">한솔은 어떻게?</a></li>
+                        <li><a href="">한솔미디어</a></li>
+                        <li><a href="">Real 신기한 후기</a></li>
+                    </ul>
+                </li>
+                <li><a href="">교육서비스</a>
+                    <ul class="sub">
+                        <li><a href="">교육음원</a></li>
+                        <li><a href="">교육컨텐츠</a></li>
+                        <li><a href="">교육정보</a></li>
+                        <li><a href="">맞춤교육정보</a></li>
+                        <li><a href="">행복한교육이야기</a></li>
+                    </ul>
+                </li>
+                <li><a href="">전체제품</a>
+                    <ul class="sub">
+                        <li><a href="./sub.html">연령별</a></li>
+                        <li><a href="./sub.html">브랜드별</a></li>
+                        <li><a href="./sub.html">관심영역별</a></li>
+                        <li><a href="">제품맵</a></li>
+                        <li><a href="">브랜드소개</a></li>
+                    </ul>
+                </li>
+                <li><a href="">멤버십</a>
+                    <ul class="sub">
+                        <li><a href="">유아멤버십</a></li>
+                        <li><a href="">초등멤버십</a></li>
+                        <li><a href="">멤버십혜택</a></li>
+                        <li><a href="">특별도서선택</a></li>
+                        <li><a href="">멤버십 전체보기</a></li>
+                    </ul>
+                </li>
+                <li><a href="">이벤트/캠페인</a>
+                    <ul class="sub">
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">캠페인</a></li>
+                        <li><a href="">한글의 힘 캠페인</a></li>
+                        <li><a href="">15분 책읽기 캠페인</a></li>
+                        <li><a href="">15분 기적 만들기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="line-menu">
+            <div class="line">
+                <img src="./img/sub-img/home_img_03.png" alt="" class="home">
+                <p class="tit">전체메뉴</p>
+                <select>
+                    <option>브랜드별</option>
+                    <option>관심영역별</option>
+                    <option>브랜드별</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="price">
+            <h1 class="title">제품/브랜드</h1>
+            <h2 class="sub-title">한솔교육의 프리미엄 제품을 미리 경험해볼 수 있습니다.</h2>
+        </div>
+        <!--price-->
+
+
+
+
+        <div id="cont1">
+            <div class="img-box"><img src="./Details-img/Details_03.png" alt=""></div>
+            
+               <img src="./Details-img/Sharing_03.png" alt="" class="icon">
+               <div class="txt-box">
+                <h2>FINDEN ENGLISH (핀덴 잉글리시)</h2>
+                <h3>따라하는 리플레이 NO! 대화하는 롤플레이 YES!</h3>
+                <ul class="Learning">
+                    <li><a href="">추천연령</a><span>만 2세 ~ 만 5세</span></li>
+                    <li><a href="">학습유형</a><span>방문교육가능,음원활용</span></li>
+                </ul>
+                   </div>
+                <div class="price-box">
+                    <div class="price-img">
+                        <ul>
+                            <li><a href=""><img src="./Details-img/Item_03.png" alt=""></a><span>음악과 함께하는 학습</span></li>
+                            <li><a href=""><img src="./Details-img/Item_05.png" alt=""></a><span>믿고 맡기는 1등 선생님</span></li>
+                            <li><a href=""><img src="./Details-img/Item_07.png" alt=""></a><span>놀이학습과 교구</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn">
+                    <ul>
+                        <li><a href="">무료교육상담</a></li>
+                    </ul>
+                    <h3 class="pr">※ 주문기능은 한솔교육 정회원만 가능합니다.</h3>
+                </div>
+        </div>
+
+        
+        <div id="cont1-1">
+            <div class="img-box"><img src="./Details-img/Details_03.png" alt=""></div>
+            <div class="txt-box">
+               <img src="./Details-img/Sharing_03.png" alt="" class="icon">
+               <div class="txt-box">
+                <h2>FINDEN ENGLISH (핀덴 잉글리시)</h2>
+                <h3>따라하는 리플레이 NO! 대화하는 롤플레이 YES!</h3>
+                <ul class="Learning">
+                    <li><a href="">추천연령</a><span>만 2세 ~ 만 5세</span></li>
+                    <li><a href="">학습유형</a><span>방문교육가능,음원활용</span></li>
+                </ul>
+                   </div>
+                <div class="price-box">
+                    <div class="price-img">
+                        <ul>
+                            <li><a href=""><img src="./Details-img/Item_03.png" alt=""></a><span>음악과 함께하는 학습</span></li>
+                            <li><a href=""><img src="./Details-img/Item_05.png" alt=""></a><span>믿고 맡기는 1등 선생님</span></li>
+                            <li><a href=""><img src="./Details-img/Item_07.png" alt=""></a><span>놀이학습과 교구</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn">
+                    <ul>
+                        <li><a href="">무료교육상담</a></li>
+                    </ul>
+                    <h3 class="pr">※ 주문기능은 한솔교육 정회원만 가능합니다.</h3>
+                </div>
+                </div>
+        </div>
+
+        <div id="cont2">
+            <div class="price-menu">
+                <ul>
+                    <li><a href="">제품정보</a></li>
+                    <li><a href="">제품구성</a></li>
+                </ul>
+            </div>
+            <div class="hsbg">
+                <div class="hsimg">
+                    <h2 class="one">아이의 감각과 생각을 깨어주는 <strong>영유아 대화하는 롤플레이</strong></h2>
+                    <h2 class="tew">한솔교육 핀덴 잉글리시</h2>
+                    <h3 class="tree">우리 이 행복한 첫 영어 경험스토리텔링으로 <br>
+                        경험한 상황을 모방놀이로 따라 말하며 영어의 흥미를 느껴보세요</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/Nocm1xDF0xY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <img src="./Details-img/bgimg1.png" alt="">
+                <img src="./Details-img/bgimg2.png" alt="" class="bgimg">
+                <img src="./Details-img/bgimg3.png" alt="" class="bgimg">
+                <img src="./Details-img/bgimg4.png" alt="" class="bgimg">
+                <img src="./Details-img/bgimg5.png" alt="" class="bgimg">
+            </div>
+        </div>
+       
+       <div class="hsfooter">
+            <div id="quick">
+                <ul>
+                    <li><a href=""><span class="img"><img src="./Details-img/coo.png" alt=""></span><span>무료상담신청</span></a></li>
+                    <li><a href=""><span class="img"><img src="./Details-img/call.png" alt=""></span><span>무료발달검사</span></a></li>
+                    <li><a href=""><span class="img"><img src="./Details-img/faq.png" alt=""></span><span>FAQ</span></a></li>
+                    <li class="top"><a href=""><img src="./Details-img/btn_top.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+       
+        <div class="footer">
+            <div class="page6">
+                <p class="call">고객센터 : <strong>1588-1185</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 평일 09:00~18:00 (공휴일 제외)</p>
+                <div class="app">
+                    <ul>
+                        <li class="hs"><a href="">한솔교육 APP &nbsp;<img src="./img/main-img/ft_ico_07.png" alt=""></a></li>
+                        <li><a href="https://www.facebook.com/eduhansol1" target="_blank"><img src="./img/main-img/ft_ico_09.png" alt=""></a></li>
+                        <li><a href="https://blog.naver.com/eduhansol1" target="_blank"><img src="./img/main-img/ft_ico_11.png" alt=""></a></li>
+                        <li><a href="https://www.instagram.com/hansoledu_official/" target="_blank"><img src="./img/main-img/ft_ico_13.png" alt=""></a></li>
+                        <li><a href="https://www.youtube.com/user/hansoledu" target="_blank"><img src="./img/main-img/ft_ico_15.png" alt=""></a></li>
+
+                    </ul>
+                </div>
+                <div class="ft-menu">
+                    <ul>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href=""> 이용약관</a></li>
+                    </ul>
+                    <br>
+                </div>
+                <div class="copy">주)한솔교육 사업자등록번호 : 105-81-48593 통신판매신고 : 제2008-서울마포-0281호 <br>
+                    서울특별시 마포구 월드컵북로 361 (상암동) 한솔교육 빌딩 </div>
+                <div class="copy-right">&copy; Hansol Education Corp. All Rights Reserved.</div>
+                <div class="ft-logo"><img src="./img/main-img/ft_img_03.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!--wrap-->
+</body>
+
+</html>
