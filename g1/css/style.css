@@ -1,0 +1,2281 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    font-family: 'Ropa Sans', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#wrpa {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 120px;
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    position: relative;
+
+    border-bottom: 3px solid #006200;
+
+}
+
+.hd {
+    /*
+    background-color: red;*/
+    width: 70%;
+    margin: 0 auto;
+}
+
+.top-bar {
+    width: 300px;
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    float: right;
+}
+
+.top-bar li {
+    float: left;
+    width: 16%;
+}
+
+.top-bar li a {
+    display: block;
+    text-align: center;
+}
+
+.top-bar li i {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    width: 34px;
+    vertical-align: middle;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #d4d4d4;
+    color: #fff;
+}
+
+.top-bar li a i:first-child:hover {
+    background-color: darkblue;
+}
+
+.top-bar li a i.ic2:hover {
+    background-color: green;
+}
+
+.top-bar li a i.ic3:hover {
+    background-color: #ff386d;
+}
+
+.top-bar li a i.ic4:hover {
+    background-color: #e30000;
+}
+
+.logo {
+    padding-top: 15px;
+    width: 110px;
+    height: 50px;
+    display: block;
+}
+
+.logo img {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.gnb {
+    position: absolute;
+    top: 70px;
+    left: 550px;
+    width: 1100px;
+}
+
+.gnb li {
+    float: left;
+    width: 20%;
+}
+
+.gnb li a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.gnb li a:hover {
+    color: #006200;
+}
+
+.slider {
+    position: relative;
+    clear: both;
+
+    width: 100%;
+}
+
+
+/*연두브랜드*/
+.brand {
+    height: 90vh;
+    width: 100%;
+    clear: both;
+    position: relative;
+}
+
+.brand h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.brandTabbtn {
+    /*transition: 0.5s;
+   
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;*/
+    
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    
+}
+
+.brandTabbtn .Tabbtn {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    line-height: 80px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 70px;
+    font-size: 15px;
+    vertical-align: middle;
+    background-color: rgba(255,255,255,0.5);
+}
+.brandTabbtn .Tabbtn::after{
+    content: "";
+    height: 70px;
+    width: 1px;
+    background-color: #ccc;
+    display: block;
+    position: absolute;
+    left: 110px;
+}
+.brandTabbtn .Tabbtn:last-child::after{
+    content: "";
+    height: 0;
+    width: 0;
+}
+.Conbox {
+    display: none;
+}
+
+.raItem {
+    display: none;
+}
+
+#ra1:checked ~ .brandTabbtn .Tabbtn.item1 {
+    background-color: #680805;
+    color: #fff;
+
+}
+
+#ra2:checked ~ .brandTabbtn .Tabbtn.item2 {
+    background-color: #388211;
+    color: #fff;
+}
+
+#ra3:checked ~ .brandTabbtn .Tabbtn.item3 {
+    background-color: #b94e00;
+    color: #fff;
+}
+
+#ra4:checked ~ .brandTabbtn .Tabbtn.item4 {
+    background-color: #ca6b00;
+    color: #fff;
+}
+
+.Conbox {
+    display: none;
+}
+
+#ra1:checked ~ .brandConbox .Conbox.item1 {
+    display: block;
+}
+
+#ra2:checked ~ .brandConbox .Conbox.item2 {
+    display: block;
+}
+
+#ra3:checked ~ .brandConbox .Conbox.item3 {
+    display: block;
+}
+
+#ra4:checked ~ .brandConbox .Conbox.item4 {
+    display: block;
+}
+
+.brandConbox {
+    cursor: pointer;
+}
+
+.brandConbox .Conbox.item1 {
+    background-image: url(../img/images/images/brand1_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #680805;
+}
+
+.brandConbox .Conbox.item2 {
+    background-image: url(../img/images/images/brand2_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #388211;
+}
+
+.brandConbox .Conbox.item3 {
+    background-image: url(../img/images/images/brand4_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #b94e00;
+}
+
+.brandConbox .Conbox.item4 {
+    background-image: url(../img/images/images/brand3_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #ca6b00;
+}
+
+.brandConbox .Conbox {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.brandConbox .Conbox .txt-box {
+    width: 30%;
+    box-sizing: border-box;
+    position: absolute;
+    right: 400px;
+    float: right;
+    margin: 0 auto;
+    display: block;
+    text-align: right;
+    height: 700px;
+    display: block;
+}
+
+.brandConbox .Conbox.item1 .txt-box h2 {
+    color: #8a000d;
+    font-size: 30px;
+    padding-top: 100px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item1 .txt-box .das {
+    color: #555;
+    font-size: 18px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+.brandConbox .Conbox.item1 .txt-box .das2 {
+    color: #555;
+    font-size: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding-bottom: 10px;
+    line-height: 25px;
+    text-align: justify;
+
+}
+
+.brandConbox .Conbox.item1 .txt-box .num {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.brandConbox .Conbox.item1 .txt-box .num li {
+    width: 20%;
+    clear: both;
+    height: 20px;
+    float: left;
+}
+
+.brandConbox .Conbox.item1 .txt-box .num li a {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 50px;
+}
+
+.brandConbox .Conbox.item1 .txt-box .num span {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.brandConbox .Conbox.item1 .txt-box .num span:hover {
+    background-color: #aea59a;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item1 .txt-box .num .spinner-num {
+    padding: 0.4em 0;
+    width: 25%;
+    color: #444;
+    border: 0;
+    display: block;
+    border-top: #aea59a 1px solid;
+    border-bottom: #aea59a 1px solid;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0;
+    position: absolute;
+    right: 310px;
+    bottom: -45px;
+}
+
+.blind,
+legend {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.brandConbox .Conbox.item1 .txt-box .num .price {
+    margin-top: 25px;
+}
+
+.brandConbox .Conbox.item1 .txt-box .num .price::after {
+    content: "3,700원";
+    position: absolute;
+    display: block;
+    bottom: -83px;
+    left: 130px;
+    color: #680805;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.brandConbox .Conbox.item1 .txt-box .Payment {
+    clear: both;
+    text-align: left;
+    padding-top: 100px;
+}
+
+.brandConbox .Conbox.item1 .txt-box .Payment li {
+    float: left;
+    width: 40%;
+}
+
+.brandConbox .Conbox.item1 .txt-box .Payment li a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6f6a64;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item1 .txt-box .Payment li:last-child a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #a6191f;
+    color: #fff;
+}
+
+
+
+.brandConbox .Conbox.item2 .txt-box h2 {
+    color: #388211;
+    font-size: 30px;
+    padding-top: 100px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .das {
+    color: #555;
+    font-size: 18px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .das2 {
+    color: #555;
+    font-size: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding-bottom: 10px;
+    line-height: 25px;
+    text-align: justify;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .num {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .num li {
+    width: 20%;
+    clear: both;
+    height: 20px;
+    float: left;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num li a {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 50px;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num span {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num span:hover {
+    background-color: #aea59a;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num .spinner-num {
+    padding: 0.4em 0;
+    width: 25%;
+    color: #444;
+    border: 0;
+    display: block;
+    border-top: #aea59a 1px solid;
+    border-bottom: #aea59a 1px solid;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0;
+    position: absolute;
+    right: 310px;
+    bottom: -45px;
+}
+
+.blind,
+legend {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+.brandConbox .Conbox.item1 .txt-box .num1 {
+    margin-top:40px;
+    font-size: 25px;
+    text-align: left;
+}
+.brandConbox .Conbox.item1 .txt-box .num1 span {
+   
+   position: absolute;
+    left: 100px;
+    color: #a6191f;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num1 {
+    margin-top:40px;
+    font-size: 25px;
+    text-align: left;
+}
+.brandConbox .Conbox.item2 .txt-box .num1 span {
+   
+   position: absolute;
+    left: 100px;
+    color: #388211;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num1 {
+    margin-top:40px;
+    font-size: 25px;
+    text-align: left;
+}
+.brandConbox .Conbox.item3 .txt-box .num1 span {
+   
+   position: absolute;
+    left: 100px;
+    color: #b94e00;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num1 {
+    margin-top:40px;
+    font-size: 25px;
+    text-align: left;
+}
+.brandConbox .Conbox.item4 .txt-box .num1 span {
+   
+   position: absolute;
+    left: 100px;
+    color: #ca6b00;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+
+
+
+.brandConbox .Conbox.item2 .txt-box .Payment {
+    clear: both;
+    text-align: left;
+    padding-top: 100px;
+}
+
+.brandConbox .Conbox.item2 .txt-box .Payment li {
+    float: left;
+    width: 40%;
+}
+
+.brandConbox .Conbox.item2 .txt-box .Payment li a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6f6a64;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item2 .txt-box .Payment li:last-child a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #388211;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+.brandConbox .Conbox.item3 .txt-box h2 {
+    color: #b94e00;
+    font-size: 30px;
+    padding-top: 100px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item3 .txt-box .das {
+    color: #555;
+    font-size: 18px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+.brandConbox .Conbox.item3 .txt-box .das2 {
+    color: #555;
+    font-size: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding-bottom: 10px;
+    line-height: 25px;
+    text-align: justify;
+
+}
+
+.brandConbox .Conbox.item3 .txt-box .num {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.brandConbox .Conbox.item3 .txt-box .num li {
+    width: 20%;
+    clear: both;
+    height: 20px;
+    float: left;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num li a {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 50px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num span {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num span:hover {
+    background-color: #aea59a;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num .spinner-num {
+    padding: 0.4em 0;
+    width: 25%;
+    color: #444;
+    border: 0;
+    display: block;
+    border-top: #aea59a 1px solid;
+    border-bottom: #aea59a 1px solid;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0;
+    position: absolute;
+    right: 310px;
+    bottom: -45px;
+}
+
+.blind,
+legend {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.brandConbox .Conbox.item3 .txt-box .num .price {
+    margin-top: 25px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num .price::after {
+    content: "3,700원";
+    position: absolute;
+    display: block;
+    bottom: -83px;
+    left: 130px;
+    color: #b94e00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .Payment {
+    clear: both;
+    text-align: left;
+    padding-top: 100px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .Payment li {
+    float: left;
+    width: 40%;
+}
+
+.brandConbox .Conbox.item3 .txt-box .Payment li a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6f6a64;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item3 .txt-box .Payment li:last-child a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #b94e00;
+    color: #fff;
+
+}
+ 
+
+
+
+
+
+
+
+
+.brandConbox .Conbox.item4 .txt-box h2 {
+    color: #ca6b00;
+    font-size: 30px;
+    padding-top: 100px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item4 .txt-box .das {
+    color: #555;
+    font-size: 18px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+.brandConbox .Conbox.item4 .txt-box .das2 {
+    color: #555;
+    font-size: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding-bottom: 10px;
+    line-height: 25px;
+    text-align: justify;
+
+}
+
+.brandConbox .Conbox.item4 .txt-box .num {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.brandConbox .Conbox.item4 .txt-box .num li {
+    width: 20%;
+    clear: both;
+    height: 20px;
+    float: left;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num li a {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 50px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num span {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num span:hover {
+    background-color: #aea59a;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num .spinner-num {
+    padding: 0.4em 0;
+    width: 25%;
+    color: #444;
+    border: 0;
+    display: block;
+    border-top: #aea59a 1px solid;
+    border-bottom: #aea59a 1px solid;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0;
+    position: absolute;
+    right: 310px;
+    bottom: -45px;
+}
+
+.blind,
+legend {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.brandConbox .Conbox.item4 .txt-box .num .price {
+    margin-top: 25px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num .price::after {
+    content: "3,700원";
+    position: absolute;
+    display: block;
+    bottom: -83px;
+    left: 130px;
+    color: #ca6b00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .Payment {
+    clear: both;
+    text-align: left;
+    padding-top: 100px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .Payment li {
+    float: left;
+    width:40%;
+}
+
+.brandConbox .Conbox.item4 .txt-box .Payment li a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6f6a64;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item4 .txt-box .Payment li:last-child a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ca6b00;
+    color: #fff;
+}
+
+
+
+
+
+
+/*연두해요왜?*/
+.why {
+    clear: both;
+    position: relative;
+    background-image: url(../img/images/images/why_02_02.png);
+    width: 100%;
+    height: 100vh;
+}
+
+.why-2 {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.why-2 h2 {
+    padding-top: 100px;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+#ra5:checked ~ .whyTabbtn .WtabBtn.item5 {
+    background-color: #749a37;
+    color: #fff;
+}
+
+#ra6:checked ~ .whyTabbtn .WtabBtn.item6 {
+    background-color: #000;
+    color: #fff;
+}
+
+
+#ra5:checked ~ .whyConbtn .Wconbtn.item5 {
+    display: block;
+}
+
+#ra6:checked ~ .whyConbtn .Wconbtn.item6 {
+    display: block;
+}
+
+
+.raItem1 {
+    display: none;
+}
+
+.whyTabbtn {
+    margin-top: 30px;
+    transition: 0.5s;
+    height: 50px;
+    line-height: 50px;
+    color: #000;
+    width: 40%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.whyTabbtn .WtabBtn {
+    width: 25%;
+    border-bottom: 0;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    background-color: #fff;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.Wconbtn {
+    display: none;
+}
+
+.whyConbtn .Wtxt-box {
+    width: 700px;
+    height: 500px;
+    padding: 30px;
+    border: 3px dotted #eee;
+    background-color: #fcfcfc;
+}
+
+.whyConbtn .Wtxt-box .Wtit {
+    margin-top: -100px;
+    margin-bottom: 20px;
+    color: #388211;
+}
+
+.whyConbtn .Wtxt-box .Wdas {
+    font-size: 18px;
+    color: #333;
+    line-height: 25px;
+}
+
+.whyConbtn .Wconbtn.item6 .Wtxt-box {
+    width: 920px;
+    height: 500px;
+    padding: 30px;
+    border: 3px dotted #eee;
+    background-color: #fcfcfc;
+}
+
+.whyConbtn .Wtxt-box li {
+    float: left;
+    width: 33.3333%;
+}
+
+.whyConbtn .Wtxt-box li a {
+    display: block;
+    font-size: 25px;
+    margin-top: 70px;
+    color: #388211;
+}
+
+.whyConbtn .Wtxt-box li p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.whyConbtn .Wtxt-box img {
+    display: block;
+    position: absolute;
+    bottom: 330px;
+}
+
+/*비디오*/
+.video {
+    width: 100%;
+    height: 90vh;
+    clear: both;
+    position: relative;
+}
+
+.vid {
+    padding-top: 100px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.vid h2 {
+    margin-top: 5px;
+    color: #094516;
+    font-size: 30px;
+
+}
+
+.vid h3 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.videolist {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.video1 li {
+    float: left;
+    width: 60%;
+}
+
+.video1 li iframe {
+    margin-top: 20px;
+}
+
+.videotxt {
+    width: 40%;
+    float: right;
+    padding-top: 50px;
+}
+
+.videotxt li {
+    float: left;
+    width: 100%;
+}
+
+.videotxt li p {
+    text-indent: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 16px;
+}
+
+.videotxt h2 {
+    color: #094516;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.videotxt li p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../img/images/images/list_03.png);
+    width: 30px;
+    height: 30px;
+}
+.videotxt .vtitdas{
+    font-size: 16px;
+    width: 100%;
+    float: right;
+    color: #555;
+    margin-top: 30px;
+    line-height:25px;
+    background-color: #f9fff5;
+    height: 120px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.videotxt .vtitdas strong{
+    font-size: 19px;
+}
+/*레시피*/
+
+.Recipe {
+    width: 100%;
+    height: 100vh;
+    clear: both;
+    background-color: #f5faff;
+    position: relative;
+}
+
+.rec {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.rec h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 60px;
+}
+ /* 3번째 목록*/
+   /*     .lst.sq3 li {
+            position: relative;
+            overflow: hidden
+        }
+
+        .lst.sq3 .img_box {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 5;
+            overflow: hidden;
+        }
+
+        .bx.sq9:hover .img_box {
+            opacity: 0.9;
+            z-index: 0;
+        }
+
+        .bx.sq10:hover .img_box {
+            z-index: 0;
+            opacity: 0.9;
+        }
+
+        .bx.sq11:hover .img_box {
+            z-index: 0;
+            opacity: 0.9;
+        }
+
+        .bx.sq9:hover .tit_box {
+            background-color: rgba(40, 40, 40, 0.4);
+        }
+.bx.sq10:hover .tit_box {
+            background-color: rgba(40, 40, 40, 0.4);
+        }
+.bx.sq12:hover .tit_box {
+            background-color: rgba(40, 40, 40, 0.4);
+        }
+.bx.sq11:hover .tit_box {
+            background-color: rgba(40, 40, 40, 0.4);
+        }
+
+        .bx.sq12:hover .img_box {
+            opacity: 0.9;
+            z-index: 0;
+        }
+
+  .lst {
+            clear: both;
+            width: 100%;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .lst li {
+            float: left;
+            width: 400px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .lst.sq li {
+            overflow: hidden;
+        }
+
+        .lst .bx_fr {
+            width: 400px;
+            height: 300px;
+            transition: 0.5s;
+        }
+
+        .lst .bx_fr .img_box,
+        .lst .bx_fr .tit_box {
+            float: left;
+        }
+
+        .lst li .img_box {
+            cursor: pointer;
+            width: 400px;
+            height: 300px;
+            transition: 0.5s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .lst li .img_box img {
+            width: 100%;
+            height: 300px;
+            display: block;
+        }
+
+        .lst li .tit_box {
+            width: 400px;
+            height: 100px;
+            background: #282828;
+            color: #fff;
+            margin-top: 200px;
+            transition: 0.5s;
+            position: relative;
+        }
+
+        .tit {
+            padding: 5px;
+            font-size: 20px;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+        }
+
+        .com {
+            text-align: center;
+            padding: 14px;
+        }
+
+        .lnk_box {
+            text-align: center;
+            line-height: 1.3;
+            padding-top: 36px;
+        }
+
+     */
+.lst.sq3{
+    overflow: hidden;
+    position: relative;
+}
+.lst.sq3 li{
+    float: left;
+    width: 24%;
+    margin-right: 1%;
+}
+.lst.sq3 img{
+    opacity: 1;
+    transition: 0.5s;
+    height: 300px;
+    overflow: hidden;box-sizing: border-box;
+    width: 100%;   cursor: pointer;
+}
+.lst.sq3  .tit_box{
+    float: left;
+    width: 24%;
+    cursor: pointer;
+    margin-right: 1%;
+}
+.lst.sq3 img:hover{
+    opacity: 0.6;
+}
+
+.tit_box{
+   overflow: hidden;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff;
+    position: absolute;
+    top: 200px;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+}
+.tit_box .tit{
+    font-size: 19px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.tit_box .com{
+   color: #555;
+    font-size: 15px;
+}
+.recbtn{
+    margin: 0 auto;
+    margin-top:70px;
+    display: block;
+    text-align: center;
+    width:180px;
+    height: 40px;
+    background-color: #388211;
+    color: #fff;
+    line-height: 40px;
+    font-size: 18px;
+}
+.recbtn:hover{
+    background-color: #226200;
+}
+
+.lst.sq4{
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+.lst.sq4 li{
+    float: left;
+    width: 33.3333%;
+}
+.lst.sq4 li img{
+    opacity: 1;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 489px;
+    height: 290px;
+    transition: 0.5s;
+ 
+}
+.lst.sq4 li img:hover{
+    opacity: 0.8;
+}
+.lst.sq4  .tit_box{
+    float: left;
+    width: 32%;
+    cursor: pointer;
+    margin-right: 1%;
+}
+
+/*.tit_box{
+    opacity: 0;
+    text-align: center;
+    cursor: pointer;
+    width: 490px;
+    background-color: rgba(255,255,255,0.8);
+}
+.tit_box .tit{
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top:20px;
+}
+.tit_box .com{
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tit_box:hover{
+}*/
+
+/*sns*/
+.sns{
+    width: 100%;
+    height: 70vh;
+    clear: both;
+    position: relative;
+}
+.snslist{
+    width: 80%;
+    margin:0 auto;
+}
+.snslist .snsmore{
+    position: relative;
+    font-size: 19px;
+    text-align: left;
+    font-weight: normal;
+}
+.snslist .snsmore strong{
+    font-size: 26px;
+}
+.snslist h2{
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+ .owl-theme {
+            padding-top: 3em;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+
+
+        .owl-theme .item img {
+            cursor: pointer;
+            transition: 0.5s;
+            margin-bottom: 10px;
+            display: block;
+            width: 300px;
+            height: 300px;
+            transition: 0.5s;
+            overflow: hidden;
+            transform: scale(0.95);
+            position: relative;
+        }
+.owl-theme .item img:hover{
+    transform: scale(1.0);
+}
+.snslist .snsmore::after{
+    content: "";
+    width: 980px;
+    top: 15px;
+    right: 170px;
+    height: 1px;
+    background-color: #ccc;
+    display: block;
+    position: absolute;
+}
+.snslist .snsicon{
+    float: right;
+    position: absolute;
+    right: 200px;
+    bottom:145px;
+    
+}
+.snslist .snsicon img{
+    width:30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.snslist .snsicon li{float: left;}
+
+
+
+/*.ft*/
+.ft{
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+}
+.ftlist{
+    width: 80%;
+    margin: 0 auto;
+}
+.ftlogo{
+    display: block;
+    padding-top:50px;
+}
+
+.ftgnb{
+    top:70px;
+    left: 550px;
+    position: absolute;
+    color: #fff;
+    width: 400px;
+}
+.ftgnb li{
+    float: left;
+    margin-right: 30px;
+}
+.ftgnb li a{
+    display: block;
+    font-size: 15px;
+}
+.copyright{
+    margin-top: -20px;
+    text-align: center;
+    color: #fff;
+}
+
+.ftlogo2{
+    float: right;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    display: block;
+}
+.ftlogo2 img{
+    width: 70px;
+    height: 70px;
+}
+
+
+.topbtn{
+    position: fixed;
+    bottom:100px;
+    right: 80px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    background-color: rgba(162, 162, 162, 0.5);
+    box-shadow: 0 0 3px #eee;
+    display: block;
+}
+
+
+
+@media screen and (max-width:767px){
+        #wrap {
+        column-count: 1;
+    }
+    .gnb{
+        display: none;
+    }
+    .top-bar{
+        display: none;
+    }
+    .logo{
+        margin: 0 auto;
+    }
+    .logo img{
+        width: 100px;
+        height: 80px;
+    }
+    .header{
+        height: 100px;
+    }
+    .slider {
+    position: relative;
+    clear: both;
+    height: 25vh;
+    width: 100%;
+}
+    .slider img{
+        width: 100%;
+        height: 25vh;
+    }
+
+
+/*연두브랜드*/
+.brand {
+    height: 90vh;
+    width: 100%;
+    clear: both;
+    position: relative;
+}
+
+.brand h2 {
+    clear: both;
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.brandTabbtn {
+    /*transition: 0.5s;
+   
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;*/
+    
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    
+}
+
+.brandTabbtn .Tabbtn {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;
+    line-height: 80px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin:1px;
+    font-size: 14px;
+    vertical-align: middle;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.Conbox {
+    display: none;
+}
+
+.raItem {
+    display: none;
+}
+
+#ra1:checked ~ .brandTabbtn .Tabbtn.item1 {
+    background-color: #680805;
+    color: #fff;
+
+}
+
+#ra2:checked ~ .brandTabbtn .Tabbtn.item2 {
+    background-color: #388211;
+    color: #fff;
+}
+
+#ra3:checked ~ .brandTabbtn .Tabbtn.item3 {
+    background-color: #b94e00;
+    color: #fff;
+}
+
+#ra4:checked ~ .brandTabbtn .Tabbtn.item4 {
+    background-color: #ca6b00;
+    color: #fff;
+}
+
+.Conbox {
+    display: none;
+}
+
+#ra1:checked ~ .brandConbox .Conbox.item1 {
+    display: block;
+}
+
+#ra2:checked ~ .brandConbox .Conbox.item2 {
+    display: block;
+}
+
+#ra3:checked ~ .brandConbox .Conbox.item3 {
+    display: block;
+}
+
+#ra4:checked ~ .brandConbox .Conbox.item4 {
+    display: block;
+}
+
+.brandConbox {
+    cursor: pointer;
+}
+
+.brandConbox .Conbox.item1 {
+    background-image: url(../img/images/images/brand1_02.png);
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    background-size: cover;
+    border-top: 1px solid #680805;
+}
+
+.brandConbox .Conbox.item2 {
+    background-image: url(../img/images/images/brand2_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #388211;
+}
+
+.brandConbox .Conbox.item3 {
+    background-image: url(../img/images/images/brand4_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #b94e00;
+}
+
+.brandConbox .Conbox.item4 {
+    background-image: url(../img/images/images/brand3_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #ca6b00;
+}
+
+.brandConbox .Conbox {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.brandConbox .Conbox .txt-box {
+    width: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    right: 200px;
+    float: right;
+    margin: 0 auto;
+    display: block;
+    text-align: right;
+    height: 600px;
+    display: block;
+}
+
+.brandConbox .Conbox.item1 .txt-box h2 {
+    color: #8a000d;
+    font-size: 20px;
+    padding-top: 130px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item1 .txt-box .das {
+    color: #555;
+    font-size: 15px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.brandConbox .Conbox.item1 .txt-box .Payment li {
+    float: left;
+    width: 50%;
+}
+
+.brandConbox .Conbox.item1 .txt-box .Payment li a {
+    display: block;
+    text-align: center;
+    width: 100px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6f6a64;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item1 .txt-box .Payment li:last-child a {
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #a6191f;
+    color: #fff;
+}
+
+
+
+.brandConbox .Conbox.item2 .txt-box h2 {
+    color: #388211;
+    font-size: 30px;
+    padding-top: 100px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .das {
+    color: #555;
+    font-size: 18px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .das2 {
+    color: #555;
+    font-size: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding-bottom: 10px;
+    line-height: 25px;
+    text-align: justify;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .num {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .num li {
+    width: 20%;
+    clear: both;
+    height: 20px;
+    float: left;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num li a {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 50px;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num span {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num span:hover {
+    background-color: #aea59a;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num .spinner-num {
+    padding: 0.4em 0;
+    width: 25%;
+    color: #444;
+    border: 0;
+    display: block;
+    border-top: #aea59a 1px solid;
+    border-bottom: #aea59a 1px solid;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0;
+    position: absolute;
+    right: 310px;
+    bottom: -45px;
+}
+
+.blind,
+legend {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+.brandConbox .Conbox.item1 .txt-box .num1 {
+    margin-top:30px;
+    font-size: 23px;
+    text-align: left;
+}
+.brandConbox .Conbox.item1 .txt-box .num1 span {
+   
+   position: absolute;
+    left: 100px;
+    color: #a6191f;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num1 {
+    margin-top:40px;
+    font-size: 25px;
+    text-align: left;
+}
+.brandConbox .Conbox.item2 .txt-box .num1 span {
+   
+   position: absolute;
+    left: 100px;
+    color: #388211;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num1 {
+    margin-top:40px;
+    font-size: 25px;
+    text-align: left;
+}
+.brandConbox .Conbox.item3 .txt-box .num1 span {
+   
+   position: absolute;
+    left: 100px;
+    color: #b94e00;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num1 {
+    margin-top:40px;
+    font-size: 25px;
+    text-align: left;
+}
+.brandConbox .Conbox.item4 .txt-box .num1 span {
+   
+   position: absolute;
+    left: 100px;
+    color: #ca6b00;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+
+
+
+.brandConbox .Conbox.item2 .txt-box .Payment {
+    clear: both;
+    text-align: left;
+    padding-top: 100px;
+}
+
+.brandConbox .Conbox.item2 .txt-box .Payment li {
+    float: left;
+    width: 40%;
+}
+
+.brandConbox .Conbox.item2 .txt-box .Payment li a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6f6a64;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item2 .txt-box .Payment li:last-child a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #388211;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+.brandConbox .Conbox.item3 .txt-box h2 {
+    color: #b94e00;
+    font-size: 30px;
+    padding-top: 100px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item3 .txt-box .das {
+    color: #555;
+    font-size: 18px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+.brandConbox .Conbox.item3 .txt-box .das2 {
+    color: #555;
+    font-size: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding-bottom: 10px;
+    line-height: 25px;
+    text-align: justify;
+
+}
+
+.brandConbox .Conbox.item3 .txt-box .num {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.brandConbox .Conbox.item3 .txt-box .num li {
+    width: 20%;
+    clear: both;
+    height: 20px;
+    float: left;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num li a {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 50px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num span {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num span:hover {
+    background-color: #aea59a;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num .spinner-num {
+    padding: 0.4em 0;
+    width: 25%;
+    color: #444;
+    border: 0;
+    display: block;
+    border-top: #aea59a 1px solid;
+    border-bottom: #aea59a 1px solid;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0;
+    position: absolute;
+    right: 310px;
+    bottom: -45px;
+}
+
+.blind,
+legend {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.brandConbox .Conbox.item3 .txt-box .num .price {
+    margin-top: 25px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .num .price::after {
+    content: "3,700원";
+    position: absolute;
+    display: block;
+    bottom: -83px;
+    left: 130px;
+    color: #b94e00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .Payment {
+    clear: both;
+    text-align: left;
+    padding-top: 100px;
+}
+
+.brandConbox .Conbox.item3 .txt-box .Payment li {
+    float: left;
+    width: 40%;
+}
+
+.brandConbox .Conbox.item3 .txt-box .Payment li a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6f6a64;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item3 .txt-box .Payment li:last-child a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #b94e00;
+    color: #fff;
+
+}
+ 
+
+
+
+
+
+
+
+
+.brandConbox .Conbox.item4 .txt-box h2 {
+    color: #ca6b00;
+    font-size: 30px;
+    padding-top: 100px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item4 .txt-box .das {
+    color: #555;
+    font-size: 18px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+.brandConbox .Conbox.item4 .txt-box .das2 {
+    color: #555;
+    font-size: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding-bottom: 10px;
+    line-height: 25px;
+    text-align: justify;
+
+}
+
+.brandConbox .Conbox.item4 .txt-box .num {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.brandConbox .Conbox.item4 .txt-box .num li {
+    width: 20%;
+    clear: both;
+    height: 20px;
+    float: left;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num li a {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 50px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num span {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num span:hover {
+    background-color: #aea59a;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num .spinner-num {
+    padding: 0.4em 0;
+    width: 25%;
+    color: #444;
+    border: 0;
+    display: block;
+    border-top: #aea59a 1px solid;
+    border-bottom: #aea59a 1px solid;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0;
+    position: absolute;
+    right: 310px;
+    bottom: -45px;
+}
+
+.blind,
+legend {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.brandConbox .Conbox.item4 .txt-box .num .price {
+    margin-top: 25px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .num .price::after {
+    content: "3,700원";
+    position: absolute;
+    display: block;
+    bottom: -83px;
+    left: 130px;
+    color: #ca6b00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .Payment {
+    clear: both;
+    text-align: left;
+    padding-top: 100px;
+}
+
+.brandConbox .Conbox.item4 .txt-box .Payment li {
+    float: left;
+    width:40%;
+}
+
+.brandConbox .Conbox.item4 .txt-box .Payment li a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6f6a64;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item4 .txt-box .Payment li:last-child a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ca6b00;
+    color: #fff;
+}
+
+
+
+}

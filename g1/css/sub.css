@@ -1,0 +1,674 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    font-family: 'Ropa Sans', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#wrpa {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 120px;
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    position: relative;
+
+    border-bottom: 3px solid #006200;
+
+}
+
+.hd {
+    /*
+    background-color: red;*/
+    width: 70%;
+    margin: 0 auto;
+}
+
+.top-bar {
+    width: 300px;
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    float: right;
+}
+
+.top-bar li {
+    float: left;
+    width: 16%;
+}
+
+.top-bar li a {
+    display: block;
+    text-align: center;
+}
+
+.top-bar li i {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    width: 34px;
+    vertical-align: middle;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #d4d4d4;
+    color: #fff;
+}
+
+.top-bar li a i:first-child:hover {
+    background-color: darkblue;
+}
+
+.top-bar li a i.ic2:hover {
+    background-color: green;
+}
+
+.top-bar li a i.ic3:hover {
+    background-color: #ff386d;
+}
+
+.top-bar li a i.ic4:hover {
+    background-color: #e30000;
+}
+
+.logo {
+    padding-top: 15px;
+    width: 110px;
+    height: 50px;
+    display: block;
+}
+
+.logo img {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.gnb {
+    position: absolute;
+    top: 70px;
+    left: 550px;
+    width: 1100px;
+}
+
+.gnb li {
+    float: left;
+    width: 20%;
+}
+
+.gnb li a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.gnb li a:hover {
+    color: #006200;
+}
+
+
+
+
+/*연두해요왜?*/
+.why {
+    clear: both;
+    position: relative;
+    background-image: url(../img/images/images/why_02_02.png);
+    width: 100%;
+    height: 100vh;
+}
+
+.why-2 {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.why-2 h2 {
+    padding-top: 100px;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+#ra5:checked ~ .whyTabbtn .WtabBtn.item5 {
+    background-color: #749a37;
+    color: #fff;
+}
+
+#ra6:checked ~ .whyTabbtn .WtabBtn.item6 {
+    background-color: #000;
+    color: #fff;
+}
+
+
+#ra5:checked ~ .whyConbtn .Wconbtn.item5 {
+    display: block;
+}
+
+#ra6:checked ~ .whyConbtn .Wconbtn.item6 {
+    display: block;
+}
+
+
+.raItem1 {
+    display: none;
+}
+
+.whyTabbtn {
+    margin-top: 30px;
+    transition: 0.5s;
+    height: 50px;
+    line-height: 50px;
+    color: #000;
+    width: 40%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.whyTabbtn .WtabBtn {
+    width: 25%;
+    border-bottom: 0;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    background-color: #fff;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.Wconbtn {
+    display: none;
+}
+
+.whyConbtn .Wtxt-box {
+    width: 700px;
+    height: 500px;
+    padding: 30px;
+    border: 3px dotted #eee;
+    background-color: #fcfcfc;
+}
+
+.whyConbtn .Wtxt-box .Wtit {
+    margin-top: -100px;
+    margin-bottom: 20px;
+    color: #388211;
+}
+
+.whyConbtn .Wtxt-box .Wdas {
+    font-size: 18px;
+    color: #333;
+    line-height: 25px;
+}
+
+.whyConbtn .Wconbtn.item6 .Wtxt-box {
+    width: 920px;
+    height: 500px;
+    padding: 30px;
+    border: 3px dotted #eee;
+    background-color: #fcfcfc;
+}
+
+.whyConbtn .Wtxt-box li {
+    float: left;
+    width: 33.3333%;
+}
+
+.whyConbtn .Wtxt-box li a {
+    display: block;
+    font-size: 25px;
+    margin-top: 70px;
+    color: #388211;
+}
+
+.whyConbtn .Wtxt-box li p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.whyConbtn .Wtxt-box img {
+    display: block;
+    position: absolute;
+    bottom: 330px;
+}
+
+
+
+
+
+
+
+
+/*.ft*/
+.ft{
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+}
+.ftlist{
+    width: 80%;
+    margin: 0 auto;
+}
+.ftlogo{
+    display: block;
+    padding-top:50px;
+}
+
+.ftgnb{
+    top:70px;
+    left: 550px;
+    position: absolute;
+    color: #fff;
+    width: 400px;
+}
+.ftgnb li{
+    float: left;
+    margin-right: 30px;
+}
+.ftgnb li a{
+    display: block;
+    font-size: 15px;
+}
+.copyright{
+    margin-top: -20px;
+    text-align: center;
+    color: #fff;
+}
+
+.ftlogo2{
+    float: right;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    display: block;
+}
+.ftlogo2 img{
+    width: 70px;
+    height: 70px;
+}
+
+
+
+
+
+@media screen and (max-width:767px){
+        #wrap {
+        column-count: 1;
+    }
+    .gnb{
+        display: none;
+    }
+    .top-bar{
+        display: none;
+    }
+    .logo{
+        margin: 0 auto;
+    }
+    .logo img{
+        width: 100px;
+        height: 80px;
+    }
+    .header{
+        height: 100px;
+    }
+    .slider {
+    position: relative;
+    clear: both;
+    height: 25vh;
+    width: 100%;
+}
+    .slider img{
+        width: 100%;
+        height: 25vh;
+    }
+
+
+/*연두브랜드*/
+.brand {
+    height: 90vh;
+    width: 100%;
+    clear: both;
+    position: relative;
+}
+
+.brand h2 {
+    clear: both;
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.brandTabbtn {
+    /*transition: 0.5s;
+   
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;*/
+    
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    
+}
+
+.brandTabbtn .Tabbtn {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;
+    line-height: 80px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin:1px;
+    font-size: 14px;
+    vertical-align: middle;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.Conbox {
+    display: none;
+}
+
+.raItem {
+    display: none;
+}
+
+#ra1:checked ~ .brandTabbtn .Tabbtn.item1 {
+    background-color: #680805;
+    color: #fff;
+
+}
+
+#ra2:checked ~ .brandTabbtn .Tabbtn.item2 {
+    background-color: #388211;
+    color: #fff;
+}
+
+#ra3:checked ~ .brandTabbtn .Tabbtn.item3 {
+    background-color: #b94e00;
+    color: #fff;
+}
+
+#ra4:checked ~ .brandTabbtn .Tabbtn.item4 {
+    background-color: #ca6b00;
+    color: #fff;
+}
+
+.Conbox {
+    display: none;
+}
+
+#ra1:checked ~ .brandConbox .Conbox.item1 {
+    display: block;
+}
+
+#ra2:checked ~ .brandConbox .Conbox.item2 {
+    display: block;
+}
+
+#ra3:checked ~ .brandConbox .Conbox.item3 {
+    display: block;
+}
+
+#ra4:checked ~ .brandConbox .Conbox.item4 {
+    display: block;
+}
+
+.brandConbox {
+    cursor: pointer;
+}
+
+.brandConbox .Conbox.item1 {
+    background-image: url(../img/images/images/brand1_02.png);
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    background-size: cover;
+    border-top: 1px solid #680805;
+}
+
+.brandConbox .Conbox.item2 {
+    background-image: url(../img/images/images/brand2_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #388211;
+}
+
+.brandConbox .Conbox.item3 {
+    background-image: url(../img/images/images/brand4_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #b94e00;
+}
+
+.brandConbox .Conbox.item4 {
+    background-image: url(../img/images/images/brand3_02.png);
+    width: 100%;
+    height: 768px;
+
+    border-top: 1px solid #ca6b00;
+}
+
+.brandConbox .Conbox {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.brandConbox .Conbox .txt-box {
+    width: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    right: 200px;
+    float: right;
+    margin: 0 auto;
+    display: block;
+    text-align: right;
+    height: 600px;
+    display: block;
+}
+
+.brandConbox .Conbox.item1 .txt-box h2 {
+    color: #8a000d;
+    font-size: 20px;
+    padding-top: 130px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item1 .txt-box .das {
+    color: #555;
+    font-size: 15px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.brandConbox .Conbox.item1 .txt-box .Payment li {
+    float: left;
+    width: 50%;
+}
+
+.brandConbox .Conbox.item1 .txt-box .Payment li a {
+    display: block;
+    text-align: center;
+    width: 100px;
+    font-size: 17px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #6f6a64;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item1 .txt-box .Payment li:last-child a {
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #a6191f;
+    color: #fff;
+}
+
+
+
+.brandConbox .Conbox.item2 .txt-box h2 {
+    color: #388211;
+    font-size: 30px;
+    padding-top: 100px;
+    text-align: left;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .das {
+    color: #555;
+    font-size: 18px;
+    display: block;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .das2 {
+    color: #555;
+    font-size: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding-bottom: 10px;
+    line-height: 25px;
+    text-align: justify;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .num {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.brandConbox .Conbox.item2 .txt-box .num li {
+    width: 20%;
+    clear: both;
+    height: 20px;
+    float: left;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num li a {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 50px;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num span {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num span:hover {
+    background-color: #aea59a;
+    color: #fff;
+}
+
+.brandConbox .Conbox.item2 .txt-box .num .spinner-num {
+    padding: 0.4em 0;
+    width: 25%;
+    color: #444;
+    border: 0;
+    display: block;
+    border-top: #aea59a 1px solid;
+    border-bottom: #aea59a 1px solid;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0;
+    position: absolute;
+    right: 310px;
+    bottom: -45px;
+}
+
+.blind,
+legend {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+.brandConbox .Conbox.item1 .txt-box .num1 {
+    margin-top:30px;
+    font-size: 23px;
+    text-align: left;
+}
+.brandConbox .Conbox.item1 .txt-box .num1 span {
+   
+   position: absolute;
+    left: 100px;
+    color: #a6191f;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+
+}
