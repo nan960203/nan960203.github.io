@@ -1,0 +1,660 @@
+@charset "utf-8";
+
+ body,
+        html {
+            margin: 0 auto;
+            clear: both;
+            position: relative;
+        }
+        
+        #wrap{
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+        
+.mob{
+    display: none;
+}
+
+.hd{
+    
+   position: relative;
+    margin: 0 auto;
+    height: 140px;
+    order: 1;
+    width: 75%;
+    
+}
+
+ .logo{
+     cursor: pointer;
+     order: 2;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+     padding-top: 10px;
+    height: 60px;
+}
+.logo img{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+.top-bar{
+    order: 3;
+    top: 20px;
+    position: absolute;
+    width: 100%;
+}
+.top-bar ul.left li{
+    position: absolute;
+    left: 100px;
+    top: -1px;
+}
+.top-bar ul.left li a{
+    display: block;
+    
+}
+.top-bar ul.right{
+    width: 15%;
+    float: right;
+}
+.top-bar ul.right li{
+    float: left;
+    
+}
+.top-bar ul.right li a{
+    display: block;
+    margin-right: 20px;
+    text-align: center;
+}
+.top-bar ul li a:hover{
+    color: #555;
+}
+
+
+.gnb{
+    clear: both;
+    border-top: 1px solid #dfdfdf;
+    position: absolute;
+    bottom: 20px;
+    padding: 5px;
+    order: 3;
+    width: 100%;
+    height: 25px;
+    margin: 0 auto;
+}
+.gnb ul li{
+    float: left;
+    width: 20%;
+    position: relative;
+}
+.gnb ul li a{
+   display: block;
+            text-align: center;
+            color: #000;
+            font-weight: 100;
+            font-size: 17px;
+            padding: 10px;
+      background-color: #fff;
+}
+.gnb ul li a.dep1:hover{
+    color: #0a3990;
+}
+.sub{
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+}
+.gnb li:hover .sub{
+    opacity: 1;
+    visibility: visible;
+}
+.gnb .sub li{
+    clear: both;
+    width: 100%;
+}
+.gnb .sub li a{
+    text-indent: 10px;
+    font-size: 16px;
+    text-align: left;
+}
+.gnb .sub li a{
+    border-bottom: 1px solid #dfdfdf;
+}
+.gnb .sub li a:hover{
+    display: block;
+    background-color: #262626;
+    color: antiquewhite;
+}
+.companyimg{
+    margin-top: 50px;
+}
+
+/*.price*/
+
+.brand{
+    clear: both;
+    
+    z-index: 20;
+    width: 100%;
+}
+.brand_menu{
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.brand_title{top:30px;
+    position: relative;
+    font-size:30px;
+    color: #0a3990;
+    width: 200px;
+}
+
+/*.brand_gnb{
+    margin-top: -10px;
+    width: 500px;
+    float: right;
+}
+.brand_gnb li{
+    float: left;
+    width: 20%;
+}
+.brand_gnb li a{
+    font-size: 15px;
+    display: block;
+    width:80px;
+    height: 20px;
+    text-align: center;
+}
+.brand_gnb li a:hover{
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #0a3990;
+}*/
+.raItem{
+    display: none;
+}
+.brand_btn{
+    padding-top: -20px;
+    text-align: right;
+    margin: 0 auto;
+   
+}
+.btn{
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #eee;
+    line-height: 40px;
+     width: 100px;
+    height: 40px;
+    display: inline-block;
+}
+#ra1:checked ~ .brand_btn .btn.item1{
+    background-color: #063a87;
+    color: #fff;
+   
+    border-bottom: 1px transparent;
+}
+#ra2:checked ~ .brand_btn .btn.item2{
+    background-color: #063a87;
+    color: #fff;
+    border-bottom: 1px transparent;
+}
+#ra3:checked ~ .brand_btn .btn.item3{
+   border-color: #063a87;
+    color: #063a87; 
+    border-bottom: 1px transparent;
+}
+#ra4:checked ~ .brand_btn .btn.item4{
+   background-color: #063a87;
+    color: #fff; 
+    border-bottom: 1px transparent;
+}
+#ra5:checked ~ .brand_btn .btn.item5{
+    background-color: #063a87;
+    color: #fff;
+    border-bottom: 1px transparent;
+}
+
+#ra1:checked ~ .brandConbox .tab.item1{
+    display: block;
+}
+#ra2:checked ~ .brandConbox .tab.item2{
+    display: block;
+}
+#ra3:checked ~ .brandConbox .tab.item3{
+    display: block;
+}
+#ra4:checked ~ .brandConbox .tab.item4{
+    display: block;
+}
+#ra5:checked ~ .brandConbox .tab.item5{
+    display: block;
+}
+
+/*회사소개*/
+.brandcon1{
+    text-align: center;
+    
+}
+.brContit{
+    font-weight:normal;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #333;
+    line-height: 45px;
+}
+
+.brContit strong{
+    color: #063a87;
+    font-size: 35px;
+}
+
+
+
+.company{
+    margin-top: 20px;
+    width: 100%;
+    
+}
+.big_con{
+    float: left;
+    
+}
+.big_con li{
+    float: left;
+    width: 60%;
+}
+.big_con li img{
+    width: 700px;
+    height: 400px;
+}
+
+.mini_con li{
+    width: 40%;
+    float: right;
+}
+.mini_con li p{
+    display: block;
+    font-size: 17px;
+    color: #333;
+    text-align: left;
+    margin-top: 40px;
+    line-height: 30px;
+}
+
+.companybox{
+    margin-top: 40px;
+    width: 100%;
+}
+.Comimg{
+    float: left;
+}
+.Comimg li{
+    width: 50%;
+    clear: both;
+}
+.Comimg li img{
+    width: 450px;
+    height: 250px;display: block;
+}
+.Comtxt{
+    margin-top:80px;
+    float: right;
+}
+.Comtxt li{
+    width: 50%;
+    float: right;
+}
+.company2{
+    padding-top: 100px;
+clear: both;
+}
+.company2 h3{
+text-align: center;
+    color: #063a87;
+    font-weight:600;
+    
+}
+.company2 .comtit{
+    font-size: 35px;
+    font-weight: normal;
+}
+.company2 .comdas{
+    margin-top:30px;
+    font-size: 16px;
+    color: #333;
+    line-height: 25px;
+}
+
+
+
+
+.Comimg1{
+    float: right;
+}
+.Comimg1 li{
+    width: 50%;
+    clear: both;
+}
+.Comimg1 li img{
+    width: 450px;
+    height: 250px;display: block;
+}
+.Comtxt1{
+    margin-top:80px;
+    float: left;
+}
+.Comtxt1 li{
+    width: 50%;
+    float: left;
+}
+.company2 .comdas1{
+    margin-top:30px;
+    font-size: 16px;
+    color: #333;
+    line-height: 25px;
+}
+
+
+/*ci*/
+.company3{
+clear: both;
+width: 100%;
+    padding-top: 100px;
+   
+}
+.company3 h3{
+text-align: center;
+    color: #063a87;
+    font-weight:600;
+    
+}
+.citit{
+    font-weight: normal;
+    margin-top: 30px;
+    font-size: 30px;
+}
+.citit strong{
+    color: #063a87;
+    letter-spacing: 1px;
+}
+
+.ciimg{
+    margin-top: 20px;
+}
+
+.logotype{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.cimore{
+    margin: 0 auto;
+}
+.cimore li{
+    width: 33.3333%;
+    float: left;
+}
+.cimore img{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 100px;
+}
+.line{
+    border-bottom: 1px solid #eee;
+}
+
+
+
+
+/*좋은원료tab2*/
+.brandcon2{
+    width: 100%;
+    text-align: center;
+    
+}
+.brContit{
+    font-weight:normal;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #333;
+    line-height: 45px;
+}
+
+.brContit strong{
+    color: #063a87;
+    font-size: 35px;
+}
+
+.subbg{
+   position: relative;
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+}
+.subbg img{
+     padding-top: 30px;
+    width: 100%;
+    height: 600px;
+}
+.subbg .subtxt{
+    width: 40%;
+    position: absolute;
+    bottom: 170px;
+    text-align: center;
+    right: 20px;
+    font-size: 17px;
+    line-height: 35px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 500;
+    color: #333;
+    
+}
+.subbg .subdas{
+    position: absolute;
+    width: 40%;
+    bottom: 30px;
+    right: 20px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(255,255,255,0.3);
+    font-family: 'Nanum Myeongjo', serif;
+    
+}
+
+.good{
+    clear: both;
+    padding-top: 100px;
+}
+
+.good h3{
+text-align: center;
+    color: #063a87;
+    font-weight:600;
+    
+}
+
+.good1{
+    clear: both;
+    padding-top: 100px;
+}
+
+.good1 h3{
+text-align: center;
+    color: #063a87;
+    font-weight:600;
+    
+}
+.good1 .big_con li img{
+    height: 200px;
+}
+
+.good1 .mini_con li p{
+    display: block;
+    font-size: 17px;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+    margin-top: 40px;
+    line-height: 30px;
+}
+
+.subbg2{
+    width: 100%;
+    height: 600px;
+    cursor: pointer;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+/*ft*/
+.footer{
+    width: 100vw;
+    clear: both;
+    position: relative;
+    height: 40vh;
+    background-color: #424242;
+    
+    
+}
+.ftwrap{
+    width: 100vw;
+    margin: 0 auto;
+    height: 50px;
+    background-color: #000000;
+}
+.ftgnb{
+    margin: 0 auto;
+    width: 50vw;
+    height: 50px;
+}
+.ftgnb li{
+    float: left;
+    width: 16%;
+}
+.ftgnb li a{
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+}
+.ftgnb li a:hover{
+    color: #e3e3e3;
+}
+
+.ftlist{
+    position: relative;
+    padding-top: 100px;
+    color: #fff;
+    width: 80vw;
+    margin: 0 auto;
+}
+.fttxt{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.add{
+    margin-top:20px;
+    margin-bottom: 20px;
+    color: #bebec0;
+}
+.ftright{
+    top: 100px;
+    right: 100px;
+    position: absolute;
+}
+.ftright a{
+    display: block;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #0d377a;
+}
+
+
+
+@media all and (max-width: 767px){
+   
+    .gnb{
+        display: none;
+    }
+    
+    .top-bar{
+        display: none;
+    }
+
+/*동영상배너*/
+.page{cursor: pointer;
+    clear: both;
+    width: 100vw;
+    height: 35vh;
+    position: relative;
+}
+    .hd{
+        height: 80px;
+    }
+    
+    /*브랜드스토리*/
+    .brand{
+        display: flex;
+        flex-flow: column;
+    }
+    .brand_title{
+        margin-top: -60px;
+        margin-bottom: 50px;
+    }
+    .brandConbox{
+        display: flex;
+        flex-flow: column;
+    }
+    .brContit{
+        line-height: 30px;
+        font-size: 17px;
+    }
+    .brContit strong{
+        font-size: 20px;
+    }
+    .company{
+        display: flex;
+    }
+    .big_con{
+        display: flex;
+        flex-flow: column;
+    }
+    .big_con li{
+        width:100%;
+    }
+    .big_con .brcon1img{
+      display: block;
+        width: 100%;
+       
+    }
+    .mini_com li{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+    }
+    .big_con li{
+         width: 100%;
+       float: left;
+       
+    }
+  
+    .mini_con li p{
+      overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: justify;
+    }
+    
+    
+       
+}
