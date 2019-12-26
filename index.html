@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>국립합창단</title>
+    <link rel="shortcut icon" href="./favicon/fa256.png">
+    <link rel="shortcut icon" href="./favicon/fa152.png">
+    <link rel="shortcut icon" href="./favicon/fa144.png">
+    <link rel="shortcut icon" href="./favicon/fa128.png">
+    <link rel="shortcut icon" href="./favicon/fa120.png">
+    <link rel="shortcut icon" href="./favicon/fa96.png">
+    <link rel="shortcut icon" href="./favicon/fa76.png">
+    <link rel="shortcut icon" href="./favicon/fa64.png">
+    <link rel="shortcut icon" href="./favicon/fa57.png">
+    <link rel="shortcut icon" href="./favicon/fa32.png">
+    <link rel="shortcut icon" href="./favicon/fa24.png">
+    <link rel="shortcut icon" href="./favicon/fa16.png">
+    <link rel="stylesheet" href="./css/common.css">
+    <!--owl-->
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.css">
+    <!--owl js-->
+    <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.js" type="text/javascript"></script>
+
+
+    <style>
+        body,
+        html {
+            clear: both;
+            position: relative;
+        }
+
+        .collap {
+            position: fixed;
+            top: 0;
+            right: -110%;
+            z-index: 80;
+            background-color: #fff;
+            width: 100vw;
+            height: 100vh;
+            padding-top: 90px;
+            box-sizing: border-box;
+            transition: 0.7s;
+            z-index: 999;
+            top: 90px;
+        }
+        .collap ul{
+            width: 85vw;
+            margin: 0 auto;
+        }
+
+        .collap.on {
+            right: 0;
+        }
+
+        .collap li {
+            float: left;
+            width: 20%;
+            position: relative;
+        }
+
+        .collap li a {
+            text-align: center;
+            display: block;
+            height: 32px;
+        }
+
+        .collap li a.dep1 {
+            color: #7808d8;
+            line-height: 3;
+            padding-left: 3em;
+            height: 42px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 1em;
+        }
+
+        /*.collap li a.dep1:after {
+            content: "▼";
+            position: absolute;
+            left: 70%;
+        }
+
+        .collap li.on a.dep1:after {
+            content: "▲"
+        }*/
+
+        .collap li ul.dep2 {
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+            height: auto;
+            background: transparent;
+            position: static;
+        }
+
+        .collap .dep2 li {
+            clear: both;
+            width: 100%;
+        }
+
+        /*
+        .collap li.on ul.dep2 {
+             대메뉴 li가 on상태이면 .dep2(서브메뉴)가 보이게 해라 
+            display: block;
+            visibility: visible;
+        }*/
+
+        .collap li ul.dep2 li {
+            line-height: 2;
+        }
+
+        .collap li ul.dep2 li a {
+            color: #333;
+            font-size: 1rem;
+            text-align: left;
+            text-indent: 140px;
+            font-size: 18px;
+            line-height: 3;
+            padding: 5px;
+        }
+
+        .collap li ul.dep2 li a:hover {
+            color: rebeccapurple;
+            font-weight: bold;
+        }
+
+        .lst_btn {
+            display: block;
+            position: absolute;
+            top: 0.5em;
+            left: 2%;
+            width: 48px;
+            height: 48px;
+            border: 2px solid #fff;
+            cursor: pointer;
+            box-sizing: border-box;
+            z-index: 99;
+        }
+
+        .lst_btn .line {
+            display: block;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            left: 0.5em;
+            line-height: 2px;
+            transition: 0.4s;
+            z-index: 99;
+            transform: rotate(0deg);
+        }
+
+        .lst_btn .item1 {
+            width: 20px;
+            top: 1.1em;
+        }
+
+        .lst_btn .item2 {
+            width: 30px;
+            top: 0.7em;
+        }
+
+        .lst_btn:hover .item1 {
+            width: 30px;
+        }
+
+        .lst_btn:hover .item2 {
+            width: 20px;
+        }
+
+        .lst_btn.on .item1 {
+            width: 30px;
+            transform: rotate(45deg);
+            top: 23px;
+        }
+
+        .lst_btn.on .item2 {
+            width: 30px;
+            transform: rotate(-45deg);
+            top: 23px;
+        }
+
+
+
+        /*헤더*/
+        .hd {
+            clear: both;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 80;
+            width: 100%;
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: 0.5s;
+
+        }
+
+        .logo {
+            width: 250px;
+            height: 50px;
+            display: block;
+            margin: 0 auto;
+            padding-top: 1em;
+        }
+
+        .logo img {
+            width: 100%;
+            display: block;
+            cursor: pointer;
+        }
+
+        /*탑메뉴*/
+        .top-bar {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .right-menu {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .right-menu li {
+            float: right;
+            margin-top: -37px;
+            margin-right: 20px;
+        }
+
+        .right-menu li a {
+            display: block;
+
+        }
+
+        .right-menu li a img {
+            display: block;
+            width: 40px;
+            height: 40px;
+        }
+
+        /*topmenu언어*/
+        .lagtxt {
+            float: right;
+            color: #fff;
+        }
+
+        .lagtxt a {
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-align: center;
+            display: block;
+            width: 90px;
+            height: 30px;
+            background-color: #a523d1;
+
+            line-height: 30px;
+            margin-top: -33px;
+        }
+
+        /*메뉴*/
+        .menu {
+            clear: both;
+            width: 85%;
+            margin: 0 auto;
+            padding-top: 2em;
+        }
+
+        .menu ul {}
+
+        .menu ul li {
+            float: left;
+            width: 20%;
+            position: relative;
+
+        }
+
+        .menu ul li a {
+            display: block;
+            text-align: center;
+            color: #fff;
+            font-weight: 700;
+            font-size: 22px;
+            padding: 5px;
+        }
+
+        .menu ul li a:hover {
+            color: #a523d1;
+        }
+
+        .sub {
+            border-top: 3px solid #a523d1;
+            top: 51px;
+            width: 100%;
+            position: absolute;
+            height: 0;
+            transition: all 0.5s;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .menu li:hover .sub {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.5s;
+            height: auto;
+        }
+
+        .menu .sub li {
+            clear: both;
+            width: 100%;
+        }
+
+        .menu .sub li a {
+            text-align: left;
+            text-indent: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            font-weight: normal;
+            font-size: 17px;
+        }
+
+
+        /*배너*/
+        .vs1 {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            clear: both;
+        }
+
+        .vs_lst {
+            width: 300%;
+            overflow-x: hidden;
+        }
+
+        .vs_lst li {
+            opacity: 1;
+            width: 33.3333%;
+            height: 100vh;
+            float: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .vs_lst li.on {
+            opacity: 1;
+        }
+
+        .vs_lst li.item1 {
+            background-image: url(./img/images/webbn2.png);
+        }
+
+        .vs_lst li.item2 {
+            background-image: url(./img/images/webbn3.png);
+        }
+
+        .vs_lst li.item3 {
+            background-image: url(./img/images/webbn3.png);
+        }
+
+        /*배너버튼*/
+        .btn_box1 {
+            width: 60px;
+            /*버튼 1개당 20px 총 3개 - 60px*/
+            height: 24px;
+            position: absolute;
+            z-index: 25;
+            bottom: 30px;
+
+            left: calc(50% - 30px);
+            /*정가운데*/
+        }
+
+
+        .btn_box1 li {
+
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+
+        .btn_box1 li.item1 {
+            left: 0;
+        }
+
+        .btn_box1 li.item2 {
+            left: 20px;
+        }
+
+        .btn_box1 li.item3 {
+            left: 40px;
+        }
+
+        .btn_box1 li .btn {
+            /*button의 클래스btn*/
+            width: 15px;
+            height: 15px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+
+
+        }
+
+        .btn_box1 li.on .btn {
+            background-color: #fff;
+        }
+
+
+
+
+
+        /*공연안내*/
+        .Exhibition {
+            position: relative;
+            clear: both;
+            width: 100vw;
+            position: relative;
+
+        }
+
+        .extitle {
+            text-align: center;
+            font-size: 32px;
+            color: #242e35;
+            margin-top: 2em;
+        }
+
+        .owl-theme {
+            padding-top: 3em;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .owl-theme .txt-box,
+        .owl-theme .txt-box2 {
+            text-align: center;
+        }
+
+        .owl-theme .item img {
+            cursor: pointer;
+            transition: 0.5s;
+            margin-bottom: 10px;
+            display: block;
+
+
+        }
+     
+        .owl-theme .txt-box {
+            width: 100%;
+            height: 100px;
+        }
+
+        .owl-theme .txt-box h5 {
+            cursor: pointer;
+            padding: 5px;
+            font-size: 15px;
+            width: 75px;
+            height: 20px;
+            line-height: 20px;
+            background-color: #333;
+            color: #fff;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .owl-theme .txt-box .wlqkd {
+            cursor: pointer;
+            padding: 5px;
+            font-size: 15px;
+            width: 75px;
+            height: 20px;
+            line-height: 20px;
+            background-color: #777777;
+            color: #fff;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .owl-theme .txt-box .godhl {
+            cursor: pointer;
+            padding: 5px;
+            font-size: 15px;
+            width: 75px;
+            height: 20px;
+            line-height: 20px;
+            background-color: #d1b4b4;
+            color: #fff;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+
+        .owl-theme .txt-box h4 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .owl-theme .txt-box .date {
+            font-size: 16px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        .owl-theme .txt-box2 a {
+            text-align: center;
+            background-color: #dfdfdf;
+            width: 100%;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .owl-theme .txt-box2 a:hover {
+            text-decoration: underline;
+            color: #555;
+        }
+
+        .owl-theme .item {
+            border: 1px solid #dfdfdf;
+        }
+
+        .more_btn {
+
+            margin-top: 3em;
+
+        }
+
+        .more_btn a {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #242e35;
+            border-bottom: 3px solid #242e35;
+            width: 80px;
+            margin: 0 auto;
+            letter-spacing: 2px;
+            line-height: 30px;
+        }
+
+        .more_btn a:hover {
+            color: #555;
+            border-bottom: 3px solid #555;
+        }
+
+
+
+
+        /*콘텐츠2*/
+        .bnbg {
+            margin-top: 5em;
+            width: 100vw;
+            height: 50vh;
+            clear: both;
+        }
+
+        .conbg {
+            position: relative;
+            background-image: url(./img/images/images/conbgbg_02.png);
+            height: 450px;
+            width: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 0.5s;
+
+        }
+
+        .bg_title {
+            text-align: center;
+            color: #fff;
+            font-weight: normal;
+            margin: 0 auto;
+            padding-top: 120px;
+            font-size: 30px;
+            line-height: 45px;
+            /*position: absolute;
+            color: #fff;
+            font-size: 30px;
+            top: 150px;
+            left: calc(560px + 50px);
+            font-weight: normal;
+            text-align: center;
+            line-height:45px;*/
+
+        }
+
+        .bg_btn {
+            padding: 5px;
+            color: #fff;
+            width: 100px;
+
+            line-height: 40px;
+            font-size: 20px;
+            position: absolute;
+            text-align: center;
+            margin: 0 auto;
+            top: 350px;
+            left: calc(850px + 50px);
+            border-bottom: 3px solid #fff;
+        }
+
+        .bg_btn:hover {
+            color: #ccc;
+            border-bottom: 3px solid #ccc;
+        }
+
+
+        /*사진*/
+        .Gallery {
+            width: 100vw;
+            height: 65vh;
+            margin: 0 auto;
+            clear: both;
+            position: relative;
+            border-bottom: 1px solid #dfdfdf;
+        }
+
+        .galtitle {
+            text-align: center;
+            font-size: 32px;
+            color: #242e35;
+        }
+
+        .Gallery .owl-carousel {
+            width: 80%;
+        }
+
+        .Gallery .owl-carousel .item {
+            width: 360px;
+            height: 240px;
+        }
+
+        .Gallery .owl-carousel img {
+
+            position: relative;
+            overflow: hidden;
+            display: block;
+            transition: 0.5s;
+            transform: scale(1);
+
+        }
+
+        .Gallery .owl-carousel .item img:hover {
+            transform: scale(1.1);
+            overflow: hidden;
+            background-color: red;
+            width: 100%;
+            height: 100%;
+        }
+
+        .Gallery .owl-carousel .item img::after {
+            content: "";
+            position: absolute;
+
+        }
+
+        .Gallery .owl-title {
+            color: #71787c;
+            font-size: 17px;
+            margin-top: -3em;
+        }
+
+        .potobg {
+            background-image: url(./img/images/images/potobg_03_03.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            height: 600px;
+            width: 600px;
+            position: absolute;
+            right: 0;
+            top: -105px;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .gal_btn a {
+            padding-top: 3em;
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #242e35;
+            border-bottom: 3px solid #242e35;
+            width: 100px;
+            margin: 0 auto;
+            letter-spacing: 2px;
+            line-height: 30px;
+        }
+
+        .gal_btn a:hover {
+            color: #555;
+            border-bottom: 3px solid #555;
+        }
+
+
+        /*영상*/
+        .videogal {
+            clear: both;
+            position: relative;
+            border-bottom: 1px solid #dfdfdf;
+            width: 100vw;
+            margin: 0 auto;
+        }
+
+        .galtitle {
+
+            margin-top: 3em;
+            margin-bottom: 2em;
+        }
+
+        .video {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .video ul li {
+            float: left;
+            margin-right: 1.4%;
+        }
+
+        .video ul li:last-child a {
+            margin-right: 0;
+        }
+
+        .video ul li a {
+            display: block;
+            text-align: center;
+        }
+
+        .video .vdotxt {
+            display: block;
+            cursor: pointer;
+
+        }
+
+        .video .vdotxt .vdotit {
+            margin-bottom: 5px;
+            font-size: 13px;
+
+        }
+
+        .video .vdotxt .vdotit:hover {
+            text-decoration: underline;
+        }
+
+        .video .vdotxt .vdodate {
+            font-weight: normal;
+            color: #242e35;
+            margin-bottom: 7em;
+        }
+
+        .vdoBtn a {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #242e35;
+            border-bottom: 3px solid #242e35;
+            width: 100px;
+            margin: 0 auto;
+            letter-spacing: 2px;
+            line-height: 30px;
+            margin-bottom: 5em;
+        }
+
+        .vdoBtn a:hover {
+            color: #555;
+            border-bottom: 3px solid #555;
+        }
+
+
+        /*공지사항*/
+        .Announcement {
+            width: 100vw;
+            position: relative;
+            clear: both;
+            margin: 0 auto;
+
+        }
+
+        .anntitle {
+            clear: both;
+            margin: 0 auto;
+            margin-bottom: 2em;
+            text-align: center;
+            font-size: 32px;
+            color: #242e35;
+        }
+
+        .anno {
+            position: relative;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .anno ul {
+            margin: 5px;
+        }
+
+        .anno li {
+
+            float: left;
+            width: 24%;
+            margin-right: 1%;
+        }
+
+        .annbg {
+            position: absolute;
+            left: 0;
+            background-image: url(./img/images/videobg_02.jpg);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: -60px;
+            width: 500px;
+            height: 300px;
+            box-sizing: border-box;
+
+            overflow: hidden;
+        }
+
+        .anno ul li a {
+            border-top: 5px solid #555;
+            position: relative;
+            padding-top: 30px;
+            font-size: 18px;
+            text-indent: 30px;
+            display: block;
+            width: 350px;
+            height: 250px;
+            background-color: #f4f4f4;
+            margin-bottom: 130px;
+        }
+
+        .anno .anntxt {
+            position: absolute;
+            top: 80px;
+            margin-left: 30px;
+            font-weight: 700;
+            color: #555;
+            font-size: 20px;
+            width: 200px;
+            height: 100px;
+            display: block;
+            cursor: pointer;
+        }
+
+        .anno .anntxt::after {
+            content: "자세히";
+            font-size: 17px;
+            margin-top: 60px;
+            margin-left: 100px;
+            font-weight: normal;
+            width: 90px;
+            line-height: 40px;
+            height: 40px;
+            text-align: center;
+            background-color: #8712af;
+            color: #fff;
+            position: absolute;
+            display: block;
+        }
+
+        .anno .anntxt:hover::after {
+            background-color: #a22dcb;
+        }
+        
+         .ann_btn a {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #242e35;
+            border-bottom: 3px solid #242e35;
+            width: 100px;
+            margin: 0 auto;
+            letter-spacing: 2px;
+            line-height: 30px;
+        }
+
+        .ann_btn a:hover {
+            color: #555;
+            border-bottom: 3px solid #555;
+        }
+
+
+        /*멤버십*/
+        .mambar {
+            margin-top: 7em;
+            width: 100vw;
+            clear: both;
+            position: relative;
+        }
+
+        .mambg {
+            background-image: url(./img/images/membar_02.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 400px;
+            text-align: center;
+
+        }
+
+        .mamtit {
+            padding-top: 50px;
+        }
+
+        .mamtit::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #fff;
+            margin: 0 auto;
+            left: 950px;
+            top: 95px;
+        }
+
+        .mamtit2 {
+            margin-top: 50px;
+            color: #fff;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .mamtit3 {
+            margin-top: 10px;
+            font-size: 35px;
+            color: #fff;
+        }
+
+        .mambtn {
+            display: block;
+            font-size: 25px;
+            width: 250px;
+            height: 50px;
+            margin: 0 auto;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #fff;
+            font-weight: normal;
+            line-height: 50px;
+            border: 2px solid #fff;
+            margin-top: 80px;
+        }
+
+        .mambtn:hover {
+            display: block;
+            border: 2px solid #000;
+            color: #000;
+        }
+
+
+        /*ft*/
+
+        .footer {
+            margin-top: 100px;
+            height: 38vh;
+            width: 100vw;
+            clear: both;
+            position: relative;
+            background-color: #333;
+        }
+
+        .ftmenu {
+            width: 80%;
+            text-align: center;
+            height: 50px;
+            background-color: #000000;
+            margin: 0 auto;
+
+        }
+
+        .ftmenu ul {
+            margin-left: 100px;
+        }
+
+        .ftmenu ul li {
+            float: left;
+            line-height: 50px;
+            margin-left: 30px;
+            justify-content: center;
+        }
+
+        .ftmenu ul li a {
+            display: block;
+            color: #fff;
+        }
+
+        .ftlst {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .ftlogo img {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .copyright {
+            color: #fff;
+            margin-top: 30px;
+            font-size: 15px;
+
+        }
+
+        .fttxt {
+            color: #fff;
+            margin-top: 60px;
+            color: #ccc;
+        }
+
+        .ftmenu .right {
+            margin-right: 120px;
+        }
+
+        .ftmenu .right li {
+            float: right;
+        }
+
+        .ftmenu .right li a {
+            display: block;
+        }
+
+        .ftmenu .right li img {
+            width: 30px;
+            padding-top: 10px;
+        }
+
+        /*버튼*/
+        #topbtn {
+            transition: 0.5s;
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            background-color: #dfdfdf;
+            display: block;
+            
+            bottom: 50px;
+            right: 60px;
+            line-height: 40px;
+            text-align: center;
+            color: #000;
+        }
+        
+
+        #topbtn:hover {
+            background-color: #bfbfbf;
+        }
+        
+        
+        .search-box{
+            position: absolute;
+            left: 1150px;
+            top: 12px;
+        }
+        .search-box input{
+            text-indent: 10px;
+            outline: 0;
+            border: 1px solid #fff;
+            padding-right: 20px;
+            height: 25px;
+            color: #000;
+            background-color: #fff;
+        }
+        .search-box img{
+            position: absolute;
+            right: 5px;
+            width: 25px;
+            top: 3px;
+            cursor: pointer;
+        }
+
+        /*반응형모바일*/
+        @media all and (max-width: 767px) {
+            #wrap {
+                display: flex;
+                display: -webkit-flex;
+                flex-flow: column nowrap;
+                -webkit-flex-flow: column nowrap;
+                /*한줄에 /줄바꿈 없이*/
+                width: 100%;
+                margin: 0px auto;
+                max-width: 1200px;
+                /*이상은 안늘어나게*/
+            }
+
+            .top-bar {
+                display: none;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .hd{
+                order: 1;
+                height: 100px;
+            }
+           
+            
+            /*bn*/
+            /*배너*/
+        .vs1 {
+            order: 2;
+            width: 100%;
+            position: relative;
+            clear: both;
+            height: 50vh;
+            display: block;
+        }
+
+        .vs_lst {
+            width: 300%;
+            height: 50vh;
+            overflow-x: hidden;
+        }
+
+        .vs_lst li {
+            width: 33.3333%;
+            height: 50vh;
+            float: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+            
+            
+            
+      
+             /*공연안내*/
+        .Exhibition {
+            margin-top: -470px;
+            width: 100vw;
+            position: relative;
+            height: 100vh
+
+        }
+
+        .extitle {
+            text-align: center;
+            font-size: 32px;
+            color: #242e35;
+            margin-top: 2em;
+        }
+
+        .owl-theme {
+            padding-top: 3em;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+       /*콘텐츠2*/
+        .bnbg {
+            width: 100%;
+            height: 30vh;
+            clear: both;
+        }
+
+        .conbg {
+            position: relative;
+            background-image: url(./img/images/images/conbgbg_02.png);
+        height: 30vh;
+            width: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 0.5s;
+
+        }
+
+        .bg_title {
+            text-align: center;
+            color: #fff;
+            font-weight: normal;
+            margin: 0 auto;
+            padding-top: 70px;
+            font-size: 20px;
+            line-height: 45px;
+            /*position: absolute;
+            color: #fff;
+            font-size: 30px;
+            top: 150px;
+            left: calc(560px + 50px);
+            font-weight: normal;
+            text-align: center;
+            line-height:45px;*/
+
+        }
+            
+
+ /*사진*/
+        .Gallery {
+            padding-top: -300px;
+            left: calc(50% - 230px);
+            width: 100%;
+            height: 65vh;
+            margin: 0 auto;
+            clear: both;
+            position: relative;
+            border-bottom: 1px solid #dfdfdf;
+        }
+
+            
+             .videogal {
+            clear: both;
+            position: relative;
+            border-bottom: 1px solid #dfdfdf;
+            width: 100%;
+            margin: 0 auto;
+                 left: calc(50% - 230px);
+        }
+
+        .galtitle {
+
+            margin-top: 3em;
+            margin-bottom: 2em;
+        }
+
+        .video {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .video ul li {
+            float: left;
+            margin-right: 1.4%;
+        }
+
+        .video ul li:last-child a {
+            margin-right: 0;
+        }
+
+        .video ul li a {
+            display: block;
+            text-align: center;
+        }
+
+        .video .vdotxt {
+            display: block;
+            cursor: pointer;
+
+        }
+
+            
+     
+ /*공지사항*/
+        .Announcement {
+            width: 100vw;
+            position: relative;
+            clear: both;
+            margin: 0 auto;
+            display: flex;
+
+        }
+
+        .anntitle {
+            clear: both;
+            margin: 0 auto;
+            margin-bottom: 2em;
+            text-align: center;
+            font-size: 32px;
+            color: #242e35;
+        }
+
+        .anno {
+            display: flex;
+            position: relative;
+            margin: 0 auto;
+            width: 80vw;
+        }
+
+        .anno ul {
+            display: flex;
+            margin: 5px;
+        }
+
+        .anno li {
+            flex-wrap: wrap;
+    display: flex;
+            float: left;
+            width: 100%;
+            margin-right: 1%;
+        }
+
+        .annbg {
+            position: absolute;
+            left: 0;
+            background-image: url(./img/images/videobg_02.jpg);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: -60px;
+            width: 500px;
+            height: 300px;
+            box-sizing: border-box;
+
+            overflow: hidden;
+        }
+
+        .anno ul li a {
+            border-top: 5px solid #555;
+            position: relative;
+            padding-top: 30px;
+            font-size: 18px;
+            text-indent: 30px;
+            display: block;
+            width: 350px;
+            height: 250px;
+            background-color: #f4f4f4;
+            margin-bottom: 130px;
+        }
+
+        .anno .anntxt {
+            z-index: 
+            position: absolute;
+            top: 80px;
+            margin-left: 30px;
+            font-weight: 700;
+            color: #555;
+            font-size: 20px;
+            width: 200px;
+            height: 100px;
+            display: block;
+            cursor: pointer;
+        }
+
+        .anno .anntxt::after {
+            content: "자세히";
+            font-size: 17px;
+            margin-top: 60px;
+            margin-left: 100px;
+            font-weight: normal;
+            width: 90px;
+            line-height: 40px;
+            height: 40px;
+            text-align: center;
+            background-color: #8712af;
+            color: #fff;
+            position: absolute;
+            display: block;
+        }
+
+        .anno .anntxt:hover::after {
+            background-color: #a22dcb;
+        }
+            
+       
+            
+        /*멤버십*/
+        .mambar {
+            width: 100vw;
+            clear: both;
+            position: relative;
+        }
+
+        .mamtit2 {
+            margin-top: 30px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .mamtit3 {
+            margin-top: 10px;
+            font-size: 35px;
+            color: #fff;
+        }
+
+             /*ft*/
+
+        .footer {
+            
+            margin-top: 100px;
+            width: 100vw;
+            clear: both;
+            position: relative;
+            background-color: #333;
+        }
+
+        .ftmenu {
+            display: flex;
+            flex-flow: wrap;
+            width: 80%;
+            text-align: center;
+            height: 50px;
+            background-color: #000000;
+            margin: 0 auto;
+
+        }
+            .search-box{
+                display: none;
+            }
+
+        .ftmenu ul {
+            
+            margin-left: 100px;
+        }
+
+        .ftmenu ul li {
+            display: flex;
+            justify-content: center;
+            line-height: 50px;
+            margin-left: 30px;
+            justify-content: center;
+        }
+
+        .ftmenu ul li a {
+            display: block;
+             display: flex;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .ftlst {
+            
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .ftlogo img {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .copyright {
+            color: #fff;
+            margin-top: 30px;
+            font-size: 15px;
+
+        }
+
+        .fttxt {
+            color: #fff;
+            margin-top: 50px;
+            color: #ccc;
+        }
+
+        .ftmenu .right {
+            display: none;
+            margin-right: 120px;
+        }
+
+        .ftmenu .right li {
+            float: right;
+        }
+
+        .ftmenu .right li a {
+            display: block;
+        }
+
+        .ftmenu .right li img {
+            width: 30px;
+            padding-top: 10px;
+        }
+       
+
+        }
+        
+    </style>
+    
+    <script>
+        $(document).ready(function() {
+            //첫 번째 슬라이더
+            //첫 번째 슬라이더
+            $(".btn_box1 li").click(function(i) {
+                $(this).addClass("on");
+                $(this).siblings().removeClass("on");
+                var idx = $(this).index();
+                $(".vs_lst li").eq(idx).addClass("on");
+                $(".vs_lst li").eq(idx).siblings().removeClass("on");
+                $(".vs_lst").not(":animated").animate({
+                    "margin-left": idx * -1 * wd
+                });
+            });
+            
+            
+
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+            $('.my-2>.owl-carousel').owlCarousel({
+                stagePadding: 50,
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+
+            var ck1 = true,
+                ck2 = true;
+            //펼침 메뉴의 열기/닫기 모션
+            $(".lst_btn").click(function() {
+                if (ck1) {
+                    $(".collap").addClass("on");
+                    $(".lst_btn").addClass("on");
+                } else {
+                    $(".collap").removeClass("on");
+                    $(".lst_btn").removeClass("on");
+                }
+                ck1 = !ck1;
+            });
+            //펼침 메뉴의 서브메뉴 열기
+            $(".collap li").click(function() {
+                $(".collap li").removeClass("on");
+                $(this).addClass("on");
+            });
+
+        });
+        
+       
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <nav class="collap">
+            <ul class="main_menu">
+                <li>
+                    <a href="#" class="dep1">국립합창단</a>
+                    <ul class="dep2">
+                        <li><a href="introduction.html#page1">소개</a></li>
+                        <li><a href="introduction.html#page2">인사말</a></li>
+                        <li><a href="introduction.html#page3">조직도</a></li>
+                        <li><a href="introduction.html#page4">예술감독</a></li>
+                        <li><a href="introduction.html#page5">단원소개</a></li>
+                        <li><a href="introduction.html#page6">경영고시</a></li>
+                        <li><a href="introduction.html#page7">로고</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="sub.html" class="dep1"> 공연정보</a>
+                    <ul class="dep2">
+                        <li><a href="sub.html">공연정보</a></li>
+                        <li><a href="reseach.html#page2">공연일정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dep1">공연자료</a>
+                    <ul class="dep2">
+                        <li><a href="policy.html#page1">사진</a></li>
+                        <li><a href="policy.html#page2">영상</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dep1">커뮤니티</a>
+                    <ul class="dep2">
+                        <li><a href="overview.html#page1">공지사항</a></li>
+                        <li><a href="overview.html#page2">고객의소리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dep1">멤버십</a>
+                    <ul class="dep2">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <header class="hd">
+            <a href="index.html" class="logo"><img src="./img/logo_w250.png" alt=""></a>
+            <div class="top-bar">
+
+                <ul class="lagtxt">
+                    <li><a href="#">ENGLISH</a></li>
+                </ul>
+                <ul class="right-menu">
+                     <li><a href="https://www.youtube.com/channel/UCPt2iPR8bH27BlXTY2g_D3w" target="_blank"><img src="./img/images/images/snsicon_03.png" alt="유투브"></a></li>
+                    <li><a href="https://www.instagram.com/nck_1973/" target="_blank"><img src="./img/images/images/snsicon_01.png" alt="인스타"></a></li>
+                    <li><a href="https://twitter.com/nck_1973" target="_blank"><img src="./img/images/images/snsicon_07.png" alt="트위터"></a></li>
+                    <li><a href="https://www.facebook.com/koreanationalchorus/" target="_blank"><img src="./img/images/images/snsicon_05.png" alt="페이스북"></a></li>
+                </ul>
+            </div>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">국립합창단</a>
+                        <ul class="sub">
+                            <li><a href="#">소개</a></li>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">조직도</a></li>
+                            <li><a href="#">예술감독</a></li>
+                            <li><a href="#">단원소개</a></li>
+                            <li><a href="#">경영공시</a></li>
+                            <li><a href="#">로고안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sub.html">공연정보</a>
+                        <ul class="sub">
+                            <li><a href="sub.html">공연정보</a></li>
+                            <li><a href="#">공연일정</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">공연자료</a>
+                        <ul class="sub">
+                            <li><a href="#">사진</a></li>
+                            <li><a href="#">영상</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">고객의소리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">멤버십</a></li>
+                </ul>
+            </nav>
+            <div class="lst_btn">
+                <span class="line item1"></span>
+                <span class="line item2"></span>
+            </div>
+        </header>
+
+        <section class="page sc_date" id="page1">
+            <figure class="vs1">
+                <ul class="vs_lst">
+                    <li class="item1 on">
+
+                    </li>
+                    <li class="item2">
+
+                    </li>
+                    <li class="item3">
+                        <!-- <video src="./img/images/video01.mp4" id="vd1" autoplay loop muted></video>-->
+                    </li>
+                </ul>
+                <ul class="btn_box1">
+                    <li class="btn_fr item1 on">
+                        <button class="btn"></button>
+                    </li>
+                    <li class="btn_fr item2">
+                        <button class="btn"></button>
+                    </li>
+                    <li class="btn_fr item3">
+                        <button class="btn"></button>
+                    </li>
+                </ul>
+            </figure>
+        </section>
+
+        <section class="page Exhibition" id="page2">
+            <h2 class="extitle">공연안내</h2>
+            <div class="conbg1"></div>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="./img/images/cont1.PNG" alt="">
+                    <div class="txt-box">
+                        <h5 class="wlqkd">지방공연</h5>
+                        <h4>방방곡곡 문화공감 [이천] 베르디
+                            레퀴엠</h4>
+                        <p class="date">2019.11.29</p>
+                    </div>
+                    <div class="txt-box2"><a href="#">상세</a></div>
+                </div>
+
+                <div class="item"><img src="./img/images/cont2.PNG" alt="">
+                    <div class="txt-box">
+                        <h5>정기공연</h5>
+                        <h4>코리안심포니오케스트라 말러의 부활</h4>
+                        <p class="date">2019.12.10</p>
+                    </div>
+                    <div class="txt-box2"><a href="#">상세</a></div>
+                </div>
+                <div class="item"><img src="./img/images/cont3.PNG" alt="">
+                    <div class="txt-box">
+                        <h5 class="wlqkd">지방공연</h5>
+                        <h4>방방곡곡 문화공감 서귀포 [헨델메시아]</h4>
+                        <p class="date">2019.12.06</p>
+                    </div>
+                    <div class="txt-box2"><a href="#">상세</a></div>
+                </div>
+                <div class="item"><img src="./img/images/cont4.PNG" alt="">
+                    <div class="txt-box">
+                        <h5>정기공연</h5>
+                        <h4>국립합창단 초청[헨델의 메시아]</h4>
+                        <p class="date">2019.10.08</p>
+                    </div>
+                    <div class="txt-box2"><a href="#">상세</a></div>
+                </div>
+                <div class="item"><img src="./subimg/sub5.jpg" alt="">
+                    <div class="txt-box">
+                        <h5 class="wlqkd">지방공연</h5>
+                        <h4>제20회 데뷔콘서트</h4>
+                        <p class="date">2019.11.15</p>
+                    </div>
+                    <div class="txt-box2"><a href="#">상세</a></div>
+                </div>
+                <div class="item"><img src="./img/images/cont6.PNG" alt="">
+                    <div class="txt-box">
+                        <h5 class="godhl">해외공연</h5>
+                        <h4>프랑스 해외공연</h4>
+                        <p class="date">2019.11.02 ~ 11.09</p>
+                    </div>
+                    <div class="txt-box2"><a href="#">상세</a></div>
+                </div>
+                <div class="item"><img src="./img/images/cont7.PNG" alt="">
+                    <div class="txt-box">
+                        <h5>정기공연</h5>
+                        <h4>브람스 독일진혼곡</h4>
+                        <p class="date">2019. 10. 20</p>
+                    </div>
+                    <div class="txt-box2"><a href="#">상세</a></div>
+                </div>
+                <div class="item"><img src="./img/images/cont8.PNG" alt="">
+                    <div class="txt-box">
+                        <h5>정기공연</h5>
+                        <h4>제179 정기연주회 국립합창단뿔랭과라벨</h4>
+                        <p class="date">2019. 10. 17</p>
+                    </div>
+                    <div class="txt-box2"><a href="#">상세</a></div>
+                </div>
+            </div>
+
+
+            <div class="more_btn"><a href="sub.html">더보기</a></div>
+        </section>
+        <!--Exhibition-->
+        <section class="page bnbg" id="page3">
+            <div class="conbg">
+                <h2 class="bg_title">국립합창단은 1973년 창단된 전문 합창단의 효시로서 <br>
+                    <strong>본격적인 합창 예술운동의 선두주자</strong> 입니다</h2>
+                <div class="bg_btn"><a href="#">자세히보기</a></div>
+            </div>
+        </section>
+        <!--bnbg-->
+
+
+        <section class="Gallery" id="page4">
+            <h2 class="galtitle">사진</h2>
+            <h2 class="owl-title" style="text-align: center">제179회 정기연주회 국립합창단의 뿔랭과 라벨</h2>
+            <div class="potobg"></div>
+            <div class="my-2 owl-carousel owl-theme">
+                <div class="item"><img src="./img/images/poto1.PNG" alt=""></div>
+                <div class="item"><img src="./img/images/poto2.PNG" alt=""></div>
+                <div class="item"><img src="./img/images/poto4.PNG" alt=""></div>
+                <div class="item"><img src="./img/images/poto5.PNG" alt=""></div>
+                <div class="item"><img src="./img/images/poto10.PNG" alt=""></div>
+                <div class="item"><img src="./img/images/poto7.PNG" alt=""></div>
+                <div class="item"><img src="./img/images/poto8.PNG" alt=""></div>
+                <div class="item"><img src="./img/images/poto9.PNG" alt=""></div>
+                <div class="item"><img src="./img/images/poto11.PNG" alt=""></div>
+            </div>
+            <div class="gal_btn"><a href="#">사진보기</a></div>
+
+
+        </section>
+        <div class="videogal">
+            <h2 class="galtitle" style="margin-top: 2em;">영상</h2>
+            <div class="vidbg"></div>
+            <div class="video">
+                <ul>
+                    <li><a href=""><iframe width="360" height="200" src="https://www.youtube.com/embed/V1GzwflirFU?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        <div class="vdotxt">
+                            <h3 class="vdotit">국립합창단 2019프랑스 해외연주회 20191105</h3>
+                            <h4 class="vdodate">2019.11.08</h4>
+                        </div>
+                    </li>
+                    <li><a href=""><iframe width="360" height="200" src="https://www.youtube.com/embed/HXMwwXuQAR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        <div class="vdotxt">
+                            <h3 class="vdotit">국립합창단 제180회 정기연주회 헨델 메시아 홍보영상</h3>
+                            <h4 class="vdodate">2019. 11. 6</h4>
+                        </div>
+                    </li>
+                    <li><a href=""><iframe width="360" height="200" src="https://www.youtube.com/embed/GmMw43W_hcA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        <div class="vdotxt">
+                            <h3 class="vdotit">제20회 데뷔콘서트 홍보영상</h3>
+                            <h4 class="vdodate">2019.11. 4</h4>
+                        </div>
+                    </li>
+                    <li><a href=""><iframe width="360" height="200" src="https://www.youtube.com/embed/iuGIQKQ-jOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        <div class="vdotxt">
+                            <h3 class="vdotit">국립합창단 기획공연 2019 광복절기념 합창대축제 2019.08.15</h3>
+                            <h4 class="vdodate">2019.9. 17</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="vdoBtn"><a href="#">영상보기</a></div>
+        </div>
+
+        <div class="Announcement">
+            <h2 class="anntitle" style="margin-top: 2em;">공지사항</h2>
+            <div class="annbg"></div>
+            <div class="anno">
+                <ul>
+                    <li><a href="">2019.11.01</a>
+                        <div class="anntxt">제8회 전국골든에이지 <br>
+                            (어르신)합창경연대회 <br>
+                            결선 심사결과 공고</div>
+                    </li>
+                    <li><a href="">2019.11.05</a>
+                        <div class="anntxt">국립합창단 경영관리,
+                            공연기획 팀원 최종 합격자 발표</div>
+                    </li>
+                    <li><a href="">2019.11.10</a>
+                        <div class="anntxt">국립합창단 경영관리,공연기획 팀원 채용 공고</div>
+                    </li>
+                    <li><a href="">2019.11.20</a>
+                        <div class="anntxt">제8회 전국골든에이지 <br>
+                            (어르신)합창경연대회 <br>
+                            결선 심사결과 공고</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ann_btn"><a href="#">전체보기</a></div>
+
+
+        </div>
+        <div class="mambar">
+            <div class="mambg">
+                <h2 class="mamtit">THE NATIONAL CHORUS OF KOREA</h2>
+                <h3 class="mamtit2">한국합창음악의 발전과 세계화에 앞장서는 국립합창단</h3>
+                <h2 class="mamtit3">국립합창단은 바로 여러분 곁에 있습니다</h2>
+                <div class="mambtn"><a href="#">멤버십가입</a></div>
+            </div>
+        </div>
+
+        <div class="blank"></div>
+
+        <div class="footer">
+            <nav class="ftmenu">
+                <ul>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">개인정보정책</a></li>
+                    <li><a href="#">성폭력신고핫라인</a></li>
+                    <li><a href="#">윤리경영</a></li>
+                    <li><a href="#">고객서비스현장</a></li>
+                    <li><a href="#">ENGLISH</a></li>
+                </ul>
+                <from class="search-box cell-right relative"><input type="text" placeholder="검색어를 입력해주세요"><img src="./img/images/search.icon_03.png" alt=""></from>
+                <ul class="right">
+                    <li><a href="https://www.youtube.com/channel/UCPt2iPR8bH27BlXTY2g_D3w" target="_blank"><img src="./img/images/images/snsicon_03.png" alt="유투브"></a></li>
+                    <li><a href="https://www.instagram.com/nck_1973/" target="_blank"><img src="./img/images/images/snsicon_01.png" alt="인스타"></a></li>
+                    <li><a href="https://twitter.com/nck_1973" target="_blank"><img src="./img/images/images/snsicon_07.png" alt="트위터"></a></li>
+                    <li><a href="https://www.facebook.com/koreanationalchorus/" target="_blank"><img src="./img/images/images/snsicon_05.png" alt="페이스북"></a></li>
+                </ul>
+            </nav>
+            <div class="ftlst">
+                <a href="#" class="ftlogo"><img src="./img/images/images/ftlogo_03.png" alt=""></a>
+                <p class="copyright">COPYRIGHT &copy; THE NATIONAL CHORUS OF KOREA . brALL RIGHTS RESERVED. <br>
+                    사업자 등록번호 214-82-05920 (우) 06757 서울시 서초구 남부순환로 2406 예술의전당 오페라하우스 4층<br>
+                    대표전화 02-587-8111 팩스 02-587-8565</p>
+                <p class="fttxt">(재)국립합창단은 "공직자윤리법" 제3조의 2에 따른 공직유관단체로서 "부정청탁 및 금품등 수수의 금지에 관한 법률"(청탁금지법) 적용대상 기관임을 알립니다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<a href="#" id="topbtn">↑</a></html>
