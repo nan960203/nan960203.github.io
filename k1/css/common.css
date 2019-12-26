@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+   #wrap{
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+        
+html,body{
+    width: 100%;
+    height: auto;
+    
+   font-family: 'Ropa Sans', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+    overflow-y:auto;
+    -ms-overflow-style:none;
+    /*수직스크롤만 나타나게 
+    overflow-x: hidden
+    overflow-y: auto*/  
+}
+
+/*스크롤가능,스크롤바안보이게
+::-webkit-scrollbar
+     display: none;*/
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+button,
+input,
+a,
+img {
+    outline: 0;
+    border: 0;
+    background-image: none;
+    background-color: transparent;
+}
+
+
