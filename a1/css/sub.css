@@ -607,3 +607,128 @@ html,body{
       }
       
         }
+
+
+
+
+
+
+
+  @media screen and (min-width:960px) and (max-width:1279px){
+           
+     .wrap{
+        column-count: 2;
+    }
+   
+.gnb{
+    float: right;
+    position: absolute;
+    top: 50px;
+    left: 320px;
+    width: 500px;
+}
+.gnb li{
+    float: left;
+    width: 15%;
+}
+
+.top-bar{
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    right: 1px;
+}
+.top-bar li{
+    float: left;
+    margin-right: 10px;
+}
+.top-bar li a{
+    display: block;
+    font-size: 15px;
+}
+      
+      
+/*가짜토굴*/
+.bgleft{
+    position: absolute;
+    left:calc(50% - -170px);
+    top: -80px;
+}
+.bgleft img{
+    width: 25px;
+    height: 25px;
+}
+.bgright{
+    position: absolute;
+    right: 4px;
+    top: 40px;
+}
+.bgright li{
+    clear: both;
+}
+.bgright img{
+    width: 50px;
+    height: 50px;
+}
+
+      /*아티스트*/
+      .ARTISTS-list{
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    clear: both;
+}
+.artists{
+    width: 80%;
+    margin: 0 auto;
+}
+.artists li{
+    float: left;
+    width: 100%;
+}
+      .artists li:nth-child(1){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(2){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(3){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(4){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(5){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(6){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(7){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(8){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(9){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(10){
+          width: 100%;
+          height: 300px;
+      } 
+       .artists li:nth-child(11){
+          width: 100%;
+          height: 300px;
+      }
+      
+        }

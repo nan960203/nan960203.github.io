@@ -1088,3 +1088,408 @@ html,body{
 
       
         }
+
+
+@media screen and (min-width:960px) and (max-width:1279px){
+    .wrap{
+        column-count: 2;
+    }
+   
+.gnb{
+    float: right;
+    position: absolute;
+    top: 50px;
+    left: 320px;
+    width: 500px;
+}
+.gnb li{
+    float: left;
+    width: 15%;
+}
+
+.top-bar{
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    right: 1px;
+}
+.top-bar li{
+    float: left;
+    margin-right: 10px;
+}
+.top-bar li a{
+    display: block;
+    font-size: 15px;
+}
+    
+/*가짜토굴*/
+.bgleft{
+    position: absolute;
+    left:calc(50% - 470px);
+    top: 180px;
+}
+.bgleft img{
+    width: 25px;
+    height: 25px;
+}
+.bgright{
+    position: absolute;
+    right: 25px;
+    top: 120px;
+}
+.bgright li{
+    clear: both;
+}
+.bgright img{
+    width: 50px;
+    height: 50px;
+}
+/*introduction*/
+.introduction{
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 950px;
+    
+}
+.intro{
+    width: 80%;
+    margin: 0 auto;
+}
+.intro .img-box{
+   position: relative;
+    margin-top: 40px;
+}
+.intro .introtit{
+    padding-top: 50px;
+    color: #555;
+    font-size: 19px;
+}
+
+
+      .intro .img-box li{
+    display: flex;
+    float: left;
+    width:50%;
+          height:270px;
+}
+      .intro .img-box li:first-child img{
+          width: 95%;
+          height: 250px;
+}
+      .intro .img-box li:nth-child(2) img{
+          width: 100%;
+          height: 240px;
+          margin-left:-5%;
+}
+.intro .img-box li:nth-child(3) img{
+    width: 95%;
+    height: 250px;
+}
+      .intro .img-box li:nth-child(4) img{
+    width: 100%;
+          margin-top: 0px;
+    height: 250px;
+}
+
+      
+
+.intro .introbtn{
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 50px);
+    display: block;
+    width: 100px;
+    height: 40px;
+    font-size: 17px;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    transition: 0.5s;
+}
+
+.intro .introbtn:hover{
+    color: #333;
+      position: absolute;
+    bottom: 50px;
+    left: calc(50% - 50px);
+    background-color: #000;
+    color: #fff;
+}
+
+
+      
+      
+      /*sche*/
+      
+ .sche .schetit{
+    padding-top: 50px;
+    color: #555;
+    font-size: 19px;
+}
+.sche .schetit2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 150px;
+        overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+  
+      .schemore img{
+    width: 100%;
+    height: 250px;
+    vertical-align: middle;
+}
+      
+      
+.schemore .schemoretxt span{
+    margin-bottom: 10px;
+    display: block;
+    margin-top: 27px;
+    font-size: 15px;
+    color: #910000;
+}
+.schemore .schemoretxt p{
+    font-weight: 500;
+    font-size: 17px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 350px;
+}
+.schemore .schemoretxt .schebtn{
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    left: calc(50% - 200px);
+    top: 90px;
+  
+    background-color: #001364;
+    color: #fff;
+    transition: 0.5s;
+}
+.schemore .schemoretxt .schebtn:hover{
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000;
+}
+      /*schedule*/
+.schedule{
+    width: 100%;
+    clear: both;
+    position: relative;
+    height: 2000px;
+    box-sizing: border-box;
+    background-color: #f9f9ff;
+}
+.sche{
+    width: 80%;
+    margin: 0 auto;
+}
+
+      .sche .albumbtn{
+     position: absolute;
+    right:100px;
+    top: 50px;
+          text-align: center;
+    display: block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.sche .albumbtn:hover{
+    background-color:#000;
+    color: #fff;
+    border-bottom: 1px solid #000;
+}
+
+      
+      /*age84다모임*/
+.agemore{
+    width: 100%;
+    height: 1100px;
+    position: relative;
+    clear: both;
+    background-image: url(../img/images/age_02.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.age{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.age ul li{
+    float: left;
+    width: 100%;
+}
+
+
+.age .agetit{
+    padding-top: 60px;
+    color: #555;
+    font-size: 20px;
+}
+.age .agetit2{
+    font-weight: normal;
+    font-size: 35px;
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+    margin-right: 150px;
+}
+.age ul li img{
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.age ul li audio{
+    width: 100%;
+}
+      .age .ageimg-box{
+    margin-top: 10px;
+    float: right;
+    width: 100%;
+          display: flex;
+}
+.age .ageimg-box img{
+    width: 50%;
+    height: 200px;
+}
+
+.age ul .ah{
+    margin-top: 30px;
+    font-size: 20px;
+}
+.age ul .pe{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #555;
+    line-height: 20px;
+}
+.age ul .pe strong{
+    font-size: 17px;
+    color: #005000;
+}
+
+.age ul li p{
+    line-height: 25px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.age ul li p strong{
+    font-size:18px;
+}
+
+/*playe*/
+.musicPlayer{
+    width: 100%;
+    height: 1900px;
+    position: relative;
+    clear: both;
+    background-color: #000;
+}
+.playe{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.playe li{
+    float: left;
+    width: 50%;
+}
+
+
+.playe .playetit{
+    padding-top: 50px;
+    color: #eee;
+    font-size: 25px;
+}
+.playe .playetit2{
+    color: #fff;
+    font-size: 35px;
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+    margin-right: 150px;
+}
+
+
+
+
+.album{
+    overflow: hidden;
+    padding-top: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+.album li{
+    float: left;
+    width: 49%;
+    overflow: hidden;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+.album img{
+    transition: 0.5s;
+    overflow: hidden;
+    width:100%;
+}
+.album img:hover{
+    transform: scale(1.15);
+}
+.albumbtn{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    display: block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.albumbtn:hover{
+    background-color: rgba(255,255,255,0.4);
+}
+
+
+      
+.rolling_wrap {
+	position: relative;
+	width: 100%;
+	min-height: 400px;
+	height: 400px;
+	margin: auto;
+	margin-top: 60px;
+	overflow: hidden;
+}
+
+.rolling_wrap a {
+	position: absolute;
+	overflow: hidden;
+	width: 420px;
+    height: 400px;
+	overflow: hidden;
+}
+
+.rolling_wrap a img {
+	width: 100%;
+	height: 100%;
+}
+
+      
+        }
+
+
+}
