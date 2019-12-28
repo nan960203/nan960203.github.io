@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>겨울왕국</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hi+Melody&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/lightslider.min.css">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/lightslider.min.js"></script>
+   <script>
+    /* $(document).ready(function() {
+            var sc_pg = parseInt($(window).height())
+            $(window).on('mousewheel', function(e) {
+                if (e.originalEvent.wheelDelta < 0) {
+                    $('html,body').not(':animated').animate({
+                        scrollTop: '+=' + sc_pg + 'px'
+                    }, 800);
+                } else {
+                    $('html,body').not(':animated').animate({
+                        scrollTop: '-=' + sc_pg + 'px'
+                    }, 800);
+                }
+                return false;
+            }); //$(window).on('mousewheel'
+        });*/
+       
+       
+    </script>
+     <script>
+    	 $(document).ready(function() {
+			$("#content-slider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                speed:500,
+                auto:true,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }  
+            });
+		}); //갤러리
+    </script>
+    
+</head>
+<body>
+    <div id="wrap">
+        <div class="header" id="page1">
+        <div class="hd"><a href="index.html" class="logo"><img src="./img/logo_03.png" alt=""></a>
+        <nav class="top-bar">
+            <ul>
+               <li><a href="#page1">HOME</a></li>
+                <li><a href="#page2">예고편보기</a></li>
+                <li><a href="#page3">등장인물 소개</a></li>
+                <li><a href="#page4">갤러리</a></li>
+            </ul>
+        </nav>
+        </div>
+         <div class="slider"><img src="./img/bn01_02.png" alt=""></div>
+        </div>
+       
+        <div class="con1" id="page2">
+            <img src="./img/c1bg_03.png" alt="" class="cimg1"><img src="./img/c1bg3_02.png" alt="" class="cimg2">
+            <div class="con-video">
+               <a href="#" class="morebtn">MORE</a> 
+                <h2 class="videotit">두려움을 깨고 새로운 운명을 만나다!</h2>
+                <p class="videodas">숨겨진 과거의 진실을 찾아 친구들과 위험천만한 놀라운 모험을 떠나게 된다.</p>
+                <iframe width="1100" height="550" src="https://www.youtube.com/embed/eSEs4B4H-EA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+            </div>
+             
+        </div>
+        
+        <div class="con2" id="page3">
+           <img src="./img/images/character_04.png" alt="" class="character">
+            
+            <input type="radio" class="raitem" name="raitem" id="ra1" checked> 
+            <input type="radio" class="raitem" name="raitem" id="ra2"> 
+            <input type="radio" class="raitem" name="raitem" id="ra3"> 
+            <input type="radio" class="raitem" name="raitem" id="ra4"> 
+            <input type="radio" class="raitem" name="raitem" id="ra5">  
+             <div class="brandTabbtn">
+                <label for="ra1" class="Tabbtn item1"><img src="./img/images/con2item_03_03.png" alt=""></label>
+                <label for="ra2" class="Tabbtn item2"><img src="./img/images/con2item_06.png" alt=""></label>
+                <label for="ra3" class="Tabbtn item3"><img src="./img/images/con2item_08.png" alt=""></label>
+                <label for="ra4" class="Tabbtn item4"><img src="./img/images/con2item_10.png" alt=""></label>
+                <label for="ra5" class="Tabbtn item5"><img src="./img/images/con2item_12_03.png" alt=""></label>
+            </div>
+            <div class="brandConbox">
+                <div class="Conbox item1">
+                 
+                   <ul class="txt-box"><h2 class="con2name">엘사 (Elsa)</h2>
+                   <p class="con2das"><strong>주인공 아렌델의 여왕,</strong> 안나의 언니
+더 성숙된 모습으로 마법을 다루며 왕국을 아낀다
+귓속에서 들리는 부름에 미지의 세계로 , 
+두렵지만 마법의 숲과 아렌델의 비밀을 밝히기 위해 
+용감히 떠난다. 엘사는 정령과 인간을 이어주는 
+다섯번째 정령이였다
+</p>
+                  <a href="#" class="con2btn">자세히보기</a>
+                   </ul>
+                </div>
+                <div class="Conbox item2">
+                   <ul class="txt-box"><h2 class="con2name">안나(Anna)</h2>
+                   <p class="con2das"><strong>아렌델 왕국의 차녀,</strong> 엘사의 유일한 여동생 <br>
+마법의 숲과 아렌델을 구하는 최종 영웅, 언니처럼 마법은  <br>없지만
+자신의 용기와 판단력으로 저주를 풀어 <br>언니도 구하게된다
+마지막에 아렌델의 여왕으로 등극한다
+</p>
+                  <a href="#" class="con2btn">자세히보기</a>
+                   </ul>
+                </div>
+                 <div class="Conbox item3">
+                   <ul class="txt-box"><h2 class="con2name">올라프(Olaf)</h2>
+                   <p class="con2das"><strong>엘사의 마법으로 생명을 얻는 꼬마 눈사람,</strong>
+머리와 몸이 분리될수 잇는 이상한 능력을 가지고있음,
+여름날의 따뜻한 바람과 햇빛을 꿈꾼다.
+
+</p>
+                  <a href="#" class="con2btn">자세히보기</a>
+                   </ul>
+                </div>
+                <div class="Conbox item4">
+                   <ul class="txt-box"><h2 class="con2name">크리스토프 (Kristoff) / 스벤 (Sven)</h2>
+                   <p class="con2das"><strong>안나의 연인, 순록 스벤의 주인</strong>
+아주 순진한 성격의 소유자 안나에게 청혼할려고 하는데
+자꾸 잘하지 못하는 언변때문에 기회를 놓친다
+마법의 숲에서 안나랑 헤어지게 되지만 골렘의 발밑에서 안나를
+구하는 안나의 영원한 히어로
+<br>
+<br>크리스토프의 친한 친구 순록, 썰매기사
+</p>
+                  <a href="#" class="con2btn">자세히보기</a>
+                   </ul>
+                </div>
+                 <div class="Conbox item5">
+                   <ul class="txt-box"><h2 class="con2name">브루니 (Bruni)</h2>
+                   <p class="con2das"><strong>불의 정령,</strong> 호기심 많은 도롱뇽
+저주에 걸린 숲에 살고 있는 귀엽고 깜찍한 정령
+엘사의 마법의 눈을 좋아한다.처음에는 불지르며 난리지만
+엘사에게 마음을 내어준다. 엘사의 눈에 자신의 불덩이 같은 몸을 녹인다
+</p>
+                  <a href="#" class="con2btn">자세히보기</a>
+                   </ul>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="con3" id="page4">
+           <a href="#" class="gallerybtn">MORE</a>
+          <img src="./img/images/gallery_03.png" alt="" class="galleryfont">
+           <img src="./img/images/con3iteme.png" alt="" class="con3bgimg1">
+           <img src="./img/images/con3bga_03.png" alt="" class="con3bgimg2">
+            <div class="demo">
+        <div class="item">            
+            <div class="clearfix" style="max-width:1100px; max-height: 300px;">
+                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                    <li data-thumb="./img/con3img1.jpg"> 
+                        <img src="./img/con3-1.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img2.jpg"> 
+                        <img src="./img/con3-2.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img3.jpg"> 
+                        <img src="./img/con3-3.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img4.jpg"> 
+                        <img src="./img/con3-4.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img5.jpg"> 
+                        <img src="./img/con3-5.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img6.jpg"> 
+                        <img src="./img/con3-6.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img7.jpg"> 
+                        <img src="./img/con3-7.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img8.jpg"> 
+                        <img src="./img/con3-8.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img9.jpg"> 
+                        <img src="./img/con3-9.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img10.jpg"> 
+                        <img src="./img/con3-10.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img11.jpg"> 
+                        <img src="./img/con3-11.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img12.jpg"> 
+                        <img src="./img/con3-12.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img13.jpg"> 
+                        <img src="./img/con3-13.jpg" />
+                         </li>
+                    <li data-thumb="./img/con3img14.jpg"> 
+                        <img src="./img/con3-14.jpg" />
+                         </li>
+                   </ul>
+            </div>
+        </div>
+      
+    </div>
+        </div>
+        <div class="ft">
+            <a href="#" class="ftlogo"><img src="./img/images/disney_03.png" alt=""></a>
+            <p class="copyright">&copy;Disney &copy; Disney/Pixar &copy;MARVEL &copy; & ™ Lucasfilm Ltd.</p>
+        </div>
+        <div class="pagebtn">
+            <ul>
+                <li><a href="#page1"></a></li>
+                <li><a href="#page2"></a></li>
+                <li><a href="#page3"></a></li>
+                <li><a href="#page4"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
