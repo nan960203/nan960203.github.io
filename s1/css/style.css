@@ -49,10 +49,11 @@ html,body{
 }
 .top-bar li a{
     display: block;
-    font-size: 16px;
+    font-size: 17px;
 }
 .top-bar li a:hover{
     color: #043a6b;
+    font-weight: bold;
 }
 .slider{
     height: 100vh;
@@ -415,6 +416,7 @@ html,body{
     bottom: 0;
     width: 500px;
     height: 800px;
+    left: -10px;
 }
 .con3bgimg2{
     position: absolute;
