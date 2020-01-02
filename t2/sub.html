@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <title>더바디샵</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon/favicon256.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon152.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon144.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon128.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon96.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon72.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon64.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon48.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon32.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon16.jpg">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <script src="../OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js" type="text/jscript"></script>
+    <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.js" type="text/javascript"></script>
+
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var ck1 = true,
+                ck2 = true;
+            //true라는 값을 ck1이라는 변수에 저장
+            /*
+            $("선택자").메소드(function(){})
+            */
+            $(".lst_btn").click(function() {
+                if (ck1) { //if 조건문=참(참일시 실행문)
+                    $(".collap").addClass("on");
+                    $(".lst_btn").addClass("on");
+                } else { //else (거짓일 때 실행문)
+                    $(".collap").removeClass("on");
+                    $(".lst_btn").removeClass("on");
+                }
+                ck1 = !ck1; //true = false
+            });
+            //스크롤시 메인 메뉴 모션    
+            $(window).scroll(function() {
+                var sc_top = parseInt($("body, html").scrollTop());
+                if (sc_top >= 500 && sc_top < 8200) {
+                    $(".hd").addClass("on");
+                    $(".hd").removeClass("off");
+                } else if (sc_top >= 8200) {
+                    $(".hd").removeClass("on");
+                    $(".hd").addClass("off");
+                } else {
+                    $(".hd").removeClass("on");
+                    $(".hd").removeClass("off");
+                }
+            });
+           //패럴럭스 스크롤링
+            var wh = $(window).height();
+            var wd = $(window).width();
+            $(".sc_data").each(function(index) {
+                $(this).attr("data-val", index * wh);
+            });
+            $(".sc_data").on("mousewheel DOMMouseScroll", function(e) {
+                var secPos = parseInt($(this).attr("data-val"));
+                if (e.originalEvent.wheelDelta >= 0) {
+                    $("html, body").stop().animate({
+                        scrollTop: secPos - wh
+                    });
+                    return false;
+                } else if (e.originalEvent.wheelDelta < 0) {
+                    $("html, body").stop().animate({
+                        scrollTop: secPos + wh
+                    });
+                    return false;
+                }
+            });
+            
+            $('.search-box').click(function() {
+                $(this).toggleClass('option-mode');
+
+                return false; // 자신이 클릭 되었다는 사실을 부모 엘리먼트에게 알리지 않는다.
+            });
+            
+
+
+        });
+        
+       
+    </script>
+
+    <style>
+        body,
+        html {
+            clear: both;
+            position: relative;
+        }
+
+        /*토글메뉴*/
+        .collap {
+            position: fixed;
+            top: 0;
+            background-color: lavenderblush;
+            right: -110%;
+            z-index: 100;
+
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            transition: 0.7s;
+
+        }
+
+        .collap {
+            position: fixed;
+            top: 0;
+            background-color: lavenderblush;
+            left: -110%;
+            z-index: 100;
+
+            width: 30vw;
+            height: 100vh;
+            box-sizing: border-box;
+            transition: 0.7s;
+
+        }
+
+        /*.clogo{
+            width: 200px;
+            height: auto;
+            display: block;
+            margin-top: 3em;
+            
+            padding: 5px;
+        }
+        .clogo img{
+            margin-left: 1em;
+            margin-bottom: 1em;
+            width: 100%;
+            cursor: pointer;
+            display: block;
+        }
+        */
+        /* 사이드메뉴*/
+        .collap {
+            position: fixed;
+            top: 0;
+            right: -110%;
+            z-index: 80;
+            background-color: #e8e8e8;
+            width: 25vw;
+            height: 100vh;
+            padding-top: 90px;
+            box-sizing: border-box;
+            transition: 0.7s;
+        }
+
+        .collap.on {
+            left: 0;
+        }
+
+        .collap li {
+            clear: both;
+            position: relative;
+        }
+
+        .collap li a {
+            display: block;
+            height: 32px;
+        }
+
+        .collap li a.dep1 {
+            color: #000;
+            line-height: 3;
+            padding-left: 3em;
+            height: 42px;
+            line-height: 42px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .collap li a.dep1:after {
+            /*  content: "▼";*/
+            position: absolute;
+            left: 70%;
+        }
+
+        .collap li.on a.dep1:after {
+            /* content: "▲"*/
+        }
+
+        .collap li ul.dep2 {
+            text-indent: 20px;
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+            height: auto;
+            background: transparent;
+            position: static;
+        }
+
+        .collap li.on ul.dep2 {
+            /* 대메뉴 li가 on상태이면 .dep2(서브메뉴)가 보이게 해라 */
+            display: block;
+            visibility: visible;
+        }
+
+        .collap li ul.dep2 li {
+            line-height: 2;
+        }
+
+        .collap li ul.dep2 li a {
+            color: #333;
+            font-size: 1rem;
+        }
+     .clogo {
+            display: none;
+        }
+
+
+
+
+        /*토글버튼*/
+        .lst_btn {
+            position: absolute;
+            top: 0.5em;
+            left: 2%;
+            width: 48px;
+            height: 48px;
+
+            margin-top: 0.5em;
+            z-index: 99;
+            cursor: pointer;
+            display: block;
+        }
+
+        .lst_btn .line {
+            display: block;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            top: 0.5em;
+            right: 0.5em;
+            transition: 0.4s;
+            z-index: 99;
+            transform: rotate(0deg);
+        }
+
+        .lst_btn .item1 {
+            width: 20px;
+            top: 1.1em;
+        }
+
+        .lst_btn .item2 {
+            width: 30px;
+            top: 0.5em;
+
+        }
+
+        /*넓이변경효과*/
+        .lst_btn:hover .item1 {
+            width: 30px;
+        }
+
+        .lst_btn:hover .item2 {
+            width: 20px;
+        }
+
+        /*클릭시 효과 on*/
+        .lst_btn.on .item1 {
+            /*클릭시 x로변경*/
+            width: 30px;
+            transform: rotate(45deg);
+            top: 23px;
+        }
+
+        .lst_btn.on .item2 {
+            /*클릭시 x로변경*/
+            width: 30px;
+            transform: rotate(-45deg);
+            top: 23px;
+        }
+
+        /*헤더영역*/
+        .hd {
+            clear: both;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 80;
+            width: 100%;
+            height: 120px;
+
+            transition: 0.5s;
+        }
+
+        .hd.on {
+            /*on 제이쿼리기능 이용 배경색변하게*/
+            background-color: rgba(255,255,255,0.5);
+
+        }
+
+        .hd.off {
+            /*3,4페이지에서 헤더안보이게*/
+            top: -120px;
+        }
+
+        .logo {
+            display: block;
+            width: 260px;
+            height: 25px;
+            margin: 0 auto;
+            margin-top: 1em;
+        }
+
+        .logo img {
+            height: 100%;
+            display: block;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /*왼쪽상단메뉴*/
+        .top_bar {
+            margin-left: 10em;
+            margin-top: -1.5em;
+            color: #333;
+        }
+
+        .top_bar li {
+            position: relative;
+            float: left;
+            padding-left: 15px;
+        }
+
+
+        .top_bar2 {
+            margin-right: 10em;
+
+        }
+
+        .top_bar2 li {
+            float: right;
+            padding-right: 15px;
+        }
+
+        .top_bar2 li.icon {
+            margin-top: -5px;
+        }
+
+
+        /*메뉴바*/
+        .gnb {
+            clear: both;
+            margin-top: 1em;
+            margin-left: 9em;
+            float: left;
+        }
+
+        .gnb ul {}
+
+        .gnb li {
+            float: left;
+            width: 160px;
+            position: relative;
+        }
+
+        .gnb li a {
+            display: block;
+            text-align: center;
+            padding: 1em;
+            line-height: 0.5em;
+
+        }
+
+        .gnb li a.dep1 {
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+        .gnb li:hover a.dep1 {}
+
+        .dep2 {
+            width: 100%;
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+
+        }
+
+        .gnb li:hover .dep2 {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.4s;
+            height: auto;
+        }
+
+        .dep2 li {
+            clear: both;
+            /*대메뉴 .gnb li의 float:left 영향안받게 밑으로 쌓이게 clear:both*/
+            background-color: #f8f8f8;
+        }
+
+        .dep2 li a:hover {
+            background-color: #fff;
+        }
+
+
+        .search {
+            clear: both;
+            right: 7em;
+            margin-top: -1em;
+            position: absolute;
+
+        }
+
+        .search-box {
+            position: relative;
+            top: -38px;
+            left: 97em;
+            margin-top: -30px;
+        }
+
+        .search-box>input {
+            width: 240px;
+            outline: 0;
+            border-bottom: 1px solid #333;
+            height: 30px;
+            top: 56px;
+            background-color: transparent;
+            font-size: 12px;
+        }
+
+        .search-box>input:focus {
+            border-color: #000;
+        }
+
+        .search-box>img {
+            width: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+
+        }
+
+        .search-box .search-menu {
+            box-sizing: border-box;
+            border: 1px solid #dfdfdf;
+            position: absolute;
+            display: none;
+            left: -1px;
+            width: calc(100% + 2px);
+            background-color: black;
+            color: white;
+            padding: 10px 10px 7px;
+            font-size: 12px;
+        }
+
+        .search-box.option-mode .search-menu {
+            display: block;
+        }
+
+
+        /*section1*/
+       
+       .sc_date{
+            
+            width: 100vw;
+            height: 130vh;
+            
+        }
+        .change{
+            width: 85vw;
+            height: 100vh;
+            margin: 0 auto;
+            
+        }
+        .txt_box{
+            text-align: center;
+        }
+        .ch_tit{
+            font-size: 38px;
+            margin-bottom: 0.3em;
+        }
+        .ch_txt{
+            margin-bottom: 2em;
+            color: #555;
+            font-weight: 100;
+            font-size: 25px;
+        }
+        
+        .ch_menu{
+            margin-left: 1em;
+            margin-bottom: 2em;
+            margin-top: 10em;
+            color: #555;
+        }
+        .ch_menu strong{
+            color: #000;
+        }
+        #vdo {
+            width: 80vw;
+            height: 95%;
+            margin: 0 auto;
+        }
+
+        #vd1 {
+            margin: 0 auto;
+            width:80vw;
+            height: 100%;
+            min-height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        
+        
+        /*page2*/
+        .ch{
+            margin: 0 auto;
+            width: 85vw;
+            height: 100vh;
+        }
+        .ch_com{
+        
+            text-align: center;
+            font-weight: 100;
+            margin-top: 3em;
+          
+        }
+        .img_box{
+            padding-top: 5em;
+            margin: 0 auto;
+            width: 100%;
+
+            
+        }
+        .img_box ul{
+            float: left;
+     width: 85%;
+            margin-left: 10em;
+       
+        }
+        .img_box ul li{
+       
+            float: left;
+            width:25%;
+            margin: 0 auto;
+        }
+      
+        .img_box ul li img{
+            width:400px;
+            height: 354px;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+       
+        
+        /*ch3 page3*/
+        .ch3{
+            width: 85vw;
+            margin: 0 auto;
+            height: 165vh;
+            
+        }
+        .ch_com2{
+            text-align: center;
+            font-weight: normal;
+        }
+        .pos{
+            padding-top: 3em;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            cursor: pointer;
+            margin-bottom:5em;
+ 
+            
+        }
+        .prev_lst{
+           
+            margin: 0 auto;
+            text-indent: 20px;
+            width: 100%;
+            background-color: #eaeaea;
+            height: 50px;
+            line-height: 50px;
+        }
+        .prev_lst span{
+            cursor: pointer;
+        }
+        .prev_lst span:hover{
+            
+            text-decoration: underline;
+        }
+        .prev_btn ul li a{
+            margin: 0 auto;
+            margin-top: 3em;
+            text-align: center;
+            display: block;
+            width: 200px;
+            height: 50px;
+            border: 2px solid #000;
+            line-height: 50px;
+        }
+        .prev_btn ul li a:hover{
+            background-color: #000;
+            color: #fff;
+        }
+       /*하단*/
+        .ft {
+            margin-top: 5em;
+            height: 700px;
+            width: 100%;
+            clear: both;
+
+        }
+
+        .fnb {
+            height: 50px;
+            background-color: #f3f3f3;
+            width: 85%;
+            margin: 0 auto;
+            padding: 8px 0;
+        }
+
+        .fnb ul {
+            margin-left: 30em;
+        }
+
+        .fnb li {
+            float: left;
+            margin-left: 30px;
+        }
+
+        .fnb li a {
+            display: block;
+            text-align: center;
+        }
+
+        .fnb .news {
+            margin-left: 20em;
+        }
+
+        .fnb .news a {
+            display: block;
+            width: 300px;
+            height: 48px;
+            line-height: 48px;
+            border: 2px solid #000;
+            text-align: center;
+        }
+
+        .fnb .news a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+
+        .footer-region {
+            width: 85%;
+            margin: 0 auto;
+
+            text-align: left;
+            margin-top: 4em;
+        }
+
+        .ft-columns {
+            float: left;
+        }
+
+        .ft-columns .columns {
+            float: left;
+            width: 270px;
+        }
+
+        .ft-columns .columns strong:hover {
+            text-decoration: underline;
+        }
+
+        .ft-columns .columns ul li {
+            margin-bottom: 1em;
+        }
+
+        .ft-columns .columns ul li a {
+            display: block;
+            font-size: 15px;
+        }
+
+        .footer-right {
+            float: right;
+            width: 300px;
+            text-align: right;
+            margin-right: -820px;
+        }
+
+        .footer-right .columns {
+            float: right;
+            margin-right: 0;
+            margin-bottom: 5px;
+            text-align: right;
+
+
+        }
+
+        .footer-right .columns strong:hover {
+            text-decoration: none;
+        }
+
+        .ft_txt {
+            clear: both;
+            padding-top: 3em;
+            font-weight: bold;
+
+        }
+
+        .copy-right {
+            padding-top: 2em;
+            color: #7d7d7d;
+            line-height: 1.4;
+            font-weight: 100;
+        }
+        #totop{
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            background-color: #dfdfdf;
+            display: block;
+            bottom: 150px;
+            right: 60px;
+            line-height: 40px;
+            text-align: center;
+        }
+        #totop:hover{
+            background-color: #bfbfbf;
+        }
+    </style>
+</head>
+
+<body>
+
+   <nav class="collap">
+        <a class="clogo"><img src="./img/main/logo_03.png" alt=""></a>
+        <ul class="main_menu">
+            <li><a href="" class="dep1">NEWS &amp; EVENT</a>
+                <ul class="dep2">
+                    <li><a href="">NEW IN</a></li>
+                    <li><a href="">BEST SELLRS</a></li>
+                    <li><a href="">EVENT</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">#더바디샵선물하기</a>
+                <ul class="dep2">
+                    <li><a href="">1만원대 선물세트</a></li>
+                    <li><a href="">2만원대 선물세트</a></li>
+                    <li><a href="">3만원대 이상선물세트</a></li>
+                    <li><a href="">선물세트 전체보기</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">SKIN CARE</a>
+                <ul class="dep2">
+                    <li><a href="">클렌저</a></li>
+                    <li><a href="">스크럼&amp;마스크</a></li>
+                    <li><a href="">페이스오일</a></li>
+                    <li><a href="">토너&amp;미스트</a></li>
+                    <li><a href="">세럼</a></li>
+                    <li><a href="">모이스처라이저</a></li>
+                    <li><a href="">아이케어</a></li>
+                    <li><a href="">선케어</a></li>
+                    <li><a href="">립케어</a></li>
+                    <li><a href="">화장솜&amp;액세서리</a></li>
+                    <li><a href="">남성스킨케어</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">BATH &amp; BODY</a>
+                <ul class="dep2">
+                    <li><a href="">대용량바디케어</a></li>
+                    <li><a href="">배쓰&amp;샤워</a></li>
+                    <li><a href="">바디스크럽</a></li>
+                    <li><a href="">바디모이스처라이저</a></li>
+                    <li><a href="">바디오일</a></li>
+                    <li><a href="">바디미스트</a></li>
+                    <li><a href="">데오도란트</a></li>
+                    <li><a href="">풋케어</a></li>
+                    <li><a href="">핸드케어</a></li>
+                    <li><a href="">비누</a></li>
+                    <li><a href="">액세서리</a></li>
+                    <li><a href="">기획세트</a></li>
+                    <li><a href="">트래블 에센셜</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">FRAGRANEC</a>
+                <ul class="dep2">
+                    <li><a href="">FOR HIM</a></li>
+                    <li><a href="">FOR HER</a></li>
+                    <li><a href="">FOR EVERYONE</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">HAIR</a>
+                <ul class="dep2">
+                    <li><a href="">샴푸</a></li>
+                    <li><a href="">컨디셔너&amp;트리트먼트</a></li>
+                    <li><a href="">액세서리</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">SHOP BT RANGE</a>
+                <ul class="dep2">
+                    <li><a href="">화이트 머스크</a></li>
+                    <li><a href="">모링가</a></li>
+                    <li><a href="">티트리</a></li>
+                    <li><a href="">화이트 머스크 로'</a></li>
+                    <li><a href="">핑크 그레이프후룻</a></li>
+                    <li><a href="">브리티쉬 로즈</a></li>
+                    <li><a href="">화이트 머스크 플로라</a></li>
+                    <li><a href="">아몬드 밀크 &amp; 허니</a></li>
+                    <li><a href="">그린티</a></li>
+                    <li><a href="">블랙 머스크</a></li>
+                    <li><a href="">망고</a></li>
+                    <li><a href="">진저</a></li>
+                    <li><a href="">드롭스 오브 유스</a></li>
+                    <li><a href="">드롭스 오브 라이트</a></li>
+                    <li><a href="">루트 오브 스트렝스</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">#SALE</a>
+                <ul class="dep2">
+                    <li><a href="">하나 더 증정</a></li>
+                    <li><a href="">멤버십 세트</a></li>
+                    <li><a href="">온라인 단독</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+    <header class="hd"><a href="index.html" class="logo"><img src="./img/main/logo_03.png" alt="logo"></a>
+        <ul class="top_bar">
+            <li class="item1"><a href="#">매장안내</a></li>
+            <li class="item2"><a href="">LYB 멤버십</a></li>
+        </ul>
+        <ul class="top_bar2">
+            <li class="icon"><a href="#"><img src="./img/main/micon_01.png" alt=""></a>
+            </li>
+            <li class="icon"><a href="#"><img src="./img/main/micon_02.png" alt=""></a>
+            </li>
+            <li class="icon"><a href="#"><img src="./img/main/micon_03.png" alt=""></a></li>
+            <li class="icon eyes"><a href="#"><img src="./img/main/micon_04.png" alt=""></a></li>
+            <li class="right"><a href="#">로그인</a></li>
+            <li class="right"><a href="#">회원가입</a></li>
+
+        </ul>
+        <nav class="gnb">
+            <ul class="main_menu">
+                <li><a href="" class="dep1">NEWS &amp; EVENT</a>
+                    <ul class="dep2">
+                        <li><a href="">NEW IN</a></li>
+                        <li><a href="">BEST SELLRS</a></li>
+                        <li><a href="">EVENT</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">#더바디샵선물하기</a>
+                    <ul class="dep2">
+                        <li><a href="">1만원대 선물세트</a></li>
+                        <li><a href="">2만원대 선물세트</a></li>
+                        <li><a href="">3만원대 이상 선물세트</a></li>
+                        <li><a href="">선물세트 전체보기</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">SKIN CARE</a>
+                    <ul class="dep2">
+                        <li><a href="">클렌저</a></li>
+                        <li><a href="">스크럼&amp;마스크</a></li>
+                        <li><a href="">페이스오일</a></li>
+                        <li><a href="">토너&amp;미스트</a></li>
+                        <li><a href="">세럼</a></li>
+                        <li><a href="">모이스처라이저</a></li>
+                        <li><a href="">아이케어</a></li>
+                        <li><a href="">선케어</a></li>
+                        <li><a href="">립케어</a></li>
+                        <li><a href="">화장솜&amp;액세서리</a></li>
+                        <li><a href="">남성스킨케어</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">BATH &amp; BODY</a>
+                    <ul class="dep2">
+                        <li><a href="">대용량바디케어</a></li>
+                        <li><a href="">배쓰&amp;샤워</a></li>
+                        <li><a href="">바디스크럽</a></li>
+                        <li><a href="">바디모이스처라이저</a></li>
+                        <li><a href="">바디오일</a></li>
+                        <li><a href="">바디미스트</a></li>
+                        <li><a href="">데오도란트</a></li>
+                        <li><a href="">풋케어</a></li>
+                        <li><a href="">핸드케어</a></li>
+                        <li><a href="">비누</a></li>
+                        <li><a href="">액세서리</a></li>
+                        <li><a href="">기획세트</a></li>
+                        <li><a href="">트래블 에센셜</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">FRAGRANEC</a>
+                    <ul class="dep2">
+                        <li><a href="">FOR HIM</a></li>
+                        <li><a href="">FOR HER</a></li>
+                        <li><a href="">FOR EVERYONE</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">HAIR</a>
+                    <ul class="dep2">
+                        <li><a href="">샴푸</a></li>
+                        <li><a href="">컨디셔너&amp;트리트먼트</a></li>
+                        <li><a href="">액세서리</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">SHOP BT RANGE</a>
+                    <ul class="dep2">
+                        <li><a href="">화이트 머스크</a></li>
+                        <li><a href="">모링가</a></li>
+                        <li><a href="">티트리</a></li>
+                        <li><a href="">화이트 머스크 로'</a></li>
+                        <li><a href="">핑크 그레이프후룻</a></li>
+                        <li><a href="">브리티쉬 로즈</a></li>
+                        <li><a href="">화이트 머스크 플로라</a></li>
+                        <li><a href="">아몬드 밀크 &amp; 허니</a></li>
+                        <li><a href="">그린티</a></li>
+                        <li><a href="">블랙 머스크</a></li>
+                        <li><a href="">망고</a></li>
+                        <li><a href="">진저</a></li>
+                        <li><a href="">드롭스 오브 유스</a></li>
+                        <li><a href="">드롭스 오브 라이트</a></li>
+                        <li><a href="">루트 오브 스트렝스</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">#SALE</a>
+                    <ul class="dep2">
+                        <li><a href="">하나 더 증정</a></li>
+                        <li><a href="">멤버십 세트</a></li>
+                        <li><a href="">온라인 단독</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <from class="search-box cell-right relative"><input type="text" placeholder="검색어를 입력해주세요"><img class="absolute-right absolute-middle" src="img/main/search.icon_03.png" alt="">
+                <div class="search-menu">
+                    <ul>
+                        <li class="row">
+                            <div class="ico ico-btn cell"></div><span class="cell">인기검색어</span>
+
+
+                        </li>
+                        <li><span class="cell"></span></li>
+                    </ul>
+                </div>
+            </from>
+        </nav>
+        <div class="lst_btn">
+            <span class="line item1"></span>
+            <span class="line item2"></span></div>
+    </header>
+
+    <section class="page sc_date" id="page1">
+       <div class="change">
+         <div class="ch_menu"><a href="#">Home / </a>
+         <span>Our Commitment / </span>
+         <strong>캠페인</strong></div>
+          <div class="txt_box">
+           <h1 class="ch_tit">Plastic For Change</h1>
+           <h2 class="ch_txt">플라스틱은 언제까지 일회용품 이여야 할까요?</h2>
+           </div>
+           <figure id="vdo">
+               <video src="./img/plastic.mp4" id="vd1" autoplay loop muted></video>
+           </figure>
+          
+       </div>
+       
+    </section>
+    <section class="page ch" id="page2">
+       <div class="change2"></div>
+         <h2 class="ch_com">더바디샵은 지구 환경 보호를 위해 <br>전 제품 용기를 재활용된 플라스틱으로 만들고 있습니다. <br><br>그 중 250ml 헤어케어 제품 용기는<br>인도 벵갈루루의 폐기물 수거자로부터 구매한 <br>공정무역 플라스틱으로 만들어집니다. <br><br> <strong>나아가 2020년, 더바디샵의 전 제품 용기는 <br>공정무역을 통해 전해받은 재활용 플라스틱으로 만들어 질 예정입니다.</strong> <br><br>이를 통해, 심각한 환경 오염문제 뿐만 아니라 <br>2,500명의 폐기물 수거자들의 경제적인 안정, 위생적인 근무 환경을 보장해 <br>더 나은 미래를 꿈꿀 수 있도록 도울 것입니다. </h2>
+         <div class="img_box">
+            <ul>
+             <li><img src="./img/main/vm01.PNG" alt=""></li>
+             <li><img src="./img/main/vm02.PNG" alt=""></li>
+             <li><img src="./img/main/vm03.PNG" alt=""></li>
+             <li><img src="./img/main/vm04.PNG" alt=""></li>
+         </ul></div>
+         
+    </section>
+ <section class="page ch3" id="page2">
+       <div class="change3"></div>
+         <h2 class="ch_com2">더바디샵은 공병수거 캠페인을 통해 <strong>지구 환경 지키기</strong>에 동참하고자 합니다. <br><br>플라스틱으로 된 화장품 공병을 더바디샵 매장으로 가지고 오세요<br>현금처럼 사용가능한 포인트로 교환해드립니다. <br><br><strong>이를 통해 모아진 플라스틱은 테라사이클과 함께 재활용하여 <br>어린이 놀이터 제작을 위해 기부할 예정입니다.</strong> <br><br>플라스틱을 책임감 있게 사용하는 것도 <br>함께 사는 지구를 만드는 또 하나의 방법입니다. </h2>
+         
+         <img src="./img/main/poster.png" alt="" class="pos">
+         
+         
+         <div class="prev_lst">
+             <ul>
+                 <li><a href="">이전글 &nbsp; &nbsp;&nbsp; &nbsp;</a><span>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;EMPOWERING WOMEN AROUND THE WORLD</span></li>
+             </ul>
+         </div>
+         <div class="prev_btn">
+             <ul>
+                 <li><a href="">목록보기</a></li>
+             </ul>
+         </div>
+    </section>
+
+    
+    <footer class="ft">
+        <nav class="fnb">
+            <ul>
+                <li><a href="https://www.instagram.com/thebodyshop_korea/" target="_blank"><img src="./img/main/images/instar.icon_01.png" alt=""></a></li>
+                <li><a href="https://www.facebook.com/TheBodyShopKR/" target="_blank"><img src="./img/main/images/face.icon_01.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/thebodyshop_korea/" target="_blank"><img src="./img/main/images/you.icon_01.png" alt=""></a></li>
+                <li class="news"><a href="" class="btn">뉴스레터 가입하기</a></li>
+            </ul>
+        </nav>
+        <div class="footer-region">
+            <div class="ft-columns">
+                <div class="columns">
+                    <ul>
+                        <li><a href=""><strong>ABOUT US</strong></a></li>
+                        <li><a href="">브랜드 스토리</a></li>
+                        <li><a href="">더바디샵 뉴스</a></li>
+                        <li><a href="">공정무역</a></li>
+                        <li><a href="">윤리무역</a></li>
+                        <li><a href="">캠페인</a></li>
+                        <li><a href="">채용정보</a></li>
+                    </ul>
+                </div>
+                <div class="columns">
+                    <ul>
+                        <li><a href=""><strong>ABOUT CBS</strong></a></li>
+                        <li><a href="">창업안내</a></li>
+                        <li><a href="">개설절차 안내 및 신청</a></li>
+                        <ul>
+                            <li><a href=""><strong>고객만족센터</strong></a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">1:1 문의</a></li>
+                            <li><a href="">대량 구매 문의</a></li>
+                            <li><a href="">공지사항</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="columns">
+                    <ul>
+                        <li><a href=""><strong>개인정보처리방침</strong></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href=""><strong>커뮤니티</strong></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href=""><strong>사이트맵</strong></a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <div class="columns">
+                        <ul>
+                            <li><strong>평일 AM 9시 ~ PM 6시 </strong></li>
+                            <li>(점심시간 PM 12시 ~ 1시)</li>
+                            <li>토,일 공휴일 휴무</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_txt">본 사이트에 게시된 자료에 대한 권리는 (주)비에스케이코퍼레이션에 있으며, 정보를 가공, 판매하는 행위 등 서비스에 게시된 자료를 영리목적으로 사용할 수 없습니다</div>
+            <div class="copy-right">(주)비에스케이코퍼레이션대표이사:박종호서울시 강남구 학동로 401 13층 고객센터 080-759-7700팩스 02-759-0788 <br>
+개인정보관리책임자:오미경공정거래위원회 고시 제 2000-1호에 따른 사업자등록번호 116-81-62784 <br>
+이메일 주소 : <strong> webmaster@thebodyshop.co.kr</strong> 통신판매업신고번호 제 2010-서울강남-02017호 3 <br>
+사업자정보확인 온라인이용약관 호스팅 사업자 (주)비에스케이코퍼레이션</div>
+        </div>
+    </footer>
+    
+</body>
+<a href="#" id="totop">↑</a>
+</html>

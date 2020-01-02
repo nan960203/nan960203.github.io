@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <title>더바디샵</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon/favicon256.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon152.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon144.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon128.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon96.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon72.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon64.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon48.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon32.jpg">
+    <link rel="shortcut icon" href="./favicon/favicon16.jpg">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <script src="../OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js" type="text/jscript"></script>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.js" type="text/javascript"></script>
+
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var ck1 = true,
+                ck2 = true;
+            //true라는 값을 ck1이라는 변수에 저장
+            /*
+            $("선택자").메소드(function(){})
+            */
+            $(".lst_btn").click(function() {
+                if (ck1) { //if 조건문=참(참일시 실행문)
+                    $(".collap").addClass("on");
+                    $(".lst_btn").addClass("on");
+                } else { //else (거짓일 때 실행문)
+                    $(".collap").removeClass("on");
+                    $(".lst_btn").removeClass("on");
+                }
+                ck1 = !ck1; //true = false
+            });
+            //펼침 메뉴의 서브메뉴 열기
+            $(".collap li").click(function() {
+                $(".collap li").removeClass("on");
+                $(this).addClass("on");
+            });
+            //스크롤시 메인 메뉴 모션    
+            $(window).scroll(function() {
+                var sc_top = parseInt($("body, html").scrollTop());
+                if (sc_top >= 500 && sc_top < 8200) {
+                    $(".hd").addClass("on");
+                    $(".hd").removeClass("off");
+                } else if (sc_top >= 8200) {
+                    $(".hd").removeClass("on");
+                    $(".hd").addClass("off");
+                } else {
+                    $(".hd").removeClass("on");
+                    $(".hd").removeClass("off");
+                }
+            });
+            //패럴럭스 스크롤링
+            //스크롤양이 따라올라오는거//
+            var wh = $(window).height();
+            var wd = $(window).width();
+            $(".sc_data").each(function(index) {
+                //("sc_data)첫번째페이지의 1,2,3,4
+                $(this).attr("data-val", index * wh);
+                //inx 0 ---> 0*1920=0  1---> 1*1920=1920
+            });
+            //윈도우값을 알아내서 각각 wh에 저장하라,wd에 저장하라
+
+            $(".sc_data").on("mousewheel DOMMouseScroll", function(e) {
+                //mousewheel 익스플로러, DOMMouseScroll 크롬,사파리 마우스 휠이라는 이벤트을 열었을때 
+                var secPos = parseInt($(this).attr("data-val"));
+                if (e.originalEvent.wheelDelta >= 0) {
+                    //오리지널이벤트 마우스휠데이타 >=0 보다 크다. 마우스를 조금이라도 움직였을때
+                    $("html, body").stop().animate({
+                        scrollTop: secPos - wh
+                    });
+                    //wh스크롤했을때 높이값 각자 한페이지씩 0 100% 200% 
+                    return false;
+                    //return false a태그의 상단으로 이동하는것을 막기 위함// 
+                } else if (e.originalEvent.wheelDelta < 0) {
+                    $("html, body").stop().animate({
+                        scrollTop: secPos + wh
+                    });
+                    return false;
+                }
+            });
+
+            $('.search-box').click(function() {
+                $(this).toggleClass('option-mode');
+
+                return false; // 자신이 클릭 되었다는 사실을 부모 엘리먼트에게 알리지 않는다.
+            });
+            //page1 첫 번째 슬라이더
+        $(".btn_box1 li").click(function(i){
+            $(this).addClass("on");
+            $(this).siblings().removeClass("on");
+            var idx = $(this).index();
+            $(".vs_lst li").eq(idx).addClass("on");
+            $(".vs_lst li").eq(idx).siblings().removeClass("on");
+            $(".vs_lst").not(":animated").animate({"margin-left": idx*-1*wd});
+        });
+
+            //두 번째 슬라이더
+            var tar, tar_wd, tar_cnt;
+            tar_cnt = $(".vs_lst2 li").length;
+            tar_wd = parseInt($(".btn_fr2 li").width());
+
+            $(".btn_box2 li").click(function(e) {
+                tar = $(this).index();
+                for (var i = 1; i < tar; i++) {
+                    $(".vs_lst2 li").eq(0).appendTo($(".vs_lst2"));
+                    $(".btn_box2 li").eq(0).appendTo($(".btn_box2"));
+                }
+                nextAni();
+            });
+
+            function nextAni() {
+                $(".vs_lst2").not(":animated").animate({
+                    "margin-left": wd * -1
+                }, 300, function() {
+                    $(".vs_lst2 li").eq(0).appendTo($(".vs_lst2"));
+                    $(".vs_lst2").css("margin-left", "0px");
+                    $(".vs_lst2 li").eq(0).addClass("on");
+                    $(".vs_lst2 li").eq(0).siblings().removeClass("on");
+                    $(".btn_box2 li").eq(0).appendTo($(".btn_box2"));
+                    $(".btn_box2 li").removeClass("on");
+                    $(".btn_box2 li").eq(0).addClass("on");
+                });
+            }
+
+            function prevAni() {
+                $(".vs_lst2 li").eq(tar_cnt - 1).prependTo($(".vs_lst2"));
+                $(".vs_lst2").css("margin-left", -wd + "px");
+                $(".vs_lst2").not(":animated").animate({
+                    "margin-left": "0px"
+                }, 300, function() {
+                    $(".vs_lst2 li").eq(0).addClass("on");
+                    $(".vs_lst2 li").eq(0).siblings().removeClass("on");
+                    $(".btn_box2 li").eq(tar_cnt - 1).prependTo($(".btn_box2"));
+                    $(".btn_box2 li").removeClass("on");
+                    $(".btn_box2 li").eq(0).addClass("on");
+                });
+            }
+            $(".lr_btn_box li.left").click(function() {
+                prevAni();
+            });
+            $(".lr_btn_box li.right").click(function() {
+                nextAni();
+            });
+
+            $(document).ready(function() {
+                $(".owl-carousel").owlCarousel();
+            });
+
+
+
+        });
+        
+        //한페이지스크롤
+        $(document).ready(function() {
+            var sc_pg = parseInt($(window).height())
+            $(window).on('mousewheel', function(e) {
+                if (e.originalEvent.wheelDelta < 0) {
+                    $('html,body').not(':animated').animate({
+                        scrollTop: '+=' + sc_pg + 'px'
+                    }, 800);
+                } else {
+                    $('html,body').not(':animated').animate({
+                        scrollTop: '-=' + sc_pg + 'px'
+                    }, 800);
+                }
+                return false;
+            }); //$(window).on('mousewheel'
+        });
+
+    </script>
+
+    <style>
+        body,
+        html {
+            clear: both;
+            position: relative;
+        }
+
+
+
+        /*.clogo{
+            width: 200px;
+            height: auto;
+            display: block;
+            margin-top: 3em;
+            
+            padding: 5px;
+        }
+        .clogo img{
+            margin-left: 1em;
+            margin-bottom: 1em;
+            width: 100%;
+            cursor: pointer;
+            display: block;
+        }
+        */
+        .clogo {
+            display: none;
+        }
+
+
+
+
+        /* 사이드메뉴*/
+        .collap {
+            position: fixed;
+            top: 0;
+            right: -110%;
+            z-index: 80;
+            background-color: #e8e8e8;
+            width: 25vw;
+            height: 100vh;
+            padding-top: 90px;
+            box-sizing: border-box;
+            transition: 0.7s;
+        }
+
+        .collap.on {
+            left: 0;
+        }
+
+        .collap li {
+            clear: both;
+            position: relative;
+        }
+
+        .collap li a {
+            display: block;
+            height: 32px;
+        }
+
+        .collap li a.dep1 {
+            color: #000;
+            line-height: 3;
+            padding-left: 3em;
+            height: 42px;
+            line-height: 42px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .collap li a.dep1:after {
+            /*  content: "▼";*/
+            position: absolute;
+            left: 70%;
+        }
+
+        .collap li.on a.dep1:after {
+            /* content: "▲"*/
+        }
+
+        .collap li ul.dep2 {
+            text-indent: 20px;
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+            height: auto;
+            background: transparent;
+            position: static;
+        }
+
+        .collap li.on ul.dep2 {
+            /* 대메뉴 li가 on상태이면 .dep2(서브메뉴)가 보이게 해라 */
+            display: block;
+            visibility: visible;
+        }
+
+        .collap li ul.dep2 li {
+            line-height: 2;
+        }
+
+        .collap li ul.dep2 li a {
+            color: #333;
+            font-size: 1rem;
+        }
+
+
+
+        /*토글버튼*/
+        .lst_btn {
+            position: absolute;
+            top: 0.5em;
+            left: 2%;
+            width: 48px;
+            height: 48px;
+
+            margin-top: 0.5em;
+            z-index: 99;
+            cursor: pointer;
+            display: block;
+        }
+
+        .lst_btn .line {
+            display: block;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            top: 0.5em;
+            right: 0.5em;
+            transition: 0.4s;
+            z-index: 99;
+            transform: rotate(0deg);
+        }
+
+        .lst_btn .item1 {
+            width: 20px;
+            top: 1.1em;
+        }
+
+        .lst_btn .item2 {
+            width: 30px;
+            top: 0.5em;
+
+        }
+
+        /*넓이변경효과*/
+        .lst_btn:hover .item1 {
+            width: 30px;
+        }
+
+        .lst_btn:hover .item2 {
+            width: 20px;
+        }
+
+        /*클릭시 효과 on*/
+        .lst_btn.on .item1 {
+            /*클릭시 x로변경*/
+            width: 30px;
+            transform: rotate(45deg);
+            top: 23px;
+        }
+
+        .lst_btn.on .item2 {
+            /*클릭시 x로변경*/
+            width: 30px;
+            transform: rotate(-45deg);
+            top: 23px;
+        }
+
+
+        /*헤더영역*/
+        .hd {
+            clear: both;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 80;
+            width: 100%;
+            height: 120px;
+
+            transition: 0.5s;
+        }
+
+        .hd.on {
+            /*on 제이쿼리기능 이용 배경색변하게*/
+            background-color: rgba(255, 255, 255, 0.5);
+
+        }
+
+        .hd.off {
+            /*3,4페이지에서 헤더안보이게*/
+            top: -120px;
+        }
+
+        .logo {
+            display: block;
+            width: 260px;
+            height: 25px;
+            margin: 0 auto;
+            margin-top: 1em;
+        }
+
+        .logo img {
+            height: 100%;
+            display: block;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /*왼쪽상단메뉴*/
+        .top_bar {
+            margin-left: 10em;
+            margin-top: -1.5em;
+            color: #333;
+        }
+
+        .top_bar li {
+            position: relative;
+            float: left;
+            padding-left: 15px;
+        }
+
+
+        .top_bar2 {
+            margin-right: 10em;
+
+        }
+
+        .top_bar2 li {
+            float: right;
+            padding-right: 15px;
+        }
+
+        .top_bar2 li.icon {
+            margin-top: -5px;
+        }
+
+
+        /*메뉴바*/
+        .gnb {
+            clear: both;
+            margin-top: 1em;
+            margin-left: 9em;
+            float: left;
+        }
+
+        .gnb ul {}
+
+        .gnb li {
+            float: left;
+            width: 160px;
+            position: relative;
+        }
+
+        .gnb li a {
+            display: block;
+            text-align: center;
+            padding: 1em;
+            line-height: 0.5em;
+
+        }
+
+        .gnb li a.dep1 {
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+        .gnb li:hover a.dep1 {}
+
+        .dep2 {
+            width: 100%;
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+
+        }
+
+        .gnb li:hover .dep2 {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.4s;
+            height: auto;
+        }
+
+        .dep2 li {
+            clear: both;
+            /*대메뉴 .gnb li의 float:left 영향안받게 밑으로 쌓이게 clear:both*/
+            background-color: #f8f8f8;
+        }
+
+        .dep2 li a:hover {
+            background-color: #fff;
+        }
+
+
+        .search {
+            clear: both;
+            right: 7em;
+            margin-top: -1em;
+            position: absolute;
+
+        }
+
+        .search-box {
+            position: relative;
+            top: -38px;
+            left: 97em;
+            margin-top: -30px;
+        }
+
+        .search-box>input {
+            width: 240px;
+            outline: 0;
+            border-bottom: 1px solid #333;
+            height: 30px;
+            top: 56px;
+            background-color: transparent;
+            font-size: 12px;
+        }
+
+        .search-box>input:focus {
+            border-color: #000;
+        }
+
+        .search-box>img {
+            width: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+
+        }
+
+        .search-box .search-menu {
+            box-sizing: border-box;
+            border: 1px solid #dfdfdf;
+            position: absolute;
+            display: none;
+            left: -1px;
+            width: calc(100% + 2px);
+            background-color: black;
+            color: white;
+            padding: 10px 10px 7px;
+            font-size: 12px;
+        }
+
+        .search-box.option-mode .search-menu {
+            display: block;
+        }
+
+
+        /*section1*/
+        /*배경*/
+        .vs1 {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            clear: both;
+        }
+
+       
+
+        /*section2*/
+        .vs2 {
+            position: relative;
+            clear: both;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        
+
+/*슬라이드 영역 가로*/
+ .swiper-container {
+        width: 100%;
+     background-color: red;
+        height: 100%;
+    }
+     .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+        .swiper-slide img{
+            height: 1000px;
+        }
+
+
+
+        .trebtn {
+            display: block;
+            color: #000;
+            width: 200px;
+            font-size: 1.6em;
+            border: 1px solid #000;
+            padding: 0.5em 1em;
+            margin-top: 35em;
+            text-align: center;
+            margin-left: 200px;
+            left: calc(50% - 350px);
+            transition: 0.5s;
+            position: relative;
+
+        }
+
+        .trebtn:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000;
+        }
+
+
+
+        /*상품*/
+        .price_menu {
+            width: 100vw;
+            height: 100vh;
+            clear: both;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            clear: both;
+
+
+        }
+
+        .price_menu2 h2 {
+            margin-top: 3em;
+            font-size: 30px;
+        }
+
+
+        .price_item {
+            width: 90%;
+            padding-top: 6em;
+            margin: 0 auto;
+        }
+
+        .price_item ul {
+            margin-left: 2em;
+        }
+
+        .price_item img{
+            transition: 0.5s;
+            position: relative;
+            margin: 0 auto;
+            display: block;
+            width: 350px;
+            height: 350px;
+            background-color: transparent;
+        }
+        .price_item img:hover{
+            transform: scale(1.1);
+        }
+        .price_item ul li {
+            float: left;
+            width: 25%;
+        }
+
+        .star{
+            font-size: 17px;
+            margin-top: 1.5em;
+        }
+        .price_name {
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .price_money {
+            margin-top: 1.5em;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .price_money::after {
+            content: "원";
+            font-size: 17px;
+            margin-left: 5px;
+        }
+     
+        .price_btn ul li a {
+            position: absolute;
+            margin-left: 5em;
+            margin-top: 1em;
+            display: block;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid #333;
+        }
+
+        .price_btn ul li a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+
+        .price_btn ul .ht a {
+            background-image: url(img/main/micon_01.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;
+            width: 50px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            margin-top: 12px;
+            line-height: 50px;
+            margin-left: 15em;
+        }
+
+        .price_btn ul .ht a:hover {
+            background-color: transparent;
+        }
+
+        /*4스파오브더월드*/
+        .video_lst {
+            width: 100vw;
+            height: 100vh;
+            clear: both;
+            position: relative;
+        }
+
+        .v_bg {
+            background-color: #fbfbfb;
+            height: 100%;
+
+        }
+
+        .frm {
+            float: left;
+            width: 80%;
+            padding-top: 12em;
+            margin-left: 13em;
+        }
+
+
+        .spa {
+            position: absolute;
+            top: 12em;
+            left: 70em;
+            width: 40%;
+            float: right;
+
+        }
+
+        .spa h2 {
+            margin-left: 30px;
+            position: relative;
+            font-size: 35px;
+            font-weight: 100;
+
+        }
+
+        .spa h2::after {
+            content: "more +";
+            position: absolute;
+            font-size: 20px;
+            right: 2em;
+            top: 10px;
+            cursor: pointer;
+
+        }
+
+        .spa p {
+            margin-left: 30px;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            font-size: 18px;
+            color: #6f6f6f;
+            font-weight: 100;
+
+        }
+
+        .spa .spa_price {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .spa .spa_price li {
+            float: left;
+            width: 33.3333%;
+            margin-right: 120px;
+        }
+
+        .spa .spa_price img {
+            width: 350px;
+            height: 300px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid #dfdfdf;
+            display: block;
+            
+        }
+  
+       
+        .spa .spa_price ul li a {
+            display: block;
+            text-align: center;
+        }
+
+        .spa .price_name2 {
+            margin-top: 0.5em;
+            font-size: 18px;
+            color: #555;
+           width: 150%;
+
+        }
+      
+        .spa .price1 {
+            font-weight: bold;
+            margin-top: 0.5em;
+            font-size: 25px;
+        }
+
+        .spa .price1::after {
+            content: "원";
+            font-size: 20px;
+            margin: 3px;
+        }
+
+        /*5.토킹*/
+        .taik {
+            margin: 0 auto;
+            width: 100%;
+            height: 100vh;
+            clear: both;
+
+        }
+        .taik{
+           /* background-image: url(img/main/bgbgbgbg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;*/
+        }
+
+        .tktk {
+            margin: 0 auto;
+            width: 85%;
+        }
+
+        .tk_txt_box {
+            width: 30%;
+            margin-left: 10em;
+            position: relative;
+            top: 100px;
+
+        }
+
+        .tk_txt_box h4 {
+            
+            color: #afafaf;
+            font-weight: 100;
+            text-align: right;
+            font-size: 22px;
+            padding-bottom: 3em;
+
+        }
+
+        .tk_txt_box h4::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 1px;
+            top: 70px;
+            right: -20px;
+            transform: rotate(90deg);
+            background-color: #afafaf;
+
+        }
+
+        .tk_txt_box h2 {
+              text-align: right;
+            font-size: 30px;
+            margin-bottom: 30px;
+            line-height: 30px;
+            color: #000;
+        }
+        .tk_txt_box p{
+            text-align: right;
+            font-size: 17px;
+            line-height: 30px;
+            color: #555;
+        }
+        .tk_txt_box h1 {
+            margin-top: -0.2em;
+            font-size: 60px;
+            text-align: right;
+            letter-spacing: 3px;
+        }
+         .tk_txt_box .tkdas{
+             margin-top: 1.5em;
+            font-size: 15px;
+        }
+        .frm2 {
+            margin-top: -20em;
+            width: 50%;
+            margin-right: 4em;
+            float: right;
+        }
+        .frm3{
+            margin-top: 1em;
+            width: 50%;
+            margin-right: 11em;
+            float: right;
+            /*transform: rotate(3deg);*/
+        }
+        .frm2 frame {
+            float: right;
+        }
+
+        .tk_btn ul li a {
+            float: right;
+            display: block;
+            width: 200px;
+            height: 50px;
+            border: 1px solid #000;
+            padding: 5px;
+            line-height: 50px;
+            position: absolute;
+            text-align: center;
+            font-size: 20px;
+            top: 600px;
+            left: calc(50% - 410px);
+            color: #000;
+        }
+
+        .tk_btn ul li a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        .tklink{
+            margin-top: 1em;
+            width: 500px;
+            height:30px;
+        }
+        .tklink a{
+             text-align: right;
+            font-size: 17px;
+            line-height: 30px;
+            color: #555;
+            margin: 2px;
+        }
+        .tklink a:hover{
+            text-decoration: underline;
+        }
+        /*6.챌린지*/
+        .change {
+            margin: 0 auto;
+            overflow: hidden;
+            width: 85vw;
+            height: 100vh;
+            clear: both;
+        }
+
+        .ch {
+            background-color: #fdfdfd;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .ch .ch_tit {
+            font-weight: 100;
+            font-size: 40px;
+            padding-top: 1em;
+        }
+
+        .ch_img {
+            left: 10em;
+            width: 50%;
+            padding-top: 4em;
+        }
+
+        .ch_img .item1 {
+            width: 90%;
+            transition: 0.4s;
+        }
+
+        .ch_img .item1:hover {
+            transform: scale(1.1);
+        }
+
+        .ch_img .item2 {
+
+            position: absolute;
+            top: 500px;
+            left: 640px;
+            transition: 0.4s;
+        }
+
+        .ch_img .item1 img {
+            cursor: pointer;
+            margin-top: 4em;
+            width: 600px;
+            margin-left: -77px;
+
+        }
+
+        .ch_img .item2 img {
+            width: 400px;
+            cursor: pointer;
+        }
+
+        .ch_img .item2:hover {
+            transform: scale(1.1);
+        }
+
+        .ch_txt {
+            float: right;
+            width: 50%;
+            right: -120px;
+            position: relative;
+            top: -340px;
+        }
+
+        .ch_txt .ch_tit2 {
+            font-weight: 100;
+            font-size: 28px;
+            margin-bottom: 1.6em;
+        }
+
+        .ch_txt .ch_tit2::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 30px;
+            background-color: #000;
+            /*transform: rotate(90deg);*/
+            top: 65px;
+            left: 410px;
+        }
+
+        .ch_txt p {
+            font-size: 18px;
+            text-align: center;
+            color: #555;
+            font-weight: normal;
+            margin-left:
+        }
+
+        .ch_txt .ch_btn li a {
+            display: block;
+            width: 200px;
+            height: 50px;
+
+            font-size: 20px;
+            line-height: 50px;
+            padding: 5px;
+            margin-left: 300px;
+            border: 1px solid #000;
+            color: #000;
+            margin-top: 5em;
+        }
+
+        .ch_txt .ch_btn li a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+
+
+        /*하단*/
+        .ft {
+            margin-top: 5em;
+            height: 700px;
+            width: 100%;
+            clear: both;
+
+        }
+
+        .fnb {
+            height: 50px;
+            background-color: #f3f3f3;
+            width: 85%;
+            margin: 0 auto;
+            padding: 8px 0;
+        }
+
+        .fnb ul {
+            margin-left: 30em;
+        }
+
+        .fnb li {
+            float: left;
+            margin-left: 30px;
+        }
+
+        .fnb li a {
+            display: block;
+            text-align: center;
+        }
+
+        .fnb .news {
+            margin-left: 20em;
+        }
+
+        .fnb .news a {
+            display: block;
+            width: 300px;
+            height: 48px;
+            line-height: 48px;
+            border: 2px solid #000;
+            text-align: center;
+        }
+
+        .fnb .news a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+
+        .footer-region {
+            width: 85%;
+            margin: 0 auto;
+
+            text-align: left;
+            margin-top: 4em;
+        }
+
+        .ft-columns {
+            float: left;
+        }
+
+        .ft-columns .columns {
+            float: left;
+            width: 270px;
+        }
+
+        .ft-columns .columns strong:hover {
+            text-decoration: underline;
+        }
+
+        .ft-columns .columns ul li {
+            margin-bottom: 1em;
+        }
+
+        .ft-columns .columns ul li a {
+            display: block;
+            font-size: 15px;
+        }
+
+        .footer-right {
+            float: right;
+            width: 300px;
+            text-align: right;
+            margin-right: -670px;
+        }
+
+        .footer-right .columns {
+            float: right;
+            margin-right: 0;
+            margin-bottom: 5px;
+            text-align: right;
+
+
+        }
+
+        .footer-right .columns strong:hover {
+            text-decoration: none;
+        }
+
+        .ft_txt {
+            clear: both;
+            padding-top: 3em;
+            font-weight: bold;
+
+        }
+
+        .copy-right {
+            padding-top: 2em;
+            color: #7d7d7d;
+            line-height: 1.4;
+            font-weight: 100;
+        }
+
+        #totop {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            background-color: #dfdfdf;
+            display: block;
+            bottom: 150px;
+            right: 60px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        #totop:hover {
+            background-color: #bfbfbf;
+        }
+        @media screen and (max-width:767px){
+            .top_bar{
+                display: none;
+            }
+            .top_bar2{
+                display: none;
+            }
+            .collap {
+            position: fixed;
+            top: 0;
+            right: -110%;
+            z-index: 80;
+            background-color: #e8e8e8;
+            width: 70vw;
+            height: 100vh;
+            padding-top: 90px;
+            box-sizing: border-box;
+            transition: 0.7s;
+        }
+            
+             /*section1*/
+        /*배경*/
+        .vs1 {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            clear: both;
+        }
+
+        .vs_lst {
+            width: 300%;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .vs_lst li {
+            width: 33.3333%;
+            height: 100vh;
+            float: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+    
+             .gnb{display: none;}
+            /*page4*/
+            .thum_lst li{width: 100%;height: 33.33333%; float: none;clear: both;}
+            .thum_lst li .pic_box { left:10%; }
+            .thum_tit{width: auto;left: 50%;top: 11%;}
+            .thum_com{width: auto;left: 50%;}
+            /* page1*/
+            .vs_tit{padding-left: 15px;}
+            .vs_com{padding-left: 15px;}
+            .vs_more{margin-left: 15px;}
+            /*page2 button2 */
+            .btn_box2 li button{width: 120px;font-size: 12px;}
+            .btn_box2 li.on button{font-size: 14px;}
+        
+            
+            /*상품*/
+        .price_menu {
+            width: 100vw;
+            height: 100vh;
+            clear: both;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            clear: both;
+
+
+        }
+
+        .price_menu2 h2 {
+            margin-top: 2em;
+            font-size: 25px;
+        }
+
+
+        .price_item {
+            width:100%;
+            padding-top: 3em;
+            margin: 0 auto;
+        }
+
+        .price_item ul {
+            margin-left: 2em;
+        }
+
+        .price_item img{
+            transition: 0.5s;
+            position: relative;
+            margin: 0 auto;
+            display: block;
+            width: 200px;
+            height:200px;
+            background-color: transparent;
+        }
+           
+        .price_item img:hover{
+            transform: scale(1.1);
+        }
+        .price_item ul li {
+            float: left;
+            width: 49%;
+        }
+
+        .star{
+            font-size: 17px;
+            margin-top: 1em;
+        }
+        .price_name {
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .price_money {
+            margin-top: 1em;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .price_money::after {
+            content: "원";
+            font-size: 17px;
+            margin-left: 5px;
+        }
+     
+        .price_btn ul li a {
+            position: absolute;
+            margin-left: 5em;
+            margin-top: 1em;
+            display: block;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid #333;
+            display: none;
+        }
+
+        .price_btn ul li a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+
+        .price_btn ul .ht a {
+            background-image: url(img/main/micon_01.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;
+            width: 50px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            margin-top: 12px;
+            line-height: 50px;
+            margin-left: 15em;
+        }
+
+        .price_btn ul .ht a:hover {
+            background-color: transparent;
+        }
+/*4스파오브더월드*/
+        .video_lst {
+            width: 100%;
+            height: 100vh;
+            clear: both;
+            position: relative;
+        }
+
+        .v_bg {
+            
+            display: flex;
+            flex-flow: column;
+            background-color: #fbfbfb;
+       
+        }
+
+        .frm {
+               display: flex;
+            flex-flow: column;
+            float: left;
+            width: 50%;
+            padding-top: 10em;
+            margin-left: 2em;
+        }
+
+
+        .spa {
+            
+            position: absolute;
+            top: 12em;
+            left: 70em;
+            width: 40%;
+            float: right;
+
+        }
+
+        .spa h2 {
+            margin-left: 30px;
+            position: relative;
+            font-size: 35px;
+            font-weight: 100;
+
+        }
+
+        .spa h2::after {
+            content: "more +";
+            position: absolute;
+            font-size: 20px;
+            right: 2em;
+            top: 10px;
+            cursor: pointer;
+
+        }
+
+        .spa p {
+            margin-left: 30px;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            font-size: 18px;
+            color: #6f6f6f;
+            font-weight: 100;
+
+        }
+
+        .spa .spa_price {
+            overflow: hidden;
+        }
+
+        .spa .spa_price li {
+            float: left;
+            width: 33.3333%;
+            margin-right: 120px;
+        }
+
+        .spa .spa_price img {
+            width: 350px;
+            height: 300px;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid #dfdfdf;
+            transition: 0.5s;
+            display: block;
+            
+        }
+
+        
+       
+        .spa .spa_price ul li a {
+            display: block;
+            text-align: center;
+        }
+
+        .spa .price_name2 {
+            margin-top: 0.5em;
+            font-size: 18px;
+            color: #555;
+
+        }
+      
+        .spa .price1 {
+            font-weight: bold;
+            margin-top: 0.5em;
+            font-size: 25px;
+        }
+
+        .spa .price1::after {
+            content: "원";
+            font-size: 20px;
+            margin: 3px;
+        }
+
+    </style>
+    
+    
+</head>
+
+<body>
+
+    <nav class="collap">
+        <a class="clogo"><img src="./img/main/logo_03.png" alt=""></a>
+        <ul class="main_menu">
+            <li><a href="" class="dep1">NEWS &amp; EVENT</a>
+                <ul class="dep2">
+                    <li><a href="">NEW IN</a></li>
+                    <li><a href="">BEST SELLRS</a></li>
+                    <li><a href="">EVENT</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">#더바디샵선물하기</a>
+                <ul class="dep2">
+                    <li><a href="">1만원대 선물세트</a></li>
+                    <li><a href="">2만원대 선물세트</a></li>
+                    <li><a href="">3만원대 이상선물세트</a></li>
+                    <li><a href="">선물세트 전체보기</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">SKIN CARE</a>
+                <ul class="dep2">
+                    <li><a href="">클렌저</a></li>
+                    <li><a href="">스크럼&amp;마스크</a></li>
+                    <li><a href="">페이스오일</a></li>
+                    <li><a href="">토너&amp;미스트</a></li>
+                    <li><a href="">세럼</a></li>
+                    <li><a href="">모이스처라이저</a></li>
+                    <li><a href="">아이케어</a></li>
+                    <li><a href="">선케어</a></li>
+                    <li><a href="">립케어</a></li>
+                    <li><a href="">화장솜&amp;액세서리</a></li>
+                    <li><a href="">남성스킨케어</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">BATH &amp; BODY</a>
+                <ul class="dep2">
+                    <li><a href="">대용량바디케어</a></li>
+                    <li><a href="">배쓰&amp;샤워</a></li>
+                    <li><a href="">바디스크럽</a></li>
+                    <li><a href="">바디모이스처라이저</a></li>
+                    <li><a href="">바디오일</a></li>
+                    <li><a href="">바디미스트</a></li>
+                    <li><a href="">데오도란트</a></li>
+                    <li><a href="">풋케어</a></li>
+                    <li><a href="">핸드케어</a></li>
+                    <li><a href="">비누</a></li>
+                    <li><a href="">액세서리</a></li>
+                    <li><a href="">기획세트</a></li>
+                    <li><a href="">트래블 에센셜</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">FRAGRANEC</a>
+                <ul class="dep2">
+                    <li><a href="">FOR HIM</a></li>
+                    <li><a href="">FOR HER</a></li>
+                    <li><a href="">FOR EVERYONE</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">HAIR</a>
+                <ul class="dep2">
+                    <li><a href="">샴푸</a></li>
+                    <li><a href="">컨디셔너&amp;트리트먼트</a></li>
+                    <li><a href="">액세서리</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">SHOP BT RANGE</a>
+                <ul class="dep2">
+                    <li><a href="">화이트 머스크</a></li>
+                    <li><a href="">모링가</a></li>
+                    <li><a href="">티트리</a></li>
+                    <li><a href="">화이트 머스크 로'</a></li>
+                    <li><a href="">핑크 그레이프후룻</a></li>
+                    <li><a href="">브리티쉬 로즈</a></li>
+                    <li><a href="">화이트 머스크 플로라</a></li>
+                    <li><a href="">아몬드 밀크 &amp; 허니</a></li>
+                    <li><a href="">그린티</a></li>
+                    <li><a href="">블랙 머스크</a></li>
+                    <li><a href="">망고</a></li>
+                    <li><a href="">진저</a></li>
+                    <li><a href="">드롭스 오브 유스</a></li>
+                    <li><a href="">드롭스 오브 라이트</a></li>
+                    <li><a href="">루트 오브 스트렝스</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="dep1">#SALE</a>
+                <ul class="dep2">
+                    <li><a href="">하나 더 증정</a></li>
+                    <li><a href="">멤버십 세트</a></li>
+                    <li><a href="">온라인 단독</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+    <header class="hd"><a href="index.html" class="logo"><img src="./img/main/logo_03.png" alt="logo"></a>
+        <ul class="top_bar">
+            <li class="item1"><a href="#">매장안내</a></li>
+            <li class="item2"><a href="">LYB 멤버십</a></li>
+        </ul>
+        <ul class="top_bar2">
+            <li class="icon"><a href="#"><img src="./img/main/micon_01.png" alt=""></a>
+            </li>
+            <li class="icon"><a href="#"><img src="./img/main/micon_02.png" alt=""></a>
+            </li>
+            <li class="icon"><a href="#"><img src="./img/main/micon_03.png" alt=""></a></li>
+            <li class="icon eyes"><a href="#"><img src="./img/main/micon_04.png" alt=""></a></li>
+            <li class="right"><a href="#">로그인</a></li>
+            <li class="right"><a href="#">회원가입</a></li>
+
+        </ul>
+        <nav class="gnb">
+            <ul class="main_menu">
+                <li><a href="" class="dep1">NEWS &amp; EVENT</a>
+                    <ul class="dep2">
+                        <li><a href="">NEW IN</a></li>
+                        <li><a href="">BEST SELLRS</a></li>
+                        <li><a href="">EVENT</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">#더바디샵선물하기</a>
+                    <ul class="dep2">
+                        <li><a href="">1만원대 선물세트</a></li>
+                        <li><a href="">2만원대 선물세트</a></li>
+                        <li><a href="">3만원대 이상 선물세트</a></li>
+                        <li><a href="">선물세트 전체보기</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">SKIN CARE</a>
+                    <ul class="dep2">
+                        <li><a href="">클렌저</a></li>
+                        <li><a href="">스크럼&amp;마스크</a></li>
+                        <li><a href="">페이스오일</a></li>
+                        <li><a href="">토너&amp;미스트</a></li>
+                        <li><a href="">세럼</a></li>
+                        <li><a href="">모이스처라이저</a></li>
+                        <li><a href="">아이케어</a></li>
+                        <li><a href="">선케어</a></li>
+                        <li><a href="">립케어</a></li>
+                        <li><a href="">화장솜&amp;액세서리</a></li>
+                        <li><a href="">남성스킨케어</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">BATH &amp; BODY</a>
+                    <ul class="dep2">
+                        <li><a href="">대용량바디케어</a></li>
+                        <li><a href="">배쓰&amp;샤워</a></li>
+                        <li><a href="">바디스크럽</a></li>
+                        <li><a href="">바디모이스처라이저</a></li>
+                        <li><a href="">바디오일</a></li>
+                        <li><a href="">바디미스트</a></li>
+                        <li><a href="">데오도란트</a></li>
+                        <li><a href="">풋케어</a></li>
+                        <li><a href="">핸드케어</a></li>
+                        <li><a href="">비누</a></li>
+                        <li><a href="">액세서리</a></li>
+                        <li><a href="">기획세트</a></li>
+                        <li><a href="">트래블 에센셜</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">FRAGRANEC</a>
+                    <ul class="dep2">
+                        <li><a href="">FOR HIM</a></li>
+                        <li><a href="">FOR HER</a></li>
+                        <li><a href="">FOR EVERYONE</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">HAIR</a>
+                    <ul class="dep2">
+                        <li><a href="">샴푸</a></li>
+                        <li><a href="">컨디셔너&amp;트리트먼트</a></li>
+                        <li><a href="">액세서리</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">SHOP BT RANGE</a>
+                    <ul class="dep2">
+                        <li><a href="">화이트 머스크</a></li>
+                        <li><a href="">모링가</a></li>
+                        <li><a href="">티트리</a></li>
+                        <li><a href="">화이트 머스크 로'</a></li>
+                        <li><a href="">핑크 그레이프후룻</a></li>
+                        <li><a href="">브리티쉬 로즈</a></li>
+                        <li><a href="">화이트 머스크 플로라</a></li>
+                        <li><a href="">아몬드 밀크 &amp; 허니</a></li>
+                        <li><a href="">그린티</a></li>
+                        <li><a href="">블랙 머스크</a></li>
+                        <li><a href="">망고</a></li>
+                        <li><a href="">진저</a></li>
+                        <li><a href="">드롭스 오브 유스</a></li>
+                        <li><a href="">드롭스 오브 라이트</a></li>
+                        <li><a href="">루트 오브 스트렝스</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dep1">#SALE</a>
+                    <ul class="dep2">
+                        <li><a href="">하나 더 증정</a></li>
+                        <li><a href="">멤버십 세트</a></li>
+                        <li><a href="">온라인 단독</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <from class="search-box cell-right relative"><input type="text" placeholder="검색어를 입력해주세요"><img class="absolute-right absolute-middle" src="img/main/search.icon_03.png" alt="">
+                <div class="search-menu">
+                    <ul>
+                        <li class="row">
+                            <div class="ico ico-btn cell"></div><span class="cell">인기검색어</span>
+
+
+                        </li>
+                        <li><span class="cell"></span></li>
+                    </ul>
+                </div>
+            </from>
+        </nav>
+        
+        <div class="lst_btn">
+            <span class="line item1"></span>
+            <span class="line item2"></span></div>
+    </header>
+    
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/main/greenbn.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img/main/main_bn_01.png" alt=""></div>
+            <div class="swiper-slide"><img src="./img/main/salebn_jpg.jpg" alt=""></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+         <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script src="./js/swiper.min.js"></script>
+     <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    </script>
+    
+    
+    
+    <section class="page sc_date" id="page2">
+        <figuar class="vs2">
+            <img src="./img/main/ttreeee_02.png" alt="">
+           <a href="#" class="trebtn">MORE</a>
+        </figuar>
+    </section>
+    <section class="page price_menu" id="page3">
+        <!--  <div class="price_menu2">
+            <ul>
+                <li><a href="#"><img src="./img/main/best_01.png" alt=""></a></li>
+                <li><a href=""><img src="./img/main/best_2.png" alt=""></a></li>
+                <li><a href=""><img src="./img/main/best_3.png" alt=""></a></li>
+                <li><a href=""><img src="./img/main/best_4.png" alt=""></a></li>
+            </ul>
+        </div>-->
+
+        <div class="price_menu2">
+            <h2>더바디샵 베스트 셀러, 인기템♥</h2>
+        </div>
+        <div class="price_item">
+            <ul>
+                <li><a href=""><img src="./img/main/91046-add1.jpg" alt=""></a>
+                   <div class="star">★★★★★</div>
+                    <div class="price_name">모링가 소프트닝 바디 밀크 로션 250ML</div>
+                    <div class="price_money">16,500</div>
+                    <div class="price_btn">
+                        <ul>
+                            <li><a href="">장바구니</a></li>
+                            <li class="ht"><a href=""></a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href=""><img src="./img/main/msc.jpg" alt=""></a>
+                   <div class="star">★★★★★</div>
+                    <div class="price_name">화이트 머스크 오 드 뚜왈렛 60ML</div>
+                    <div class="price_money">38,000</div>
+                    <div class="price_btn">
+                        <ul>
+                            <li><a href="">장바구니</a></li>
+                            <li class="ht"><a href=""></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href=""><img src="./img/main/sam.jpg" alt=""></a>
+                   <div class="star">★★★★★</div>
+                    <div class="price_name">진저 스캘프 케어 대용량 샴푸 400ML</div>
+                    <div class="price_money">17,000</div>
+                    <div class="price_btn">
+                        <ul>
+                            <li><a href="">장바구니</a></li>
+                            <li class="ht"><a href=""></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href=""><img src="./img/main/ttree1.jpg" alt=""></a>
+                   <div class="star">★★★★★</div>
+                    <div class="price_name">티트리 오일 20ML</div>
+                    <div class="price_money">21,000</div>
+                    <div class="price_btn">
+                        <ul>
+                            <li><a href="">장바구니</a></li>
+                            <li class="ht"><a href=""></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+    </section>
+
+
+
+    <section class="pege video_lst" id="page4">
+        <div class="v_bg">
+            <div class="frm"><iframe width="700" height="550" src="https://www.youtube.com/embed/uL-FY465uwU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="spa">
+                <h2>Spa of the <strong>World</strong> </h2>
+                <p>지친 일상의 피로를 씻어내는 완벽한 홈 스파 세계 각지 원료와 함께 에너지를 충전하세요.</p>
+                <ul class="spa_price">
+                    <li><a href=""><img src="./img/main/cocoe.jpg" alt=""></a>
+                        <div class="price_name2">스파 오브 더 월드 하와이안 쿠쿠이 바디크림</div>
+                        <div class="price1">46,500</div>
+                    </li>
+
+                    <li><a href=""><img src="./img/main/cocoe1.jpg" alt=""></a>
+                        <div class="price_name2">스파 오브 더 월드 발칸 주니퍼 바디 워시 250ML</div>
+                        <div class="price1">14,500</div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <section class="page taik" id="page5">
+        <div class="tktk">
+            <div class="tk_txt_box">
+                <h4>Campaign</h4>
+                <h2>The body shop X DREAM_BIG</h2>
+                <p>더바디샵의 크리스마스 에디션을 구입할 때마다
+수익금의 일부가 오케스트라를 꿈꾸는 은빛마을 소녀들이 악기를 사고 음악을 배우는데 기부됩니다.더바디샵과 함께 <strong style="color: #000" >은빛 크리스마스</strong> 되세요!</p> <br>
+           <div class="tklink">
+            <a href="#">#더바디샵</a>
+            <a href="#">#크리스마스캠페인</a>
+            <a href="#">#DREAM_BIG </a>
+            <a href="#">#BE_THE_SANTA</a>
+</div>
+            </div>
+            <div class="frm2">
+                <iframe width="660" height="360" src="https://www.youtube.com/embed/Jv7uSNb9MCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <div class="frm3"> <iframe width="560" height="330" src="https://www.youtube.com/embed/ZE3Uurtfkew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+            <div class="tk_btn">
+                <ul>
+                    <li><a href="">MORE</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="page change" id="page6">
+        <div class="ch">
+            <h2 class="ch_tit">Plastic For <strong>Change</strong></h2>
+            <div class="ch_img">
+                <ul>
+                    <li class="item1"><img src="./img/main/ch01_03.jpg" alt=""></li>
+                    <li class="item2"><img src="./img/main/ch02_03.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="ch_txt">
+                <h3 class="ch_tit2">더바디샵 플라스틱 공병 수거 캠페인 </h3>
+                <p>더바디샵은 인도 벵갈루루의 폐기물 수거자들과 <br>
+                    공정무역 파트너쉽을 맺어<br>
+                    재활용된 플라스틱을 구매, 사용하고 있습니다. <br>
+                    <br>
+                    이를 통해, 더 바디샵은<br>
+                    인도폐기물 수거자들의 삶을 응원하고,<br>
+                    지구 환경 보호를 위해 맞서 싸우고자합니다.</p>
+                <ul class="ch_btn">
+                    <li><a href="sub.html">MORE</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="ft">
+        <nav class="fnb">
+            <ul>
+                <li><a href="https://www.instagram.com/thebodyshop_korea/" target="_blank"><img src="./img/main/images/instar.icon_01.png" alt=""></a></li>
+                <li><a href="https://www.facebook.com/TheBodyShopKR/" target="_blank"><img src="./img/main/images/face.icon_01.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/thebodyshop_korea/" target="_blank"><img src="./img/main/images/you.icon_01.png" alt=""></a></li>
+                <li class="news"><a href="" class="btn">뉴스레터 가입하기</a></li>
+            </ul>
+        </nav>
+        <div class="footer-region">
+            <div class="ft-columns">
+                <div class="columns">
+                    <ul>
+                        <li><a href=""><strong>ABOUT US</strong></a></li>
+                        <li><a href="">브랜드 스토리</a></li>
+                        <li><a href="">더바디샵 뉴스</a></li>
+                        <li><a href="">공정무역</a></li>
+                        <li><a href="">윤리무역</a></li>
+                        <li><a href="">캠페인</a></li>
+                        <li><a href="">채용정보</a></li>
+                    </ul>
+                </div>
+                <div class="columns">
+                    <ul>
+                        <li><a href=""><strong>ABOUT CBS</strong></a></li>
+                        <li><a href="">창업안내</a></li>
+                        <li><a href="">개설절차 안내 및 신청</a></li>
+                        <ul>
+                            <li><a href=""><strong>고객만족센터</strong></a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">1:1 문의</a></li>
+                            <li><a href="">대량 구매 문의</a></li>
+                            <li><a href="">공지사항</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="columns">
+                    <ul>
+                        <li><a href=""><strong>개인정보처리방침</strong></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href=""><strong>커뮤니티</strong></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href=""><strong>사이트맵</strong></a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <div class="columns">
+                        <ul>
+                            <li><strong>평일 AM 9시 ~ PM 6시 </strong></li>
+                            <li>(점심시간 PM 12시 ~ 1시)</li>
+                            <li>토,일 공휴일 휴무</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ft_txt">본 사이트에 게시된 자료에 대한 권리는 (주)비에스케이코퍼레이션에 있으며, 정보를 가공, 판매하는 행위 등 서비스에 게시된 자료를 영리목적으로 사용할 수 없습니다</div>
+            <div class="copy-right">(주)비에스케이코퍼레이션대표이사:박종호서울시 강남구 학동로 401 13층 고객센터 080-759-7700팩스 02-759-0788 <br>
+                개인정보관리책임자:오미경공정거래위원회 고시 제 2000-1호에 따른 사업자등록번호 116-81-62784 <br>
+                이메일 주소 : <strong> webmaster@thebodyshop.co.kr</strong> 통신판매업신고번호 제 2010-서울강남-02017호 3 <br>
+                사업자정보확인 온라인이용약관 호스팅 사업자 (주)비에스케이코퍼레이션</div>
+        </div>
+    </footer>
+
+</body>
+<a href="#" id="totop">↑</a>
+
+</html>
