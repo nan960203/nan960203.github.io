@@ -73,6 +73,84 @@ body {
 
 
 
+/*toggle*/
+
+/*열기버튼*/
+.lst_btn{
+    background-image: url(./img/toggle_06.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height:30px;
+    position: fixed;
+    right: 50px;
+    top: 25px;
+    z-index: 200;
+    text-indent: -9999px;
+    cursor: pointer;
+    display: block;
+}
+#mgnb{
+    position: fixed;
+    top:0px;
+    right: -250px; /*바깥쪽으로 박스 숨기기*/
+    z-index: 60;
+    width: 240px;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+    transition: 0.5s;
+    border-left: 3px solid #0c4ca3;
+}
+
+#ck1:checked ~ #mgnb{
+    right: 0;
+}/*ck1클릭시 #gnb 바깥쪽에있던 left -240px것이 0px으로 */
+#ck1{
+    display: none;
+}/*체크상자숨기기*/
+
+/*.close_btn{
+   text-indent: -99999px;
+}*/
+.main{
+    clear: both;
+    margin-top: 80px;
+}
+.main li{
+    line-height: 46px;
+}
+.main li a{
+    
+    padding-left: 20px;
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+.main li a:hover{
+    font-weight: bold;
+    color: #0c4ca3;
+}
+.main li:hover a.dep1{
+    color:  #0c4ca3;
+}
+.main .sub{
+    position: relative;
+    opacity: 0;
+    height: 10px;
+}
+.main li:hover .sub{
+    opacity: 1;
+    height: auto;
+}
+.main .sub li a{
+    font-size: 16px;
+    text-indent: 30px;
+    font-weight: normal;
+}
+.main .sub li a:hover{
+    background-color: rgba(255,255,255,0.4);
+}
 
 
 
