@@ -37,41 +37,13 @@ $(document).ready(function() {
      
        
      $(document).ready(function(){
-        activateScene();/* 함수실행 */ 
-        function activateScene(){//함수 정의 
-            var $content = $('#scene-content'),
-                 $charts = $content.find('.chart');
-         
-            //원형 차트 당 처리    
-            $charts.each(function(){
-                var $chart = $(this),
-                    //마스크 를 저장하고 각도 0도로 지정
-                    $circleLeft= $chart.find('.left .circle-mask-inner').css({transform:'rotate(0)'}),
-                    $circleRight= $chart.find('.right .circle-mask-inner').css({transform:'rotate(0)'}),
-                    //백분율  취득
-                     $percentNumber=$chart.find('.percent-number'),
-                    percentdata=$percentNumber.text();
-          
-                 //백분율 표시를 일단 0      
-                   $percentNumber.text(0);
-                
-                //각도 애니메이션
-                 $({percent:0}).delay(1000).animate({percent:percentdata},{//시간정의,프로그래스 정의
-                     duration:1500,
-                     progress:function(){
-                      var now =this.percent,//내 %가지고 와서 now에저장
-                        deg = now*360/100,//90*360/100
-                        degRight=Math.min(Math.max(deg,0),180),
-                         degLeft=Math.min(Math.max(deg - 180,0),180);
-                         $circleRight.css({transform:'rotate(' + degRight + 'deg)'});
-                         $circleLeft.css({transform:'rotate(' + degLeft + 'deg)'});
-                         $percentNumber.text(Math.floor(now));
-                         
-                     } 
-                 }); 
-            });
-        }
+       $('.gr_ps').delay(1000).animate({width: '80%'},2000);
+       $('.gr_html').delay(1000).animate({width: '75%'},2000);
+       $('.gr_jq').delay(1000).animate({width: '50%'},2000);
+          $('.gr_il').delay(1000).animate({width: '70%'},2000);
      });
+
+        
         
  
      $(document).ready(function(){
