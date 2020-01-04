@@ -1,77 +1,83 @@
 @charset 'utf-8';
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-ul{
+
+ul {
     list-style: none;
 }
-html,body{
+
+html,
+body {
     width: 100%;
     height: 100%;
-    
-}
-#wrap{
-    width: 100%;
-    margin: 0 auto;
-    
+
 }
 
-/*토굴*/
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+
+/*모바일토굴*/
 
 /*열기버튼*/
 .lst_btn{
+    background-image: url(../img/toggle_06.png);
     background-repeat: no-repeat;
+    background-size: cover;
     width: 30px;
-    height: 40px;
-    position: fixed;
-    top: 90px;
-    left: 220px;
-    font-size: 30px;
+    height:30px;
+    position: relative;
+    top: 400px;
+    left: 70px;
     z-index: 90;
+    text-indent: -9999px;
     cursor: pointer;
     display: block;
 }
-#collap{
+#mgnb{
     position: fixed;
     top: 0;
-    left: 110%;
-    z-index: 200;
+    left: -250px; /*바깥쪽으로 박스 숨기기*/
+    z-index: 60;
     width: 240px;
     height: 100%;
-    /*background-color: red;*/
+    background: rgba(255,255,255,0.8);
     transition: 0.5s;
     border-right: 3px solid darkred;
-	background: #fff;
 }
-
-#ck1:checked ~ #collap{
+#mgnb li a{
+    font-size: 16px;
+}
+#ck1:checked ~ #mgnb{
     left: 0;
 }/*ck1클릭시 #gnb 바깥쪽에있던 left -240px것이 0px으로 */
-.ck_box{
-	display: none;
-}
-/*체크상자숨기기*/
-#ck2:checked ~ #collap{
-	left: -110%;
-}
+#ck1{
+    display: none;
+}/*체크상자숨기기*/
 
 .close_btn{
     /*x버튼디자인*/
-    width: 36px;
-    height: 33px;
+    width: 50px;
+    height: 50px;
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    background-color: #000;
-    font-size: 30px;
-	cursor: pointer;
-	z-index: 160;
+    background-image: url(../img/toggle_06.png);
+    background-repeat: no-repeat;
+    background-position: -195px -145px;
+    cursor: pointer;
+    float: right;
+    text-indent: -9999px;
+    margin: 15px;
 }
 .main{
     clear: both;
@@ -87,195 +93,228 @@ html,body{
     display: block;
     color: #333;
 }
-
 .main li a:hover{
-    text-decoration: underline;
-    color: darkred;
+    font-weight: bold;
+    color: #fa9172;
 }
-.bottom{
+
+
+
+.bottom {
     margin-top: 120px;
 }
-.bottom li{
+
+.bottom li {
     line-height: 32px;
 }
-.bottom li a{
+
+.bottom li a {
     display: block;
     color: darkred;
     padding-left: 20px;
 }
-.bottom li a:hover{
+
+.bottom li a:hover {
     text-decoration: underline;
-    
+
 }
 
 
 
 
 
-#hd{
+#hd {
     clear: both;
     position: relative;
     width: 100%;
 }
-.header{
-    height: 130px;
+
+.header {
+    height: 100px;
     width: 80%;
     margin: 0 auto;
 }
-.header .logo{
+
+.header .logo {
     display: block;
     width: 120px;
     height: 50px;
-    padding-top: 40px;
+    padding-top: 10px;
 }
-.logo img{
+
+.logo img {
     cursor: pointer;
     display: block;
     width: 100%;
 }
-.gnb{
+
+.gnb {
     float: right;
     position: absolute;
     top: 50px;
     left: 400px;
     width: 600px;
 }
-.gnb li{
+
+.gnb li {
     float: left;
     width: 20%;
 }
-.gnb li a{
+
+.gnb li a {
     font-size: 14px;
     display: block;
     font-weight: bold;
 }
-.gnb li:first-child a{
+
+.gnb li:first-child a {
     color: #fa9172;
 }
-.gnb li a:hover{
+
+.gnb li a:hover {
     color: #fa9172;
 }
-.top-bar{
+
+.top-bar {
     position: absolute;
     top: 50px;
     width: 320px;
     right: 150px;
 }
-.top-bar li{
+
+.top-bar li {
     float: left;
     margin-right: 20px;
 }
-.top-bar li a{
+
+.top-bar li a {
     display: block;
     font-size: 17px;
 }
-.top-bar li:first-child a{
+
+.top-bar li:first-child a {
     font-size: 12px;
 }
-.top-bar li a i:hover{
+
+.top-bar li a i:hover {
     color: gainsboro;
 }
 
 /*slider*/
-.slider{
+.slider {
     cursor: pointer;
     clear: both;
     position: relative;
     width: 100%;
     margin: 0 auto;
 }
-.bg{
+
+.bg {
     width: 80%;
     margin: 0 auto;
 }
-.bg img{
+
+.bg img {
     display: block;
     width: 100%;
 }
 
 /*introduction*/
-.introduction{
+.introduction {
     clear: both;
     position: relative;
     width: 100%;
     height: 1000px;
-    
+
 }
-.intro{
+
+.intro {
     width: 80%;
     margin: 0 auto;
 }
 
-.intro .introtit{
+.intro .introtit {
     padding-top: 50px;
     color: #555;
     font-size: 20px;
 }
-.intro .introtit2{
-        font-size: 45px;
+
+.intro .introtit2 {
+    font-size: 45px;
     font-family: 'Lato', sans-serif;
     display: inline-block;
     margin-right: 150px;
 }
-.intro span{
+
+.intro span {
     display: inline-block;
     line-height: 30px;
 }
-.intro .img-box{
-     overflow: hidden;
-   position: relative;
+
+.intro .img-box {
+    overflow: hidden;
+    position: relative;
     margin-top: 70px;
 }
-.intro .img-box li{
+
+.intro .img-box li {
     display: flex;
     float: left;
     width: 33.3333%;
     overflow: hidden;
 }
-.intro .img-box li:first-child img{
+
+.intro .img-box li:first-child img {
     width: 100%;
     height: 700px;
 }
 
-.intro .img-box li:nth-child(2) img{
+.intro .img-box li:nth-child(2) img {
     width: 90%;
     padding-left: 5%;
     height: 500px;
     overflow: hidden;
 }
-.intro .img-box li:nth-child(3) img{
+
+.intro .img-box li:nth-child(3) img {
     width: 95%;
     height: 320px;
     overflow: hidden;
 }
-.intro .img-box li:nth-child(3) img:hover{
-    filter:invert(1);
+
+.intro .img-box li:nth-child(3) img:hover {
+    filter: invert(1);
 }
-.intro .img-box li:nth-child(4){
+
+.intro .img-box li:nth-child(4) {
     position: relative;
 }
-.intro .img-box li:nth-child(4) img{
+
+.intro .img-box li:nth-child(4) img {
     width: 95%;
     margin-top: 30px;
     height: 360px;
 }
-.intro .img-box li:nth-child(4) img:hover{
+
+.intro .img-box li:nth-child(4) img:hover {
     filter: grayscale(1);
 }
 
 
-.intro .img-box img{
+.intro .img-box img {
     width: 100%;
     cursor: pointer;
     transition: 0.5s;
-   
+
     transform: scale(1.0);
     cursor: pointer;
 }
-.intro .img-box img:hover{
+
+.intro .img-box img:hover {
     transform: scale(1.1);
 }
-.intro .introbtn{
+
+.intro .introbtn {
     position: absolute;
     bottom: 200px;
     right: 1000px;
@@ -288,9 +327,9 @@ html,body{
     transition: 0.5s;
 }
 
-.intro .introbtn:hover{
+.intro .introbtn:hover {
     color: #333;
-      position: absolute;
+    position: absolute;
     bottom: 200px;
     right: 1000px;
     background-color: #000;
@@ -299,29 +338,34 @@ html,body{
 
 
 /*가짜토굴*/
-.bgleft{
+.bgleft {
     position: absolute;
     left: 80px;
     top: 250px;
 }
-.bgleft img{
+
+.bgleft img {
     width: 30px;
     height: 30px;
 }
-.bgright{
+
+.bgright {
     position: absolute;
     right: 80px;
     top: 220px;
 }
-.bgright li{
+
+.bgright li {
     clear: both;
 }
-.bgright img{
+
+.bgright img {
     width: 50px;
     height: 50px;
 }
+
 /*schedule*/
-.schedule{
+.schedule {
     width: 100%;
     clear: both;
     position: relative;
@@ -329,65 +373,74 @@ html,body{
     box-sizing: border-box;
     background-color: #f9f9ff;
 }
-.sche{
+
+.sche {
     width: 80%;
     margin: 0 auto;
 }
 
 
 
-.sche .schetit{
+.sche .schetit {
     padding-top: 50px;
     color: #555;
     font-size: 20px;
 }
-.sche .schetit2{
+
+.sche .schetit2 {
     font-size: 45px;
     font-family: 'Lato', sans-serif;
     display: inline-block;
     margin-right: 150px;
 }
-.schemore{
+
+.schemore {
     cursor: pointer;
     margin-top: 40px;
     width: 100%;
 }
-.schemore li{
+
+.schemore li {
     border-bottom: 1px solid #eee;
     background-color: #fff;
     overflow: hidden;
 }
-.schemore li:hover{
+
+.schemore li:hover {
     background-color: #e4ebff;
 }
 
-.schemore img{
-    margin:10px;
+.schemore img {
+    margin: 10px;
     width: 300px;
     height: 160px;
     vertical-align: middle;
     overflow: hidden;
 }
-.schemore .schemoretxt{
+
+.schemore .schemoretxt {
     display: inline-block;
     margin-left: 30px;
     position: relative;
     height: 150px;
     width: 700px;
-    
+
 }
-.schemore .schemoretxt span{
+
+.schemore .schemoretxt span {
     margin-bottom: 10px;
     display: block;
     margin-top: 27px;
     font-size: 14px;
     color: #910000;
 }
-.schemore .schemoretxt p{
+
+.schemore .schemoretxt p {
     font-weight: 500;
     font-size: 18px;
     color: #333;
 }
+
 /*
 .schemore .schemoretxt .schebtn{
     display: block;
@@ -408,7 +461,7 @@ html,body{
     color: #000;
 }
 */
-.sche .albumbtn{
+.sche .albumbtn {
     position: absolute;
     right: 200px;
     top: 50px;
@@ -421,8 +474,8 @@ html,body{
     border-bottom: 1px solid #000;
 }
 
-.sche .albumbtn:hover{
-    background-color:#000;
+.sche .albumbtn:hover {
+    background-color: #000;
     color: #fff;
     border-bottom: 1px solid #000;
 }
@@ -430,7 +483,7 @@ html,body{
 
 
 /*age84다모임*/
-.agemore{
+.agemore {
     width: 100%;
     height: 1000px;
     position: relative;
@@ -439,12 +492,14 @@ html,body{
     background-repeat: no-repeat;
     background-position: bottom right;
 }
-.age{
+
+.age {
     width: 80%;
     margin: 0 auto;
-    
+
 }
-.age ul li{
+
+.age ul li {
     float: left;
     width: 50%;
     position: relative;
@@ -452,54 +507,62 @@ html,body{
 }
 
 
-.age .agetit2{
+.age .agetit2 {
     margin-top: 50px;
     font-size: 45px;
     font-family: 'Lato', sans-serif;
     display: inline-block;
     margin-right: 150px;
 }
-.age ul li iframe{
-    margin-top:20px;
+
+.age ul li iframe {
+    margin-top: 20px;
     width: 90%;
     height: 550px;
     cursor: pointer;
-        transition: 0.5s;
+    transition: 0.5s;
     margin-bottom: 10px;
     overflow: hidden;
 }
 
-.age ul .ah{
+.age ul .ah {
     margin-top: 30px;
     font-size: 22px;
 }
-.age ul .pe{
+
+.age ul .pe {
     font-size: 14px;
     margin-top: 10px;
     color: #555;
     line-height: 20px;
 }
-.age ul .pe strong{
+
+.age ul .pe strong {
     font-size: 16px;
     color: #005000;
 }
-.age ul li audio{
+
+.age ul li audio {
     width: 80%;
 }
-.age ul li p{
+
+.age ul li p {
     line-height: 30px;
     font-size: 15px;
 }
-.age ul li p strong{
-    font-size:17px;
+
+.age ul li p strong {
+    font-size: 17px;
 }
-.age .ageimg-box{
+
+.age .ageimg-box {
     margin-top: 20px;
     float: right;
     width: 50%;
     overflow: hidden;
 }
-.age .ageimg-box img{
+
+.age .ageimg-box img {
     width: 340px;
     height: 300px;
     cursor: pointer;
@@ -509,7 +572,7 @@ html,body{
     margin-right: 2%;
 }
 
-.age .ageimg-box img:hover{
+.age .ageimg-box img:hover {
     transform: scale(1.1);
 }
 
@@ -518,30 +581,32 @@ html,body{
 
 
 /*playe*/
-.musicPlayer{
+.musicPlayer {
     width: 100%;
     height: 1000px;
     position: relative;
     clear: both;
     background-color: #000;
 }
-.playe{
+
+.playe {
     width: 80%;
     margin: 0 auto;
 }
 
-.playe li{
+.playe li {
     float: left;
     width: 50%;
 }
 
 
-.playe .playetit{
+.playe .playetit {
     padding-top: 50px;
     color: #eee;
     font-size: 20px;
 }
-.playe .playetit2{
+
+.playe .playetit2 {
     color: #fff;
     font-size: 45px;
     font-family: 'Lato', sans-serif;
@@ -551,49 +616,54 @@ html,body{
 
 
 
-.album{
+.album {
     overflow: hidden;
     padding-top: 10px;
     width: 100%;
     margin: 0 auto;
 }
-.album li{
+
+.album li {
     float: left;
     width: 24%;
     overflow: hidden;
     margin-right: 1%;
     margin-bottom: 1%;
 }
-.album img{
+
+.album img {
     cursor: pointer;
     transition: 0.5s;
     overflow: hidden;
     width: 100%;
 }
-.album img:hover{
+
+.album img:hover {
     transform: scale(1.15);
 }
 
- #black{
-            position: fixed;
-            background-color:rgb(0, 0, 0,0.4);
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0; 
-            /*좌표값으로 전체100%*/
-        }
-        #big{
-            padding: 50px;
-            box-sizing: border-box;
-            position: fixed;
-            width: 500px;
-            height: 500px;
-           background-color: rgba(255, 255, 255, 0.2);
-           top: calc(50% - 200px);
-            left: calc(50% - 250px);
-        }
-.albumbtn{
+#black {
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.4);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /*좌표값으로 전체100%*/
+}
+
+#big {
+    padding: 50px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: calc(50% - 200px);
+    left: calc(50% - 250px);
+}
+
+.albumbtn {
     position: absolute;
     right: 200px;
     top: 50px;
@@ -606,21 +676,22 @@ html,body{
     border-bottom: 1px solid #fff;
 }
 
-.albumbtn:hover{
-    background-color:#fff;
+.albumbtn:hover {
+    background-color: #fff;
     color: #000;
     border-bottom: 1px solid #000;
 }
 
 
 /*sns*/
-.snsinstar{
+.snsinstar {
     width: 100%;
     clear: both;
     position: relative;
-    height:800px;
+    height: 800px;
 }
-.instar{
+
+.instar {
     width: 100%;
     margin: 0 auto;
 }
@@ -635,29 +706,29 @@ html,body{
 }*/
 
 .rolling_wrap {
-	position: relative;
-	width: 100%;
-	min-height: 400px;
-	height: 400px;
-	margin: 0 auto;
-	margin-top: 60px;
-	overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 60px;
+    overflow: hidden;
 }
 
 .rolling_wrap a {
-	position: absolute;
-	overflow: hidden;
-	width: 420px;
+    position: absolute;
+    overflow: hidden;
+    width: 420px;
     height: 400px;
-	overflow: hidden;
+    overflow: hidden;
 }
 
 .rolling_wrap a img {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
-.instar .snsbtn{
+.instar .snsbtn {
     display: block;
     text-align: center;
     line-height: 50px;
@@ -667,25 +738,27 @@ html,body{
     transition: 0.5s;
 }
 
-.instar .snsbtn:hover{
+.instar .snsbtn:hover {
     background-color: #000;
     color: #fff;
 }
-.ft{
+
+.ft {
     width: 100%;
     clear: both;
     position: relative;
     height: 50px;
-    
-    
+
+
 }
-.copyright{
+
+.copyright {
     text-align: center;
 }
 
 
 
-.top-btn{
+.top-btn {
     text-align: center;
     border: 1px solid #333;
     position: fixed;
@@ -699,796 +772,904 @@ html,body{
 }
 
 
-  @media screen and (max-width:767px){
-            .wrap{
-                column-count: 1;
-            }
-      .gnb{
-          display: none;
-      }
+@media screen and (max-width:767px) {
    
-      .top-bar{
-          display: none;
-      }
-      .slider img{
-          width: 100%;
-      }
-      
-      
-/*가짜토굴*/
-.bgleft{
-    position: absolute;
-    left:calc(50% - -170px);
-    top: -80px;
-}
-.bgleft img{
-    width: 25px;
-    height: 25px;
-}
-.bgright{
-    position: absolute;
-    right: 4px;
-    top: 40px;
-}
-.bgright li{
-    clear: both;
-}
-.bgright img{
-    width: 50px;
-    height: 50px;
-}
-/*introduction*/
-.introduction{
-    clear: both;
-    position: relative;
-    width: 100%;
-    height: 1000px;
-    
-}
-.intro{
-    width: 80%;
-    margin: 0 auto;
-}
-.intro .img-box{
-   position: relative;
-    margin-top: 40px;
-}
-.intro .introtit{
-    padding-top: 50px;
-    color: #555;
-    font-size: 19px;
-}
-.intro .introtit2{
-    font-size: 30px;
-    margin-bottom: 10px;
-    display: inline-block;
-    margin-right: 150px;
-}
-.intro span{
-    display: inline-block;
-    line-height: 30px;
-}
-      .intro .img-box li{
-    display: flex;
-    float: left;
-    width:50%;
-          height:260px;
-}
-      .intro .img-box li:first-child img{
-          width: 95%;
-          height: 250px;
-}
-      .intro .img-box li:nth-child(2) img{
-          width: 100%;
-          height: 250px;
-          margin-left:-5%;
-}
-.intro .img-box li:nth-child(3) img{
-    width: 95%;
-    height: 250px;
-}
-      .intro .img-box li:nth-child(4) img{
-    width: 100%;
-          margin-top: 0px;
-    height: 250px;
-}
 
-      
+    .gnb {
+        display: none;
+    }
 
-.intro .introbtn{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 50px);
-    display: block;
-    width: 100px;
-    height: 40px;
-    font-size: 17px;
-    line-height: 40px;
-    text-align: center;
-    border-bottom: 1px solid #000;
-    transition: 0.5s;
-}
+    .top-bar {
+        display: none;
+    }
 
-.intro .introbtn:hover{
-    color: #333;
-      position: absolute;
-    bottom: 50px;
-    left: calc(50% - 50px);
-    background-color: #000;
-    color: #fff;
-}
-
-      
-      
-      /*sche*/
-      
- .sche .schetit{
-    padding-top: 50px;
-    color: #555;
-    font-size: 19px;
-}
-.sche .schetit2{
-    font-size: 30px;
-    margin-bottom: 10px;
-    display: inline-block;
-    margin-right: 150px;
-        overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-  
-      .schemore img{
-    width: 95%;
-    height: 200px;
-    vertical-align: middle;
-}
-      
-      
-.schemore .schemoretxt span{
-    margin-bottom: 10px;
-    display: block;
-    margin-top: 27px;
-    font-size: 14px;
-    color: #910000;
-}
-.schemore .schemoretxt p{
-    font-weight: 500;
-    font-size: 16px;
-    color: #333;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 350px;
-}
-.schemore .schemoretxt .schebtn{
-    display: block;
-    width: 100px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    position: absolute;
-    left: calc(50% - 200px);
-    top: 90px;
-  
-    background-color: #001364;
-    color: #fff;
-    transition: 0.5s;
-}
-.schemore .schemoretxt .schebtn:hover{
-    border-radius: 20px;
-    background-color: #fff;
-    color: #000;
-}
-      /*schedule*/
-.schedule{
-    width: 100%;
-    clear: both;
-    position: relative;
-    height: 1700px;
-    box-sizing: border-box;
-    background-color: #f9f9ff;
-}
-.sche{
-    width: 80%;
-    margin: 0 auto;
-}
-
-      .sche .albumbtn{
-     position: absolute;
-    right: 50px;
-    top: 50px;
-    display: block;
-    width: 100px;
-    height: 50px;
-    line-height: 50px;
-    color: #000;
-    border-bottom: 1px solid #000;
-}
-
-.sche .albumbtn:hover{
-    background-color:#000;
-    color: #fff;
-    border-bottom: 1px solid #000;
-}
-
-      
-      /*age84다모임*/
-.agemore{
-    width: 100%;
-    height: 1100px;
-    position: relative;
-    clear: both;
-    background-image: url(../img/images/age_02.png);
+    .slider img {
+        margin-top: -10px;
+        width: 100%;
+    }
+    /*가짜토굴*/
+    /*열기버튼*/
+.lst_btn{
+    background-image: url(../img/toggle_06.png);
     background-repeat: no-repeat;
-    background-position: right;
-}
-.age{
-    width: 80%;
-    margin: 0 auto;
-    
-}
-.age ul li{
-    float: left;
-    width: 100%;
-}
-
-
-.age .agetit{
-    padding-top: 60px;
-    color: #555;
-    font-size: 20px;
-}
-.age .agetit2{
-    font-weight: normal;
-    font-size: 30px;
-    font-family: 'Lato', sans-serif;
-    display: inline-block;
-    margin-right: 150px;
-}
-.age ul li iframe{
-    margin-top:20px;
-    width: 100%;
-    height: 400px;
-    cursor: pointer;
-        transition: 0.5s;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-
-      .age .ageimg-box{
-    margin-top: 10px;
-    float: right;
-    width: 100%;
-          display: flex;
-}
-.age .ageimg-box img{
-    width: 50%;
-    height: 200px;
-}
-
-.age ul .ah{
-    margin-top: 30px;
-    font-size: 19px;
-}
-.age ul .pe{
-    font-size: 14px;
-    margin-top: 10px;
-    color: #555;
-    line-height: 20px;
-}
-.age ul .pe strong{
-    font-size: 16px;
-    color: #005000;
-}
-
-.age ul li p{
-    line-height: 25px;
-    font-size: 14px;
-    margin-top: 10px;
-}
-.age ul li p strong{
-    font-size:17px;
-}
-
-/*playe*/
-.musicPlayer{
-    width: 100%;
-    height: 1000px;
+    background-size: cover;
+    width: 30px;
+    height:30px;
     position: relative;
-    clear: both;
-    background-color: #000;
-}
-.playe{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.playe li{
-    float: left;
-    width: 50%;
-}
-
-
-.playe .playetit{
-    padding-top: 50px;
-    color: #eee;
-    font-size: 20px;
-}
-.playe .playetit2{
-    color: #fff;
-    font-size: 30px;
-    font-family: 'Lato', sans-serif;
-    display: inline-block;
-    margin-right: 150px;
-}
-
-
-
-.album{
-    overflow: hidden;
-    padding-top: 10px;
-    width: 100%;
-    margin: 0 auto;
-}
-.album li{
-    float: left;
-    width: 49%;
-    overflow: hidden;
-    margin-right: 1%;
-    margin-bottom: 1%;
-}
-.album img{
-    transition: 0.5s;
-    overflow: hidden;
-    width:100%;
-}
-.album img:hover{
-    transform: scale(1.15);
-}
-.albumbtn{
-    position: absolute;
-    right: 50px;
-    top: 50px;
+    top: 40px;
+    left: calc(50% - -200px);
+    z-index: 90;
+    text-indent: -9999px;
+    cursor: pointer;
     display: block;
-    width: 100px;
-    height: 50px;
-    line-height: 50px;
-    color: #fff;
-    border-bottom: 1px solid #fff;
+}
+#mgnb{
+    position: fixed;
+    top: 0;
+    left: -101%; /*바깥쪽으로 박스 숨기기*/
+    z-index: 60;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    transition: 0.5s;
+    border-right: 3px solid darkred;
+}
+    .main{
+    clear: both;
+    margin-top: 80px;
+}
+.main li{
+    line-height: 46px;
+}
+.main li a{
+    text-align: center;
+    padding-left: 20px;
+    font-size: 30px;
+    display: block;
+    color: #333;
+}
+.main li a:hover{
+    font-weight: bold;
+    color: #fa9172;
 }
 
-.albumbtn:hover{
-    background-color: rgba(255,255,255,0.4);
+    .bgleft img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .bgright {
+        position: absolute;
+        right: 4px;
+        top: 40px;
+    }
+
+    .bgright li {
+        clear: both;
+    }
+
+    .bgright img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /*introduction*/
+    .introduction {
+        clear: both;
+        position: relative;
+        width: 100%;
+        height: 1000px;
+
+    }
+
+    .intro {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .intro .img-box {
+        position: relative;
+        margin-top: 40px;
+    }
+
+    .intro .introtit {
+        padding-top: 50px;
+        color: #555;
+        font-size: 19px;
+    }
+
+    .intro .introtit2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        display: inline-block;
+        margin-right: 150px;
+    }
+
+    .intro span {
+        display: inline-block;
+        line-height: 30px;
+    }
+
+    .intro .img-box li {
+        display: flex;
+        float: left;
+        width: 50%;
+        height: 260px;
+    }
+
+    .intro .img-box li:first-child img {
+        width: 95%;
+        height: 250px;
+    }
+
+    .intro .img-box li:nth-child(2) img {
+        width: 100%;
+        height: 250px;
+        margin-left: -5%;
+    }
+
+    .intro .img-box li:nth-child(3) img {
+        width: 95%;
+        height: 250px;
+    }
+
+    .intro .img-box li:nth-child(4) img {
+        width: 100%;
+        margin-top: 0px;
+        height: 250px;
+    }
+
+
+
+    .intro .introbtn {
+        position: absolute;
+        bottom: 50px;
+        left: calc(50% - 50px);
+        display: block;
+        width: 100px;
+        height: 40px;
+        font-size: 17px;
+        line-height: 40px;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        transition: 0.5s;
+    }
+
+    .intro .introbtn:hover {
+        color: #333;
+        position: absolute;
+        bottom: 50px;
+        left: calc(50% - 50px);
+        background-color: #000;
+        color: #fff;
+    }
+
+
+
+    /*sche*/
+
+    .sche .schetit {
+        padding-top: 50px;
+        color: #555;
+        font-size: 19px;
+    }
+
+    .sche .schetit2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        display: inline-block;
+        margin-right: 150px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .schemore img {
+        width: 95%;
+        height: 200px;
+        vertical-align: middle;
+    }
+
+
+    .schemore .schemoretxt span {
+        margin-bottom: 10px;
+        display: block;
+        margin-top: 27px;
+        font-size: 14px;
+        color: #910000;
+    }
+
+    .schemore .schemoretxt p {
+        font-weight: 500;
+        font-size: 16px;
+        color: #333;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 350px;
+    }
+
+    .schemore .schemoretxt .schebtn {
+        display: block;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        position: absolute;
+        left: calc(50% - 200px);
+        top: 90px;
+
+        background-color: #001364;
+        color: #fff;
+        transition: 0.5s;
+    }
+
+    .schemore .schemoretxt .schebtn:hover {
+        border-radius: 20px;
+        background-color: #fff;
+        color: #000;
+    }
+
+    /*schedule*/
+    .schedule {
+        width: 100%;
+        clear: both;
+        position: relative;
+        height: 1700px;
+        box-sizing: border-box;
+        background-color: #f9f9ff;
+    }
+
+    .sche {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .sche .albumbtn {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        display: block;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        color: #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .sche .albumbtn:hover {
+        background-color: #000;
+        color: #fff;
+        border-bottom: 1px solid #000;
+    }
+
+
+    /*age84다모임*/
+    .agemore {
+        width: 100%;
+        height: 1100px;
+        position: relative;
+        clear: both;
+        background-image: url(../img/images/age_02.png);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .age {
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    .age ul li {
+        float: left;
+        width: 100%;
+    }
+
+
+    .age .agetit {
+        padding-top: 60px;
+        color: #555;
+        font-size: 20px;
+    }
+
+    .age .agetit2 {
+        font-weight: normal;
+        font-size: 30px;
+        font-family: 'Lato', sans-serif;
+        display: inline-block;
+        margin-right: 150px;
+    }
+
+    .age ul li iframe {
+        margin-top: 20px;
+        width: 100%;
+        height: 400px;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .age .ageimg-box {
+        margin-top: 10px;
+        float: right;
+        width: 100%;
+        display: flex;
+    }
+
+    .age .ageimg-box img {
+        width: 50%;
+        height: 200px;
+    }
+
+    .age ul .ah {
+        margin-top: 30px;
+        font-size: 19px;
+    }
+
+    .age ul .pe {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #555;
+        line-height: 20px;
+    }
+
+    .age ul .pe strong {
+        font-size: 16px;
+        color: #005000;
+    }
+
+    .age ul li p {
+        line-height: 25px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .age ul li p strong {
+        font-size: 17px;
+    }
+
+    /*playe*/
+    .musicPlayer {
+        width: 100%;
+        height: 1000px;
+        position: relative;
+        clear: both;
+        background-color: #000;
+    }
+
+    .playe {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .playe li {
+        float: left;
+        width: 50%;
+    }
+
+
+    .playe .playetit {
+        padding-top: 50px;
+        color: #eee;
+        font-size: 20px;
+    }
+
+    .playe .playetit2 {
+        color: #fff;
+        font-size: 30px;
+        font-family: 'Lato', sans-serif;
+        display: inline-block;
+        margin-right: 150px;
+    }
+
+
+
+    .album {
+        overflow: hidden;
+        padding-top: 10px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .album li {
+        float: left;
+        width: 49%;
+        overflow: hidden;
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+
+    .album img {
+        transition: 0.5s;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .album img:hover {
+        transform: scale(1.15);
+    }
+
+    .albumbtn {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        display: block;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    .albumbtn:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+
+
+    .rolling_wrap {
+        position: relative;
+        width: 100%;
+        min-height: 400px;
+        height: 400px;
+        margin: auto;
+        margin-top: 60px;
+        overflow: hidden;
+    }
+
+    .rolling_wrap a {
+        position: absolute;
+        overflow: hidden;
+        width: 420px;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .rolling_wrap a img {
+        width: 100%;
+        height: 100%;
+    }
+
+
 }
 
 
-      
-.rolling_wrap {
-	position: relative;
-	width: 100%;
-	min-height: 400px;
-	height: 400px;
-	margin: auto;
-	margin-top: 60px;
-	overflow: hidden;
-}
-
-.rolling_wrap a {
-	position: absolute;
-	overflow: hidden;
-	width: 420px;
-    height: 400px;
-	overflow: hidden;
-}
-
-.rolling_wrap a img {
-	width: 100%;
-	height: 100%;
-}
-
-      
-        }
-
-
-@media screen and (min-width:960px) and (max-width:1279px){
-    .wrap{
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .wrap {
         column-count: 2;
     }
-   
-.gnb{
-    float: right;
-    position: absolute;
-    top: 50px;
-    left: 320px;
-    width: 500px;
-}
-.gnb li{
-    float: left;
-    width: 15%;
-}
 
-.top-bar{
-    position: absolute;
-    top: 50px;
-    width: 300px;
-    right: 1px;
-}
-.top-bar li{
-    float: left;
-    margin-right: 10px;
-}
-.top-bar li a{
-    display: block;
-    font-size: 15px;
-}
-    
-/*가짜토굴*/
-.bgleft{
-    position: absolute;
-    left:calc(50% - 470px);
-    top: 180px;
-}
-.bgleft img{
-    width: 25px;
-    height: 25px;
-}
-.bgright{
-    position: absolute;
-    right: 25px;
-    top: 120px;
-}
-.bgright li{
-    clear: both;
-}
-.bgright img{
-    width: 50px;
-    height: 50px;
-}
-/*introduction*/
-.introduction{
-    clear: both;
-    position: relative;
-    width: 100%;
-    height: 950px;
-    
-}
-.intro{
-    width: 80%;
-    margin: 0 auto;
-}
-.intro .img-box{
-   position: relative;
-    margin-top: 40px;
-}
-.intro .introtit{
-    padding-top: 50px;
-    color: #555;
-    font-size: 19px;
-}
+    .gnb {
+        float: right;
+        position: absolute;
+        top: 50px;
+        left: 320px;
+        width: 500px;
+    }
 
+    .gnb li {
+        float: left;
+        width: 15%;
+    }
 
-      .intro .img-box li{
-    display: flex;
-    float: left;
-    width:50%;
-          height:270px;
-}
-      .intro .img-box li:first-child img{
-          width: 95%;
-          height: 250px;
-}
-      .intro .img-box li:nth-child(2) img{
-          width: 100%;
-          height: 240px;
-          margin-left:-5%;
-}
-.intro .img-box li:nth-child(3) img{
-    width: 95%;
-    height: 250px;
-}
-      .intro .img-box li:nth-child(4) img{
-    width: 100%;
-          margin-top: 0px;
-    height: 250px;
-}
+    .top-bar {
+        position: absolute;
+        top: 50px;
+        width: 300px;
+        right: 1px;
+    }
 
-      
+    .top-bar li {
+        float: left;
+        margin-right: 10px;
+    }
 
-.intro .introbtn{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 50px);
-    display: block;
-    width: 100px;
-    height: 40px;
-    font-size: 17px;
-    line-height: 40px;
-    text-align: center;
-    border-bottom: 1px solid #000;
-    transition: 0.5s;
-}
+    .top-bar li a {
+        display: block;
+        font-size: 15px;
+    }
 
-.intro .introbtn:hover{
-    color: #333;
-      position: absolute;
-    bottom: 50px;
-    left: calc(50% - 50px);
-    background-color: #000;
-    color: #fff;
-}
+    /*가짜토굴*/
+    .bgleft {
+        position: absolute;
+        left: calc(50% - 470px);
+        top: 180px;
+    }
+
+    .bgleft img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .bgright {
+        position: absolute;
+        right: 25px;
+        top: 120px;
+    }
+
+    .bgright li {
+        clear: both;
+    }
+
+    .bgright img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /*introduction*/
+    .introduction {
+        clear: both;
+        position: relative;
+        width: 100%;
+        height: 950px;
+
+    }
+
+    .intro {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .intro .img-box {
+        position: relative;
+        margin-top: 40px;
+    }
+
+    .intro .introtit {
+        padding-top: 50px;
+        color: #555;
+        font-size: 19px;
+    }
 
 
-      
-      
-      /*sche*/
-      
- .sche .schetit{
-    padding-top: 50px;
-    color: #555;
-    font-size: 19px;
-}
-.sche .schetit2{
-    font-size: 30px;
-    margin-bottom: 10px;
-    display: inline-block;
-    margin-right: 150px;
-        overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-  
-      .schemore img{
-    width: 100%;
-    height: 250px;
-    vertical-align: middle;
-}
-      
-      
-.schemore .schemoretxt span{
-    margin-bottom: 10px;
-    display: block;
-    margin-top: 27px;
-    font-size: 15px;
-    color: #910000;
-}
-.schemore .schemoretxt p{
-    font-weight: 500;
-    font-size: 17px;
-    color: #333;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 350px;
-}
-.schemore .schemoretxt .schebtn{
-    display: block;
-    width: 100px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    position: absolute;
-    left: calc(50% - 200px);
-    top: 90px;
-  
-    background-color: #001364;
-    color: #fff;
-    transition: 0.5s;
-}
-.schemore .schemoretxt .schebtn:hover{
-    border-radius: 20px;
-    background-color: #fff;
-    color: #000;
-}
-      /*schedule*/
-.schedule{
-    width: 100%;
-    clear: both;
-    position: relative;
-    height: 2000px;
-    box-sizing: border-box;
-    background-color: #f9f9ff;
-}
-.sche{
-    width: 80%;
-    margin: 0 auto;
-}
+    .intro .img-box li {
+        display: flex;
+        float: left;
+        width: 50%;
+        height: 270px;
+    }
 
-      .sche .albumbtn{
-     position: absolute;
-    right:100px;
-    top: 50px;
-          text-align: center;
-    display: block;
-    width: 100px;
-    height: 50px;
-    line-height: 50px;
-    color: #000;
-    border-bottom: 1px solid #000;
-}
+    .intro .img-box li:first-child img {
+        width: 95%;
+        height: 250px;
+    }
 
-.sche .albumbtn:hover{
-    background-color:#000;
-    color: #fff;
-    border-bottom: 1px solid #000;
-}
+    .intro .img-box li:nth-child(2) img {
+        width: 100%;
+        height: 240px;
+        margin-left: -5%;
+    }
 
-      
-      /*age84다모임*/
-.agemore{
-    width: 100%;
-    height: 1100px;
-    position: relative;
-    clear: both;
-    background-image: url(../img/images/age_02.png);
-    background-repeat: no-repeat;
-    background-position: right;
-}
-.age{
-    width: 80%;
-    margin: 0 auto;
-    
-}
-.age ul li{
-    float: left;
-    width: 100%;
-}
+    .intro .img-box li:nth-child(3) img {
+        width: 95%;
+        height: 250px;
+    }
+
+    .intro .img-box li:nth-child(4) img {
+        width: 100%;
+        margin-top: 0px;
+        height: 250px;
+    }
 
 
-.age .agetit{
-    padding-top: 60px;
-    color: #555;
-    font-size: 20px;
-}
-.age .agetit2{
-    font-weight: normal;
-    font-size: 35px;
-    font-family: 'Lato', sans-serif;
-    display: inline-block;
-    margin-right: 150px;
-}
-.age ul li iframe{
-    margin-top:20px;
-    width: 100%;
-    height: 400px;
-    cursor: pointer;
+
+    .intro .introbtn {
+        position: absolute;
+        bottom: 50px;
+        left: calc(50% - 50px);
+        display: block;
+        width: 100px;
+        height: 40px;
+        font-size: 17px;
+        line-height: 40px;
+        text-align: center;
+        border-bottom: 1px solid #000;
         transition: 0.5s;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
-    .age .ageimg-box{
-    margin-top: 10px;
-    float: right;
-    width: 100%;
-          display: flex;
-}
-.age .ageimg-box img{
-    width: 50%;
-    height: 200px;
-}
+    }
 
-.age ul .ah{
-    margin-top: 30px;
-    font-size: 20px;
-}
-.age ul .pe{
-    font-size: 15px;
-    margin-top: 10px;
-    color: #555;
-    line-height: 20px;
-}
-.age ul .pe strong{
-    font-size: 17px;
-    color: #005000;
-}
-
-.age ul li p{
-    line-height: 25px;
-    font-size: 16px;
-    margin-top: 10px;
-}
-.age ul li p strong{
-    font-size:18px;
-}
-
-/*playe*/
-.musicPlayer{
-    width: 100%;
-    height: 1900px;
-    position: relative;
-    clear: both;
-    background-color: #000;
-}
-.playe{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.playe li{
-    float: left;
-    width: 50%;
-}
-
-
-.playe .playetit{
-    padding-top: 50px;
-    color: #eee;
-    font-size: 25px;
-}
-.playe .playetit2{
-    color: #fff;
-    font-size: 35px;
-    font-family: 'Lato', sans-serif;
-    display: inline-block;
-    margin-right: 150px;
-}
+    .intro .introbtn:hover {
+        color: #333;
+        position: absolute;
+        bottom: 50px;
+        left: calc(50% - 50px);
+        background-color: #000;
+        color: #fff;
+    }
 
 
 
 
-.album{
-    overflow: hidden;
-    padding-top: 10px;
-    width: 100%;
-    margin: 0 auto;
-}
-.album li{
-    float: left;
-    width: 49%;
-    overflow: hidden;
-    margin-right: 1%;
-    margin-bottom: 1%;
-}
-.album img{
-    transition: 0.5s;
-    overflow: hidden;
-    width:100%;
-}
-.album img:hover{
-    transform: scale(1.15);
-}
-.albumbtn{
-    position: absolute;
-    right: 50px;
-    top: 50px;
-    display: block;
-    width: 100px;
-    height: 50px;
-    line-height: 50px;
-    color: #fff;
-    border-bottom: 1px solid #fff;
-}
+    /*sche*/
 
-.albumbtn:hover{
-    background-color: rgba(255,255,255,0.4);
-}
+    .sche .schetit {
+        padding-top: 50px;
+        color: #555;
+        font-size: 19px;
+    }
+
+    .sche .schetit2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        display: inline-block;
+        margin-right: 150px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .schemore img {
+        width: 100%;
+        height: 250px;
+        vertical-align: middle;
+    }
 
 
-      
-.rolling_wrap {
-	position: relative;
-	width: 100%;
-	min-height: 400px;
-	height: 400px;
-	margin: auto;
-	margin-top: 60px;
-	overflow: hidden;
-}
+    .schemore .schemoretxt span {
+        margin-bottom: 10px;
+        display: block;
+        margin-top: 27px;
+        font-size: 15px;
+        color: #910000;
+    }
 
-.rolling_wrap a {
-	position: absolute;
-	overflow: hidden;
-	width: 420px;
-    height: 400px;
-	overflow: hidden;
-}
+    .schemore .schemoretxt p {
+        font-weight: 500;
+        font-size: 17px;
+        color: #333;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 350px;
+    }
 
-.rolling_wrap a img {
-	width: 100%;
-	height: 100%;
-}
+    .schemore .schemoretxt .schebtn {
+        display: block;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        position: absolute;
+        left: calc(50% - 200px);
+        top: 90px;
 
-      
-        }
+        background-color: #001364;
+        color: #fff;
+        transition: 0.5s;
+    }
+
+    .schemore .schemoretxt .schebtn:hover {
+        border-radius: 20px;
+        background-color: #fff;
+        color: #000;
+    }
+
+    /*schedule*/
+    .schedule {
+        width: 100%;
+        clear: both;
+        position: relative;
+        height: 2000px;
+        box-sizing: border-box;
+        background-color: #f9f9ff;
+    }
+
+    .sche {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .sche .albumbtn {
+        position: absolute;
+        right: 100px;
+        top: 50px;
+        text-align: center;
+        display: block;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        color: #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .sche .albumbtn:hover {
+        background-color: #000;
+        color: #fff;
+        border-bottom: 1px solid #000;
+    }
+
+
+    /*age84다모임*/
+    .agemore {
+        width: 100%;
+        height: 1100px;
+        position: relative;
+        clear: both;
+        background-image: url(../img/images/age_02.png);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .age {
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    .age ul li {
+        float: left;
+        width: 100%;
+    }
+
+
+    .age .agetit {
+        padding-top: 60px;
+        color: #555;
+        font-size: 20px;
+    }
+
+    .age .agetit2 {
+        font-weight: normal;
+        font-size: 35px;
+        font-family: 'Lato', sans-serif;
+        display: inline-block;
+        margin-right: 150px;
+    }
+
+    .age ul li iframe {
+        margin-top: 20px;
+        width: 100%;
+        height: 400px;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .age .ageimg-box {
+        margin-top: 10px;
+        float: right;
+        width: 100%;
+        display: flex;
+    }
+
+    .age .ageimg-box img {
+        width: 50%;
+        height: 200px;
+    }
+
+    .age ul .ah {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .age ul .pe {
+        font-size: 15px;
+        margin-top: 10px;
+        color: #555;
+        line-height: 20px;
+    }
+
+    .age ul .pe strong {
+        font-size: 17px;
+        color: #005000;
+    }
+
+    .age ul li p {
+        line-height: 25px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .age ul li p strong {
+        font-size: 18px;
+    }
+
+    /*playe*/
+    .musicPlayer {
+        width: 100%;
+        height: 1900px;
+        position: relative;
+        clear: both;
+        background-color: #000;
+    }
+
+    .playe {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .playe li {
+        float: left;
+        width: 50%;
+    }
+
+
+    .playe .playetit {
+        padding-top: 50px;
+        color: #eee;
+        font-size: 25px;
+    }
+
+    .playe .playetit2 {
+        color: #fff;
+        font-size: 35px;
+        font-family: 'Lato', sans-serif;
+        display: inline-block;
+        margin-right: 150px;
+    }
+
+
+
+
+    .album {
+        overflow: hidden;
+        padding-top: 10px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .album li {
+        float: left;
+        width: 49%;
+        overflow: hidden;
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+
+    .album img {
+        transition: 0.5s;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .album img:hover {
+        transform: scale(1.15);
+    }
+
+    .albumbtn {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        display: block;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    .albumbtn:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+
+
+    .rolling_wrap {
+        position: relative;
+        width: 100%;
+        min-height: 400px;
+        height: 400px;
+        margin: auto;
+        margin-top: 60px;
+        overflow: hidden;
+    }
+
+    .rolling_wrap a {
+        position: absolute;
+        overflow: hidden;
+        width: 420px;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .rolling_wrap a img {
+        width: 100%;
+        height: 100%;
+    }
+
+}
 
 
 }

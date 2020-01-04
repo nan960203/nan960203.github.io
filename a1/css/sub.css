@@ -26,7 +26,7 @@ html,body{
     width: 100%;
 }
 .header{
-    height: 130px;
+    height: 100px;
     width: 80%;
     margin: 0 auto;
 }
@@ -37,6 +37,7 @@ html,body{
     padding-top: 40px;
 }
 .logo img{
+    margin-top: -30px;
     cursor: pointer;
     display: block;
     width: 100%;
@@ -88,30 +89,95 @@ html,body{
 
 
 
-
-/*가짜토굴*/
-.bgleft{
-    position: absolute;
-    left: 80px;
-    top: 250px;
+/*열기버튼*/
+.lst_btn{
+    background-image: url(../img/toggle_06.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height:30px;
+    position: relative;
+    top: 400px;
+    left: 70px;
+    z-index: 90;
+    text-indent: -9999px;
+    cursor: pointer;
+    display: block;
 }
-.bgleft img{
+#mgnb{
+    position: fixed;
+    top: 0;
+    left: -250px; /*바깥쪽으로 박스 숨기기*/
+    z-index: 60;
+    width: 240px;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    transition: 0.5s;
+    border-right: 3px solid darkred;
+}
+#mgnb li a{
+    font-size: 16px;
+}
+#ck1:checked ~ #mgnb{
+    left: 0;
+}/*ck1클릭시 #gnb 바깥쪽에있던 left -240px것이 0px으로 */
+#ck1{
+    display: none;
+}/*체크상자숨기기*/
+
+.close_btn{
+    /*x버튼디자인*/
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-image: url(../img/toggle_06.png);
+    background-repeat: no-repeat;
+    background-position: -195px -145px;
+    cursor: pointer;
+    float: right;
+    text-indent: -9999px;
+    margin: 15px;
+}
+.main{
+    clear: both;
+    margin-top: 80px;
+}
+.main li{
+    line-height: 46px;
+}
+.main li a{
+    
+    padding-left: 20px;
+    font-size: 24px;
+    display: block;
+    color: #333;
+}
+.main li a:hover{
+    font-weight: bold;
+    color: #fa9172;
+}
+/*가짜토굴*/
+
+
+.bgleft img {
     width: 30px;
     height: 30px;
 }
-.bgright{
+
+.bgright {
     position: absolute;
     right: 80px;
-    top: 220px;
+    top: 350px;
 }
-.bgright li{
+
+.bgright li {
     clear: both;
 }
-.bgright img{
+
+.bgright img {
     width: 50px;
     height: 50px;
 }
-
 
 /*아티스트*/
 
@@ -123,8 +189,8 @@ html,body{
 }
 .artists{
     position: relative;
-   padding-top: 20px;
-    width: 70%;
+    width: 80%;
+    background-color: red;
     margin: 0 auto;
 }
 .artists li{
@@ -294,8 +360,8 @@ html,body{
     background-color: rgb(238, 238, 238,0.5);
 }
 .artists li:first-child{
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/instarpack.jpg);
             background-size: 100% 100%;
             background-position: center center;
@@ -308,8 +374,8 @@ html,body{
         }
 
 .artists li:nth-child(2){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/instarsam.jpg);
             background-size: 100% 100%;
             background-position: center center;
@@ -325,8 +391,8 @@ html,body{
 
 
 .artists li:nth-child(3){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/images/instar_03.png);
             background-size: 100% 100%;
             background-position: center center;
@@ -340,8 +406,8 @@ html,body{
 
 
 .artists li:nth-child(3){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/images/instar_03.png);
             background-size: 100% 100%;
             background-position: center center;
@@ -355,8 +421,8 @@ html,body{
 
 
 .artists li:nth-child(4){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/images/instar_26.png);
             background-size: 100% 100%;
             background-position: center center;
@@ -370,8 +436,8 @@ html,body{
 
 
 .artists li:nth-child(5){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/images/instar_18.png);
             background-size: 100% 100%;
             background-position: center center;
@@ -385,8 +451,8 @@ html,body{
 
 
 .artists li:nth-child(6){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/instar20.jpg);
             background-size: 100% 100%;
             background-position: center center;
@@ -400,8 +466,8 @@ html,body{
 
 
 .artists li:nth-child(7){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/instar23.jpg);
             background-size: 100% 100%;
             background-position: center center;
@@ -415,8 +481,8 @@ html,body{
 
 
 .artists li:nth-child(8){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/instar25.jpg);
             background-size: 100% 100%;
             background-position: center center;
@@ -430,8 +496,8 @@ html,body{
 
 
 .artists li:nth-child(9){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/instar26.jpg);
             background-size: 100% 100%;
             background-position: center center;
@@ -445,8 +511,8 @@ html,body{
 
 
 .artists li:nth-child(10){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/instar27.jpg);
             background-size: 100% 100%;
             background-position: center center;
@@ -460,8 +526,8 @@ html,body{
 
 
 .artists li:nth-child(11){
-            width: 300px;
-            height: 350px;
+            width: 350px;
+            height: 400px;
             background-image: url(../img/instar28.jpg);
             background-size: 100% 100%;
             background-position: center center;
@@ -496,7 +562,8 @@ html,body{
     width: 100%;
     clear: both;
     position: relative;
-    height: 50px;
+    height: 100px;
+    margin-top: 120px;
     
     
 }
@@ -524,19 +591,61 @@ html,body{
       
       
 /*가짜토굴*/
+       /*가짜토굴*/
+    /*열기버튼*/
+.lst_btn{
+    background-image: url(../img/toggle_06.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height:30px;
+    position: relative;
+    top: 40px;
+    left: calc(50% - -200px);
+    z-index: 90;
+    text-indent: -9999px;
+    cursor: pointer;
+    display: block;
+}
+#mgnb{
+    position: fixed;
+    top: 0;
+    left: -101%; /*바깥쪽으로 박스 숨기기*/
+    z-index: 60;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    transition: 0.5s;
+    border-right: 3px solid darkred;
+}
+    .main{
+    clear: both;
+    margin-top: 80px;
+}
+.main li{
+    line-height: 46px;
+}
+.main li a{
+    text-align: center;
+    padding-left: 20px;
+    font-size: 30px;
+    display: block;
+    color: #333;
+}
+.main li a:hover{
+    font-weight: bold;
+    color: #fa9172;
+}
 .bgleft{
     position: absolute;
     left:calc(50% - -170px);
     top: -80px;
 }
-.bgleft img{
-    width: 25px;
-    height: 25px;
-}
+
 .bgright{
     position: absolute;
     right: 4px;
-    top: 40px;
+    top: 120px;
 }
 .bgright li{
     clear: both;
@@ -549,6 +658,7 @@ html,body{
       /*아티스트*/
       .ARTISTS-list{
     width: 100%;
+          margin-top: -50px;
     height: 1200px;
     position: relative;
     clear: both;
@@ -616,9 +726,6 @@ html,body{
 
   @media screen and (min-width:960px) and (max-width:1279px){
            
-     .wrap{
-        column-count: 2;
-    }
    
 .gnb{
     float: right;
@@ -649,11 +756,7 @@ html,body{
       
       
 /*가짜토굴*/
-.bgleft{
-    position: absolute;
-    left:calc(50% - -170px);
-    top: -80px;
-}
+
 .bgleft img{
     width: 25px;
     height: 25px;
@@ -674,7 +777,7 @@ html,body{
       /*아티스트*/
       .ARTISTS-list{
     width: 100%;
-    height: 1200px;
+    height: auto;
     position: relative;
     clear: both;
 }
@@ -688,47 +791,59 @@ html,body{
 }
       .artists li:nth-child(1){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(2){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(3){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(4){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(5){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(6){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(7){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(8){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(9){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(10){
           width: 100%;
-          height: 300px;
+          height: 350px;
       } 
        .artists li:nth-child(11){
           width: 100%;
-          height: 300px;
+          height: 350px;
       }
+      
+.bgleft{
+    position: absolute;
+    left:calc(50% - -170px);
+    top: -80px;
+}
+
+.bgright{
+    position: absolute;
+    right: 25px;
+    top: 150px;
+}
       
         }
