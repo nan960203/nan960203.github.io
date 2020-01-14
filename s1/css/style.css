@@ -55,6 +55,7 @@ html,body{
 }
 .top-bar li a{
     display: block;
+    cursor: pointer;
     font-size: 17px;
 }
 .top-bar li a:hover{
@@ -521,6 +522,16 @@ html,body{
 /*눈내리는효과*/
 
 
+
+
+
+
+
+
+
+
+
+
 /*모바일*/
  @media screen and (max-width:767px){
             
@@ -924,48 +935,7 @@ html,body{
     background-image: url(../img/con4bg.jpg);
     
 }
-.con3bgimg1{
-    position: absolute;
-    bottom: 0;
-    width: 500px;
-    height: 800px;
-    left: -10px;
-}
-.con3bgimg2{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 600px;
-    height: 750px;
-}
-.demo {
-    padding-top: 100px;
-    width:80%;
-    margin-right: 50px;
-    margin: 0 auto;
-    height:300px;
-}
- .demo .item{
-           width:100%;
-     height: 300px;
-     background-color: black;
-        }
-		.content-slider li{
-		   width: 100%;
-            height: 300px;
-            margin: 0 auto;
-		}
-    .item #image-gallery{
-         width: 50%;
-     }
-.content-slider li img{
-    width: 100%;
-    height: 300px;
-}
-.content-slider{
-    width: 100%;
-    height: 300px;
-}
+
 .galleryfont{
     position: absolute;
     top: 50px;
