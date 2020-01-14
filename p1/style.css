@@ -211,7 +211,7 @@ body {
     float: left;
     margin: 0 auto;
     display: block;
-    height: 870px;
+    height: 700px;
     box-sizing: border-box;
 }
 #content section#menu2 .con2 .pro1{
@@ -224,31 +224,23 @@ body {
     font-size: 21px;
     display: block;
     
-}
-#content section#menu2 .con2 .pro1 li:first-child a::before{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: lavender;
-    border-radius: 50%;
-   left: 210px;
-    bottom: 250px;
+    position: relative;
+    bottom: 100px;
+    right: calc(50% - 150px);
 }
 #content section#menu2 .con2 .big_img {
     width:40%;
     float: left;
     display: block;
-    height: 400px;
-    margin-top: 150px;
+    height: 350px;
+    margin-top: 200px;
 }
 
 #content section#menu2 .con2 .big_img img {
-    width: 500px;
-    height: 400px;
+    width: 450px;
+    height: 350px;
     display: block;
-    margin-top: -100px;
+    margin-top: -150px;
     text-align: center;
     margin-left: 100px;
 }
@@ -258,20 +250,22 @@ body {
     margin: 0 auto;
     width: 60%;
     float: left;
-    height: 1000px;
+    height: 700px;
+    position: relative;
 
 }
+
 #content section#menu2 .con2-1 ul li{
-    height: 100px;
+    height: 80px;
 }
 #content section#menu2 .con2-1 ul li a{
     display: block
-    line-height: 100px;
+    line-height: 80px;
     font-size: 30px;
-    width: 200px;
+    width: 100px;
 }
 #content section#menu2 .con2-1 ul li .pro2{
-    width: 1000px;
+    width:1000px;
     float: right;
     
 }
@@ -284,7 +278,7 @@ body {
 /*그래프*/
 .graph{width: 200px;margin: 50px auto;
 display: inline-block;
-    margin-top: -10px;
+    margin-top: -0px;
 font-size: 22px;}
         .graph_out{width: 700px;height: 25px;background-color: #696572;position: relative;margin-bottom: 20px;
 display: inline-block;}
@@ -1165,9 +1159,3 @@ margin-top: 30px;
 
 .close_btn{outline: 0;border: 0;position: absolute;right: -30px;top: 0;font-size: 20px;padding: 5px;color: #fff;background: #333;width: 40px;height: 40px;cursor: pointer;}
 .close_btn:hover{background: #b10404;}
-
-    
-   
-
-
-}
