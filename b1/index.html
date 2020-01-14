@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>바비브라운</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/jquery-1.11.1.js"></script>
+    <!-- 폰트어썸 불러오기 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="top-bar">
+            <input type="checkbox" id="ck1" class="ck_box">
+            <label for="ck1" class="lst_btn">열기</label>
+            <nav id="mgnb">
+
+                <ul class="main">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="sub.html">ARTISTS</a></li>
+                    <li><a href="#">SCHEDULE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+
+            </nav>
+            <div class="header">
+                <a href="index.html" class="logo"><img src="./img/images/logo_03.png" alt=""></a>
+                <ul class="search">
+                    <li><img src="./img/images/ticon_18.png" alt=""></li>
+                </ul>
+                <ul class="right-top">
+                    <li><a href="#"><img src="./img/images/ticon_03.png" alt=""></a></li>
+                    <li><a href="#"><img src="./img/images/ticon_06.png" alt=""></a></li>
+                    <li><a href="#"><img src="./img/images/ticon_08.png" alt=""></a></li>
+                </ul>
+                <div class="menu">
+                    <nav class="menu-bar">
+                        <ul>
+                            <li><a href="#">NEW</a></li>
+                            <li><a href="#">BESTSELLERS</a></li>
+                            <li><a href="#">FACE</a></li>
+                            <li><a href="#">MAKEUP</a></li>
+                            <li><a href="#">SKINCARE</a></li>
+                            <li><a href="#">LEARN</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!--topbar-->
+        <div class="slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/images/bn1_02.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/images/bn2_02.png" alt=""></div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- Swiper JS -->
+            <script src="./js/swiper.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+    </script>
+        </div>
+        <!--slider-->
+
+
+        <div class="price">
+            <div class="price-menu">
+                <h2 class="pricetit">DON’T MISS OUT</h2>
+                <input type="radio" name="raitem" class="raitem" id="ra1" checked>
+                <input type="radio" name="raitem" class="raitem" id="ra2">
+                <input type="radio" name="raitem" class="raitem" id="ra3">
+                <div class="btnraBox">
+                    <label for="ra1" class="btnBox item1">TRENDING NOW</label>
+                    <label for="ra2" class="btnBox item2">WHAT’S NEW</label>
+                    <label for="ra3" class="btnBox item3">ONLINE EXCLUSIVE </label>
+                </div>
+                <div class="conraBox">
+                    <div class="raBox item1">
+                        <ul>
+                            <li><a href="#"><img src="./img/nowitem1.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>[공식몰 단독 판매] [루비&베이브 포함] <br>크러쉬드 포 데이스 립 키트</p>
+                                    <p class="star">★★★★★(33)</p>
+                                    <span class="price01">65,000</span>
+                                </div>
+                            </li>
+
+                            <li><a href="#"><img src="./img/nowitem2.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>
+                                        [공식몰 단독 판매] 하이드레이팅 스킨케어<br> 트리오
+                                    </p>
+                                    <p class="star">★★★★★(12)</p>
+                                    <span class="price01">65,000</span>
+                                </div>
+                            </li>
+                            <li><a href="#"><img src="./img/noitem3.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>
+                                        [한국 단독 판매] [러브 에디션] 엑스트라<br> 립 틴트
+
+                                    </p>
+                                    <p class="star">★★★★★(13)</p>
+                                    <span class="price01">65,000</span>
+                                </div>
+                            </li>
+                            <li><a href="#"><img src="./img/nowitem4.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>
+
+                                        [한정판 골드 보틀] 인텐시브 스킨 세럼 <br>파운데이션 SPF40 PA+++
+
+                                    </p>
+                                    <p class="star">★★★★★ (3)</p>
+                                    <span class="price01">65,000</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="raBox item2">
+                        <ul>
+                            <li><a href="#"><img src="./img/witem1.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>
+                                        [33,000원 상당 할인 벨류] 대용량 수딩<br> 클렌징 오일
+                                    </p>
+                                    <p class="star">★★★★★(33)</p>
+                                    <span class="price01">97,000</span>
+                                </div>
+                            </li>
+
+                            <li><a href="#"><img src="./img/witem2-1.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>
+                                        [한정판] 쉬어 피니쉬 프레스드 <br>파우더
+                                    </p>
+                                    <p class="star">★★★★☆(25)</p>
+                                    <span class="price01">60,000</span>
+                                </div>
+                            </li>
+                            <li><a href="#"><img src="./img/witem3.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>
+                                        [홀리데이 컬렉션] 럭스 아이 섀도우 <br>리치 젬스톤
+
+                                    </p>
+                                    <p class="star">★★★★★(1)</p>
+                                    <span class="price01">48,000</span>
+                                </div>
+                            </li>
+                            <li><a href="#"><img src="./img/witem4.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>[2019 홀리데이 럭스 젬스 컬렉션] 다이아몬드처럼 빛나는 럭스 쥬얼 립스틱</p>
+                                    <p class="star">★★★★★ (30)</p>
+                                    <span class="price01">43,000</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="raBox item3">
+                        <ul>
+                            <li><a href="#"><img src="./img/eitem1.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>[공식몰 단독 판매] 투-미닛 소프트<br> 스모키 아이 키트</p>
+                                    <p class="star">★★★★★(1)</p>
+                                    <span class="price01">90,000</span>
+                                </div>
+                            </li>
+
+                            <li><a href="#"><img src="./img/eitem2.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>
+                                        [공식몰 단독 재입고] 미니 하이라이팅 파우더<br> 핑크 글로우
+                                    </p>
+                                    <p class="star">★★★★★(12)</p>
+                                    <span class="price01">40,000</span>
+                                </div>
+                            </li>
+                            <li><a href="#"><img src="./img/eitem3.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>
+                                        [공식몰 단독 재입고] 미니 로즈 쉬머<br> 브릭 컴팩트
+
+                                    </p>
+                                    <p class="star">★★★★★(13)</p>
+                                    <span class="price01">40,000</span>
+                                </div>
+                            </li>
+                            <li><a href="#"><img src="./img/eitem4.jpg" alt=""></a>
+                                <div class="pricename">
+                                    <p>[온라인 단독] [홀리데이] 미니 <br>럭스 립 세트
+                                    </p>
+                                    <p class="star">★★★★★ (3)</p>
+                                    <span class="price01">40,000</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video">
+            <figure id="vdo">
+                <video src="./img/bb.mp4" id="vd1" autoplay loop muted></video>
+            </figure>
+            <div class="vdotxt">
+                <p class="fo">FOCUS ON</p>
+                <h2 class="vdotit">매 순간 더 눈 부신 나,<br>NEW 럭스 샤인 인텐스</h2>
+                <a href="#" class="vdobtn">자세히보기</a>
+            </div>
+        </div>
+
+        <div class="makeup">
+            <div class="make">
+                <h2 class="maketit">
+                    MAKE UP RESSON</h2>
+                <ul>
+                    <li class="makeimg"><a href="#"><img src="./img/images/MANK_03.png" alt=""></a></li>
+                    <li class="makestop">
+                        <input type="radio" name="raitem2" class="raitem2" id="ra4" checked>
+                        <input type="radio" name="raitem2" class="raitem2" id="ra5">
+                        <input type="radio" name="raitem2" class="raitem2" id="ra6">
+                        <input type="radio" name="raitem2" class="raitem2" id="ra7">
+                        <div class="makeraBox">
+                            <label for="ra4" class="makeBox item4">STEP 1</label>
+                            <label for="ra5" class="makeBox item5">STEP 2</label>
+                            <label for="ra6" class="makeBox item6">STEP 3</label>
+                            <label for="ra7" class="makeBox item7">STEP 4</label>
+                        </div>
+                        <div class="makeConbox">
+                            <div class="makeCon item4">
+                                <ul>
+                                    <li><a href="#"></a>
+                                    <div class="maketxtbox">
+                                        <h2 class="makett">프로페셔널 메이크업 아티스트와 함께하는 메이크업 레슨을 예약해 보세요</h2><br>
+                                        <p class="makedas">
+                                            <strong style="color: crimson; font-size: 17px;">[메이크업 레슨 이용 시 준수사항]</strong> <br>
+*메이크업 레슨 예약 후 사전 연락없이 미 방문시 (3회 이상) <br>
+NO SHOW 고객으로 처리되어 추후 메이크업 레슨 이용이 불가합니다. <br>
+*레슨 시작 전, 오프라인 고객 등록 한 이후에 서비스를 받아 보실 수 있습니다. <br>
+(*매장 방문시 고객 등록 필수) <br>
+*1인당 최대 주 1회 한정 예약 가능 <br><br>
+
+<strong style="color: crimson; font-size: 17px;">[온라인 예약 컨설팅 후 모든 구매 고객 혜택]</strong> <br>
+*기간: 9/24~소진시까지 (1인 1회 / 선착순 한정수량) <br>
+*대상: 온라인 예약 후 컨설팅에 참석하신 고객님 중 모든 구매 고객께 증정 <br>
+*증정 품목: BEST 제품 2종 샘플 (랜덤 증정) <br>
+*조기 소진 시 사전 고지 없이 미증정 될 수 있습니다. <br><br>
+
+메이크업 레슨을 예약하기 위해서는 매장을 선택주세요.
+                                        </p>
+                                        <select class="resson">
+                                            <option>매장 선택하기</option>
+                                            <option>경기 - AK 분당, 경기 성남시 분당구 서현동 263번지</option>
+                                            <option>경기 - AK 수원, 수원시 팔달구 매산로1가 18번지</option>
+                                            <option>경기 - 갤러리아 수원, 경기도 수원시 팔달구 인계동 1125-1</option>
+                                            <option>경기 - 롯데 수원, 경기도 수원시 권선구 세화로 134 롯데백화점수원점</option>
+                                            <option>경기 - 롯데 일산, 경기 고양시 일산동구 장항동 784</option>
+                                            <option>경기 - 롯데 평촌, 경기도 안양시 동안구 호계동 1039 번지</option>
+                                            <option>경기 - 신세계 의정부, 경기도 의정부시 의정부동 168-54</option>
+                                            <option>경기 - 신세계 죽전, 경기 용인시 수지구 죽전동 1285번지</option>
+                                            <option>경기 - 신세계 하남, 경기도 하남시 미사대로 750 스타필드 하남</option>
+                                            <option>경기 - 현대 중동, 경기 부천 원미 중동 1164</option>
+                                            <option>경기 - 현대 킨텍스, 경기도 고양시 일산서구 대화동 2602</option>
+                                            <option>경기 - 현대 판교, 경기 성남시 분당구 백현동 541</option>
+                                            <option>광주 - 신세계 광주, 광주 서구 무진대로 932</option>
+                                            <option>대구 - 롯데 대구, 대구시 북구 태평로 161</option>
+                                            <option>대구 - 신세계 대구, 대구광역시 동구 동부로 149 번지</option>
+                                            <option>대구 - 현대  대구, 대구 중구 계산동2가 200 번지</option>
+                                            <option>대전 - 갤러리아  대전, 대전 서구 둔산2동 1036번지</option>
+                                            <option>부산 - 롯데 광복, 부산시 중구 중앙동7가 20-1번지</option>
+                                            <option>부산 - 롯데 동래, 부산광역시 동래구 중앙대로 1393</option>
+                                            <option>부산 - 롯데 부산, 부산 부산진구 부전동 503-15번지</option>
+                                            <option>부산 - 신세계 센텀시티, 부산시 해운대구 우동 1495번지</option>
+                                            <option>서울 - 롯데 강남, 서울특별시 강남구 도곡로 401 롯데백화점 1층</option>
+                                            <option>서울 - 롯데 노원, 서울시 노원구 상계2동 713번지</option>
+                                            <option>서울 - 롯데 명동, 서울 중구 소공동 1번지</option>
+                                            <option>서울 - 롯데 미아, 서울시 강북구 도봉로 62 롯데백화점 미아점 1층</option>
+                                            <option>서울 - 롯데 스타시티, 서울시 광진구 자양동 227-342</option>
+                                            <option>서울 - 롯데 에비뉴엘, 서울시 송파구 올림픽로 300</option>
+                                            <option>서울 - 롯데 잠실, 서울특별시 송파구 올림픽로 240 번지</option>
+                                            <option>서울 - 롯데 청량리, 서울시 동대문구 전농동 591-53</option>
+                                            <option>서울 - 신세계 강남, 서울특별시 서초구 반포동 19-3 번지</option>
+                                            <option>서울 - 신세계 명동, 서울 중구 충무로1가 52-5 번지</option>
+                                            <option>서울 - 신세계 영등포, 서울시 영등포구 영등포동4가 441-10번지</option>
+                                            <option>서울 - 현대 목동, 서울 양천구 목동 916 번지</option>
+                                            <option>서울 - 현대 무역, 강남구 삼성동 159-7 번지</option>
+                                            <option>서울 - 현대 신촌, 서울시 서대문구 창천동 30-33 번지</option>
+                                            <option>서울 - 현대 압구정, 서울 강남구 압구정동 429번지</option>
+                                            <option>서울 - 현대 천호, 서울 강동구 천호2동 455-8 번지</option>
+                                            <option>울산 - 롯데 울산, 울산광역시 남구 삼산로 288 롯데백화점울산점</option>
+                                            <option>울산 - 현대 울산, 울산 남구 삼산동 1521-1</option>
+                                            <option>인천 - 롯데 인천터미널, 인천광역시 미추홀구 연남로 35 번지</option>
+                                            <option>창원 - 롯데 창원, 경남 창원시 성산구 중앙대로 124</option>
+                                            <option>천안 - 신세계 충청, 충남 천안시 동남구 만남로 43 신세계백화점충청점</option>
+                                            <option>청주 - 현대 충청, 충북 청주시 흥덕구 복대동 3380 번지</option>
+                                           
+                                        </select>
+                                         <span class="Choice">메이크업 레슨 선택하기</span>
+                                         
+                                    </div></li>
+                                </ul>
+                            </div>
+                            <div class="makeCon item5">
+                                <h2 class="makeChoice">메이크업 레슨을 선택해주세요.</h2>
+                                <p class="makeCoice2">*1인당 최대 주 1회 한정 예약 가능</p>
+                                <div class="makelist">
+                                    <ul>
+                                        <li><a href="#"><img src="./img/makelist1.JPG" alt=""></a>
+                                        <div class="makelistbox">
+                                            <h2 class="makelisttit">HOW TO: 브로우 메이크업 레슨</h2>
+                                            <p class="makelistdas">나에게 어울리는 눈썹의 모양과 색상을 찾아드리고 그리는 방법을 알려드립니다.</p>
+                                        </div>
+                                        <div class="makelistbtn"><p>20분</p><span>예약하기</span>
+                                            
+                                        </div></li>
+                                        <li><a href="#"><img src="./img/makelist2.JPG" alt=""></a><div class="makelistbox">
+                                            <h2 class="makelisttit">HOW TO: 립 & 치크 메이크업 레슨</h2>
+                                            <p class="makelistdas">나에게 맞는 립스틱과 블러셔 색상을 찾아드리고 바르는 방법을 알려드립니다.</p>
+                                        </div><div class="makelistbtn"><p>20분</p><span>예약하기</span>
+                                            
+                                        </div></li>
+                                        <li><a href="#"><img src="./img/makelist3.JPG" alt=""></a><div class="makelistbox">
+                                            <h2 class="makelisttit">HOW TO: 아이 메이크업 레슨</h2>
+                                            <p class="makelistdas">데일리부터 스모키까지 내 눈매에 맞는 아이 메이크업 연출법을 알려드립니다.</p>
+                                        </div><div class="makelistbtn"><p>20분</p><span>예약하기</span>
+                                            
+                                        </div></li>
+                                        
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            <div class="makeCon item6">
+                                <h2 class="makeChoice">메이크업 레슨을 받을 날짜와 시간을 선택해주세요.</h2><br>
+                                   <h3 class="makecho">*온라인 예약 시스템 이용 안내*
+
+본 메이크업 레슨은 바비 브라운 제품 사용법을 보다 쉽게 알려드리고자 하는 하이터치 서비스입니다.
+원활한 메이크업 레슨을 위해 사전 예약을 권장합니다.
+활성화된 시간대에만 예약이 가능합니다.
+온라인 시스템을 이용한 메이크업 레슨은 당일 예약은 불가합니다.
+온라인 예약을 하셨더라도 각 매장 상황에 따라 대기 시간이 발생할 수 있습니다.
+지정 시간에 방문하지 않으시면 15분 이후 자동 예약 취소될 수 있습니다.
+온라인으로 예약한 메이크업 레슨은 당일 취소가 불가합니다. (최소 1일 전 취소 가능)
+1인당 최대 주 1회 한정 예약 가능</h3>
+                            </div>
+                            <div class="makeCon item7"></div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <!--makeup-->
+
+        <div class="offclal">
+            <h2 class="offtit">Official Online Mall Benefits</h2>
+            <div class="off">
+                <ul>
+                    <li><a href="#"><img src="./img/five.JPG" alt=""></a>
+                        <div class="offtxtbox">
+                            <h3 class="offtxttit">5% OFF</h3>
+                            <p class="offtxt">공식몰 단독 상시 5% 할인 혜택 </p>
+                            <a href="#" class="offbtn">자세히보기</a>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="./img/offitem2.JPG" alt=""></a>
+                        <div class="offtxtbox2">
+                            <h3 class="offtxttit">PRE-LAUNCHING</h3>
+                            <p class="offtxt">
+                                공식몰 단독 선런칭 아이템 </p>
+                            <a href="#" class="offbtn">자세히보기</a>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="./img/offitem3.JPG" alt=""></a>
+                        <div class="offtxtbox">
+                            <h3 class="offtxttit">ONLINE EXCLUSIVE</h3>
+                            <p class="offtxt">
+                                온라인 단독 판매 아이템 </p>
+                            <a href="#" class="offbtn">자세히보기</a>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="./img/offitem4.JPG" alt=""></a>
+                        <div class="offtxtbox2">
+                            <h3 class="offtxttit">ONLINE MEMBERSHIP</h3>
+                            <p class="offtxt">
+                                공식몰 단독 멤버쉽 혜택</p>
+                            <a href="#" class="offbtn">자세히보기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ftmenu">
+            <div class="ft">
+                <nav class="ftlist">
+                    <ul>
+                        <li class="info"><a href="#" class="dep1">고객 문의</a>
+                            <ul>
+                                <li><a href="#">이메일 문의하기</a></li>
+                                <li><a href="#">
+                                        고객관리지원팀 (02) 6971-3225</a></li>
+                                <li><a href="#">
+                                        이용 약관</a></li>
+                                <li><a href="#">
+                                        고객문의</a></li>
+                                <li><a href="#">
+                                        채용안내</a></li>
+                                <li><a href="#">
+                                        에스크로가입확인</a></li>
+                                <li><a href="#" style="color: crimson">
+                                        개인정보처리방침</a></li>
+                                <li><a href="#">
+                                        로그인/회원 가입</a></li>
+                            </ul>
+                            <select>
+                                <option>대한민국</option>
+                                <option>남아프리카</option>
+                                <option>네덜란드</option>
+                                <option>대만,중국</option>
+                                <option>독일</option>
+                                <option>러시아</option>
+                                <option>말레아시아</option>
+                                <option>멕시코</option>
+                                <option>미국</option>
+                                <option>스페인</option>
+                                <option>싱가폴</option>
+                                <option>아르헨티나</option>
+                                <option>영국</option>
+                                <option>이탈리아</option>
+                            </select>
+                        </li>
+                        <li class="mall"><a href="#" class="dep1">바비 브라운 공식몰</a>
+                            <ul>
+                                <li><a href="#">프로필</a></li>
+                                <li><a href="#">
+                                        주문내역</a></li>
+                                <li><a href="#">
+                                        메이크업 레슨 예약하기</a></li>
+                                <li><a href="#">
+                                        매장찾기</a></li>
+                                <li><a href="#">
+                                        멤버쉽 혜택</a></li>
+                                <li><a href="https://www.bobbibrown.co.kr/trust-mark"></a><img src="./img/ftlogo.JPG" alt="" class="ftlogo"></li>
+                            </ul>
+                        </li>
+                        <li class="bobbisns"><a href="#" class="dep1">BOBBIBROWN SNS 바로가기</a>
+                            <ul>
+                                <li><a href="https://www.facebook.com/bobbibrownkor/"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="http://instagram.com/bobbibrownkorea"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="http://blog.naver.com/bobbikorea"><i class="fab fa-blogger-b"></i></a></li>
+                                <li><a href="https://www.youtube.com/user/koreabobbibrown"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <nav class="copy">
+                <ul>
+                    <li><a href="#">이엘씨에이한국(유) 대표 SLAVIN PAUL 서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232 <br>
+                            사업자등록번호: 211-81-71889 | 통신판매업신고번호: 강남-15737호｜</a>
+                        <ul class="copycopy">
+                            <li><a href="#" style="color: #fff; margin-top: 10px;">사업자정보조회</a></li>
+                            <li class="infoj"><a href="#">| 고객관리지원팀: (02) 6971-3225</a></li>
+                            <li><a href="#" style="color: #fff">user_support@kr.bobbibrown.com </a></li>
+                            <li class="copyright"><a href="#">© Bobbi Brown Professional Cosmetics Inc. ALL RIGHTS RESERVED
+                                    호스팅서비스 사업자: ㈜엘지유플러스</a></li>
+                        </ul>
+                    </li>
+                    <li class="dldyd"><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--wrap-->
+</body>
+</html>
