@@ -70,8 +70,26 @@ a{
     color: #fa9172;
 }
 
-
-
+.main li:hover a.dep1{
+    color:  #0c4ca3;
+}
+.main .sub{
+    position: relative;
+    opacity: 0;
+    height: 10px;
+}
+.main li:hover .sub{
+    opacity: 1;
+    height: auto;
+}
+.main .sub li a{
+    font-size: 16px;
+    text-indent: 30px;
+    font-weight: normal;
+}
+.main .sub li a:hover{
+    background-color: rgba(255,255,255,0.4);
+}
 .top-bar{
     clear: both;
     width: 100%;
@@ -468,7 +486,7 @@ video{
     text-align: center;
     margin: 0 auto;
     position: absolute;
-    top: 40px;
+    top: 20px;
     margin: 30px;
     box-sizing: border-box;
 }
@@ -703,6 +721,28 @@ video{
     text-decoration: underline;
 }
 
+
+.offtxtbox2-1{
+    position: absolute;
+    top:650px;
+    margin-top: 20px;
+}
+.offtxtbox2-1 .offtxttit{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.offtxtbox2-1 .offtxt{
+    margin-bottom: 50px;
+    font-size: 17px;
+}
+.offtxtbox2-1 .offbtn:hover{
+    color: #333;
+    text-decoration: underline;
+}
+
 .ftmenu{
     color: #fff;
     width: 100%;
@@ -829,4 +869,839 @@ video{
 }
 .copyright{
     margin-top: 15px;
+}
+
+
+
+@media screen and (min-width:960px) and (max-width:1279px) {
+/*열기버튼*/
+.lst_btn{
+    background-image: url(../img/images/toggle_20.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height:20px;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    z-index: 90;
+    text-indent: -9999px;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+}
+#mgnb{
+    position: fixed;
+    top: 0;
+    left: -305px; /*바깥쪽으로 박스 숨기기*/
+    z-index: 60;
+    width: 300px;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    transition: 0.5s;
+    border-right: 3px solid #000;
+}
+#mgnb li a{
+    font-size: 16px;
+}
+#ck1:checked ~ #mgnb{
+    left: 0;
+}/*ck1클릭시 #gnb 바깥쪽에있던 left -240px것이 0px으로 */
+#ck1{
+    display: none;
+}/*체크상자숨기기*/
+
+.main{
+    clear: both;
+    margin-top: 80px;
+}
+.main li{
+    line-height: 46px;
+}
+.main li a{
+    
+    padding-left: 20px;
+    font-size: 24px;
+    display: block;
+    color: #333;
+}
+.main li a:hover{
+    font-weight: bold;
+    color: #fa9172;
+}
+
+
+
+.top-bar{
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    clear: both;
+    height: 100px;
+    background-color: #000;
+    
+}
+.header{
+    background-color: #000;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.header .logo{
+    margin: 0 auto;
+    display: block;
+    width:250px;
+    height: 35px;
+}
+.header .logo img{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    
+    padding-top: 10px;
+}
+.header .right-top{
+   display: none;
+}
+.menu{
+    width: 100%;
+}
+    .menu-bar{
+        display: none;
+    }
+.search{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+    /*slider*/
+
+ .swiper-container {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-slide img{
+        width: 100%;
+    }
+
+/*price*/
+
+.price{
+    clear: both;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    height: 1000px;
+}
+.price-menu{
+    margin: 0 auto;
+    width: 80%;
+}
+.price-menu .pricetit{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    padding-top: 50px;
+}
+.raitem{
+    display: none;
+}
+#ra1:checked ~ .btnraBox .btnBox.item1{
+    border-bottom: 1px solid #000;
+    height: 40px;
+}
+#ra2:checked ~ .btnraBox .btnBox.item2{
+    border-bottom: 1px solid #000;
+    height: 40px;
+}
+#ra3:checked ~ .btnraBox .btnBox.item3{
+    border-bottom: 1px solid #000;
+    height: 40px;
+}
+.raBox{
+   display: none;
+}
+
+#ra1:checked ~ .conraBox .raBox.item1{
+    display: block;
+}
+#ra2:checked ~ .conraBox .raBox.item2{
+    display: block;
+}
+#ra3:checked ~ .conraBox .raBox.item3{
+    display: block;
+}
+.btnraBox{
+    cursor: pointer;
+    padding-top:20px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    font-size: 20px;
+}
+.btnraBox .btnBox{
+    width: 200px;
+    margin: 0 auto;
+    color: #333;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.conraBox .raBox {
+    position: relative;
+    padding-top: 30px;
+}
+.conraBox .raBox ul {
+}
+.conraBox .raBox ul li{
+    float: left;
+    width: 50%;
+}
+.conraBox .raBox ul li a{
+    width: 100%;
+    position: relative;
+    height: 480px;
+    display: block;
+    border: 1px solid #000;
+}
+.conraBox .raBox ul li:first-child a{
+    border-right: 1px solid #000;
+}
+.conraBox .raBox ul li:nth-child(2) a{
+    border-right: 1px solid #000;
+    border-left: 0;
+}
+.conraBox .raBox ul li:nth-child(3) a{
+    border-left: 1px solid #000;
+    margin-bottom: 50px;
+}
+    .conraBox .raBox ul li:nth-child(4) a{
+    border-right: 1px solid #000;
+    margin-bottom: 50px;
+}
+.conraBox .raBox ul li img{
+    overflow: hidden;position: relative;
+    transition: 0.5s;
+    width: 180px;
+    height: 230px;
+    vertical-align: middle;
+    display: block;
+    margin: 80px auto;
+}
+.conraBox .raBox ul li img:hover{
+    transform: scale(1.1);
+}
+
+.conraBox .raBox ul li .pricename{
+    position: absolute;
+    top: 370px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 20px;
+}
+    .conraBox .raBox ul li:nth-child(3) .pricename{
+    position: absolute;
+    top: 850px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 20px;
+}
+      .conraBox .raBox ul li:nth-child(4) .pricename{
+    position: absolute;
+    top: 850px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 20px;
+}
+.conraBox .raBox ul li .pricename p{
+    font-size: 17px;
+}
+.conraBox .raBox ul li .pricename .star{
+    margin-top: 10px;
+    display: inline-block;
+    margin-right: 160px;
+}
+.conraBox .raBox ul li .pricename .price01{
+    display: inline-block;
+    font-size: 18px;
+}
+.conraBox .raBox ul li a:hover::before{
+    content: "";
+    position: absolute;
+    display: block;
+   width: 100%;
+    height: 100%;
+}
+    
+    
+/*video*/
+.video{
+    width: 100%;
+    position: relative;
+    clear: both;
+    
+}
+video{
+    width: 100%;
+    
+}
+.vdotxt{
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    height: 250px;
+    position: absolute;
+    bottom:50px;
+    right: 100px;
+}
+.vdotxt .fo{
+    letter-spacing: 2px;
+    font-size: 23px;
+    text-align: center;
+}
+.vdotxt .vdotit{
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+
+    
+    
+/*makeup*/
+.makeup{
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    height: 1000px;
+}
+.make{
+    
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    
+}
+
+.make ul li{
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 50%;
+}
+.make ul li img{
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+}
+.make ul li img:hover{
+    transform: scale(1.1);
+}
+#ra4:checked ~ .makeraBox .makeBox.item4{
+    border-bottom: 1px solid #000;
+    color: #000;
+    height: 40px;
+}
+#ra5:checked ~ .makeraBox .makeBox.item5{
+    border-bottom: 1px solid #000;
+    height: 40px;color: #000;
+}
+#ra6:checked ~ .makeraBox .makeBox.item6{
+    border-bottom: 1px solid #000;
+    height: 40px;color: #000;
+}
+#ra7:checked ~ .makeraBox .makeBox.item7{
+    border-bottom: 1px solid #000;
+    height: 40px;color: #000;
+}
+.makeCon{
+   display: none;
+}
+
+#ra4:checked ~ .makeConbox .makeCon.item4{
+    display: block;
+}
+#ra5:checked ~ .makeConbox .makeCon.item5{
+    display: block;
+}
+#ra6:checked ~ .makeConbox .makeCon.item6{
+    display: block;
+}
+#ra7:checked ~ .makeConbox .makeCon.item7{
+    display: block;
+}
+.raitem2{
+    display: none;
+}
+.makebtn{
+    width: 49%;
+    float: left;
+    height: 650px;
+    
+}
+.make .maketit{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 50px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+
+.makeraBox{
+    cursor: pointer;
+    padding-top:20px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    font-size: 20px;
+}
+.makeraBox .makeBox{
+    width: 80px;
+    text-align: center;
+    margin: 0 auto;
+    color: #555;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.makeConbox .makeCon ul li{
+     width: 100%;
+}
+.makeConbox .makeCon ul li a{
+    display: block;
+    width: 100%;
+    height: 600px;
+}
+.maketxtbox{
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 5px;
+    margin: 30px;
+    box-sizing: border-box;
+}
+.maketxtbox .makett{
+    font-size: 20px;
+    text-align: left;
+}
+.maketxtbox .makedas{
+    text-align: left;
+    line-height: 25px;
+    font-size: 14px;
+   overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+}
+.maketxtbox .resson{
+    text-align: center;
+    margin-top: 20px;
+    width:100%;
+    padding-left: 0;
+    height:40px;
+    background-color: transparent;
+    border: 1px solid #333;
+}
+.maketxtbox .resson option{
+    text-align: center;
+    text-indent: 5px;
+    font-size: 15px;
+    width: 80%;
+}
+.maketxtbox .resson option:hover{
+    color: crimson;
+}
+
+
+.maketxtbox .Choice {
+    cursor: pointer;
+    color: #000;
+    width: 50%;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    line-height: 40px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+}
+.maketxtbox .Choice:hover{
+    background-color:crimson;
+    color: #fff;
+}
+.makeConbox .makeCon .makeChoice{
+    padding-top:10px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+/*make.item5*/
+.makeConbox .makeCon .makeCoice2{
+    text-align: center;
+    margin: 0 auto;
+    color: crimson;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.makeConbox .makeCon .makelist ul li a{
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+    height: 180px;
+    position: relative;
+}
+.makeConbox .makeCon .makelist ul li{
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.makeConbox .makeCon .makelist ul li img{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.makeConbox .makeCon .makelistbox{
+    position: absolute;
+    top:10px;
+    left: calc(50% - 10px);
+}
+.makeConbox .makeCon .makelistbox .makelisttit{
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space:nowrap; 
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.makeConbox .makeCon .makelistbox .makelistdas{
+     text-overflow:ellipsis;
+    overflow: hidden;
+    white-space:nowrap; 
+    font-size: 14px;
+}
+.makelistbtn{
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 10px);
+}
+.makelistbtn p{
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    background-color: #eee;
+    line-height: 30px;
+}
+.makelistbtn span{
+    cursor: pointer;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000;
+    line-height: 30px;
+}
+.makelistbtn span:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+/*off*/
+
+
+.offclal{
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    position: relative;
+    background-color: #000;
+    height: 1000px;
+}
+.offclal .offtit{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 50px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.off{
+    width: 80%;
+    height: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.off ul li{
+    float: left;
+   width: 100%;
+}
+.off ul li a{
+    position: relative;
+    display: block;
+}
+.off ul li img{
+    width: 370px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    
+}
+.off ul li img:hover{
+    transform: scale(1.1);
+}
+
+.off ul li:nth-child(2) a img{
+    position: absolute;
+   top: -360px;
+    left:390px;
+}
+
+.off ul li:nth-child(4) a img{
+     position: absolute;
+   top: -360px;
+    left: 390px;
+}
+
+.offtxtbox{
+    margin-top: 10px;
+}
+.offtxtbox .offtxttit{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.offtxtbox .offtxt{
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.offtxtbox .offbtn:hover{
+    color: #333;
+    text-decoration: underline;
+}
+
+.offtxtbox2{
+    position: absolute;
+    top:400px;
+    left: 510px;
+    margin-top: 20px;
+}
+.offtxtbox2 .offtxttit{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.offtxtbox2 .offtxt{
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.offtxtbox2 .offbtn:hover{
+    color: #333;
+    text-decoration: underline;
+}
+    
+.offtxtbox2{
+    position: absolute;
+    top:400px;
+    left: 510px;
+    margin-top: 20px;
+}
+    .offtxtbox2-1{
+    position: absolute;
+    top:800px;
+        width: 300px;
+    left: 510px;
+    margin-top: 20px;
+}
+.offtxtbox2-1 .offtxttit{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    position: absolute;
+    bottom:-20px;
+    margin-bottom: 5px;
+}
+
+.offtxtbox2-1 .offtxt{
+    margin-bottom: 10px;
+    font-size: 17px;
+    position: absolute;
+    bottom:-50px;
+}
+    .offtxtbox2-1 .offbtn{
+        position: absolute;
+        bottom: -80px;
+    }
+.offtxtbox2-1 .offbtn:hover{
+    color: #333;
+    text-decoration: underline;
+}
+
+.ftmenu{
+    color: #fff;
+    width: 100%;
+    position: relative;
+    clear: both;
+    height: 800px;
+    background-color: #000;
+}
+.ft{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.ftlist{
+    height: 400px;
+}
+.ftlist ul{
+    
+    border-bottom: 1px solid #fff;
+}
+.ftlist ul li{
+    float: left;
+    width: 33.3333%;
+}
+.ftlist ul li a.dep1{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ftlist .info ul li{
+    clear: both;
+    width: 100%;
+}
+.ftlist .info ul li a{
+    display: block;
+    margin-top: 20px;
+    padding: 2px;
+}
+.ftlist .info ul li a:hover{
+    color: #dfdfdf;
+}
+
+.ftlist .mall ul li{
+    clear: both;
+    width: 100%;
+}
+.ftlist .mall ul li a{
+    display: block;
+    margin-top: 20px;
+    padding: 2px;
+}
+.ftlist .mall ul li a:hover{
+    color: #dfdfdf;
+}
+.ftlist .mall ul li img{
+    cursor: pointer;
+}
+
+.ftlist .bobbisns ul li{
+    width: 15%;
+    float: left;
+}
+.ftlist .bobbisns ul li a{
+    display: block;
+    margin-top: 20px;
+    padding: 2px;
+    font-size: 20px;
+}
+.ftlist .bobbisns ul li:first-child a:hover{
+    color: darkblue;
+}
+.ftlist .bobbisns ul li:nth-child(2) a:hover{
+    color: crimson;
+}
+.ftlist .bobbisns ul li:nth-child(3) a:hover{
+    color: green;
+}
+.ftlist .bobbisns ul li:nth-child(4) a:hover{
+    color: darkred;
+}
+
+
+.ftlist select{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 250px;
+    color: #fff;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.ftlist select option{
+    color: #000;
+    height: 20px;
+}
+.copy{
+    padding-top: 20px;
+    margin-top: 100px;
+    clear: both;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid #fff;
+}
+
+.copy ul li{
+    float: left;
+    width: 32%;
+}
+.copy ul .dldyd a{
+    margin-left: 200px;
+}
+.copy ul li a{
+    color: #dfdfdf;
+}
+.copy .copycopy li{
+    clear: both;
+    width: 100%;
+}
+.copy ul li a{
+    margin-top: 10px;
+}
+.infoj{
+    margin-top: 15px;
+}
+.copyright{
+    margin-top: 15px;
+}
+
+
 }
