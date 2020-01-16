@@ -19,54 +19,61 @@ html,body{
     width: 100%;
     margin: 0 auto;
     
-}
-#hd{
+}#hd {
     clear: both;
     position: relative;
     width: 100%;
 }
-.header{
-    height: 100px;
+
+.header {
+    height: 80px;
     width: 80%;
     margin: 0 auto;
 }
-.header .logo{
+
+.header .logo {
     display: block;
     width: 120px;
     height: 50px;
-    padding-top: 40px;
+    padding-top: 10px;
 }
-.logo img{
-    margin-top: -30px;
+
+.logo img {
     cursor: pointer;
     display: block;
     width: 100%;
 }
-.gnb{
+
+.gnb {
     float: right;
     position: absolute;
-    top: 50px;
+    top: 25px;
     left: 400px;
     width: 600px;
 }
-.gnb li{
+
+.gnb li {
     float: left;
     width: 20%;
 }
-.gnb li a{
+
+.gnb li a {
     font-size: 14px;
     display: block;
     font-weight: bold;
 }
-.gnb li:first-child a{
+
+.gnb li:first-child a {
     color: #fa9172;
 }
-.gnb li a:hover{
+
+.gnb li a:hover {
     color: #fa9172;
 }
-.top-bar{
+
+.top-bar {
     position: absolute;
-    top: 50px;
+    top: 25px;
     width: 320px;
     right: 150px;
 }
@@ -589,19 +596,32 @@ html,body{
           width: 100%;
       }
       
-      
-/*가짜토굴*/
-       /*가짜토굴*/
+       
+    .header .logo {
+    display: block;
+    width: 90px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.logo img {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+    
+    /*가짜토굴*/
     /*열기버튼*/
 .lst_btn{
     background-image: url(../img/toggle_06.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 30px;
-    height:30px;
+    width: 25px;
+    height:25px;
     position: relative;
     top: 40px;
-    left: calc(50% - -200px);
+    left: calc(50% - -135px);
     z-index: 90;
     text-indent: -9999px;
     cursor: pointer;
@@ -636,24 +656,27 @@ html,body{
     font-weight: bold;
     color: #fa9172;
 }
-.bgleft{
-    position: absolute;
-    left:calc(50% - -170px);
-    top: -80px;
-}
 
-.bgright{
-    position: absolute;
-    right: 4px;
-    top: 120px;
-}
-.bgright li{
-    clear: both;
-}
-.bgright img{
-    width: 50px;
-    height: 50px;
-}
+    .bgleft img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .bgright {
+        position: absolute;
+        right: 4px;
+        top: 140px;
+    }
+
+    .bgright li {
+        clear: both;
+    }
+
+    .bgright img {
+        width: 35px;
+        height: 35px;
+    }
+
 
       /*아티스트*/
       .ARTISTS-list{
@@ -754,25 +777,73 @@ html,body{
     font-size: 15px;
 }
       
-      
-/*가짜토굴*/
+    
+.header {
+    height: 80px;
+    width: 80%;
+    margin: 0 auto;
+}
+    
+    .gnb {
+        float: right;
+        position: absolute;
+        top: 25px;
+        left: 320px;
+        width: 500px;
+    }
 
-.bgleft img{
+    .gnb li {
+        float: left;
+        width: 15%;
+    }
+
+    .top-bar {
+        position: absolute;
+        top: 25px;
+        width: 300px;
+        right: 1px;
+    }
+
+    .top-bar li {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .top-bar li a {
+        display: block;
+        font-size: 15px;
+    }
+
+       /*열기버튼*/
+.lst_btn{
+    background-image: url(../img/toggle_06.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 25px;
-    height: 25px;
+    height:25px;
+    position: relative;
+     left: calc(50% - 470px);
+        top: 280px;
+    z-index: 90;
+    text-indent: -9999px;
+    cursor: pointer;
+    display: block;
 }
-.bgright{
-    position: absolute;
-    right: 4px;
-    top: 40px;
-}
-.bgright li{
-    clear: both;
-}
-.bgright img{
-    width: 50px;
-    height: 50px;
-}
+       .bgright {
+        position: absolute;
+        right: 35px;
+        top: 120px;
+    }
+
+    .bgright li {
+        clear: both;
+    }
+
+    .bgright img {
+        width: 50px;
+        height: 50px;
+    }
+
 
       /*아티스트*/
       .ARTISTS-list{
