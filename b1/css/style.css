@@ -160,15 +160,18 @@ a {
     width: 28px;
     height: 28px;
 }
+.menu{
+    width: 80%;
+    margin: 0 auto;
+}
 /*메뉴바*/
 .menu-bar {
-    float: right;
-    width: 1000px;
+    width: 50%;
+    margin:0 auto;
     height: 40px;
-    border: 1px solid #333;
     position: absolute;
     top: 95px;
-    right: 440px;
+    right: calc(50% - 500px);
     z-index: 99;
 }
 
@@ -227,69 +230,6 @@ a {
 
 
 
-
-/*메뉴바*/
-/* .menu-bar {
-            clear: both;
-            margin-top: 1em;
-            margin-left: 9em;
-            float: left;
-            color: #fff;
-        }
-
-        .menu-bar ul {}
-
-        .menu-bar ul li {
-            float: left;
-            width: 160px;
-            position: relative;
-        }
-
-        .menu-bar li a {
-            color: #fff;
-            display: block;
-            text-align: center;
-            padding: 1em;
-            line-height: 0.5em;
-
-        }
-
-        .menu-bar li a.dep1 {
-            color: #000;
-            font-size: 15px;
-            font-weight: bold;
-
-        }
-
-        .menu-bar li:hover a.dep1 {}
-
-        .sub {
-            width: 100%;
-            height: 0;
-            visibility: hidden;
-            opacity: 0;
-            position: absolute;
-
-        }
-
-        .menu-bar li:hover .sub {
-            visibility: visible;
-            opacity: 1;
-            transition: 0.4s;
-            height: auto;
-        }
-
-        .sub li {
-            clear: both;
-          
-            background-color: #f8f8f8;
-        }
-
-        .sub li a:hover {
-            background-color: #fff;
-        }
-*/
-
 .search {
     cursor: pointer;
     position: absolute;
@@ -344,6 +284,9 @@ a {
 }
 
 
+.swiper-slide img {
+        width: 100%;
+    }
 
 /*price*/
 
