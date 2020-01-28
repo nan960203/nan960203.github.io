@@ -21,7 +21,16 @@ body {
     height: 100%;
     font-family: 'Ropa Sans', sans-serif;
 }
-
+.fixtxt{
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    margin: 0 auto;
+    right: calc(50% - 250px);
+    text-align: center;
+    color: crimson;
+    
+}
 #wrap {
     margin: 0 auto;
     width: 100%;
